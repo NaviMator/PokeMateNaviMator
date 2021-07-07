@@ -1,0 +1,7186 @@
+[
+    {
+        "number" : "001",
+        "name_de" : "Bisasam",
+        "name_en" : "Bulbasaur",
+        "name_es" : "Bulbizarre",
+        "name_jp" : "フシギダネ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "002",
+        "name_de" : "Bisaknosp",
+        "name_en" : "Ivysaur",
+        "name_es" : "Herbizarre",
+        "name_jp" : "フシギソウ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "003",
+        "name_de" : "Bisaflor",
+        "name_en" : "Venusaur",
+        "name_es" : "Florizarre",
+        "name_jp" : "フシギバナ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "004",
+        "name_de" : "Glumanda",
+        "name_en" : "Charmander",
+        "name_es" : "Salamèche",
+        "name_jp" : "ヒトカゲ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "005",
+        "name_de" : "Glutexo",
+        "name_en" : "Charmeleon",
+        "name_es" : "Reptincel",
+        "name_jp" : "リザード",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "006",
+        "name_de" : "Glurak",
+        "name_en" : "Charizard",
+        "name_es" : "Dracaufeu",
+        "name_jp" : "リザードン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "007",
+        "name_de" : "Schiggy",
+        "name_en" : "Squirtle",
+        "name_es" : "Carapuce",
+        "name_jp" : "ゼニガメ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "008",
+        "name_de" : "Schillok",
+        "name_en" : "Wartortle",
+        "name_es" : "Carabaffe",
+        "name_jp" : "カメール",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "009",
+        "name_de" : "Turtok",
+        "name_en" : "Blastoise",
+        "name_es" : "Tortank",
+        "name_jp" : "カメックス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "010",
+        "name_de" : "Raupy",
+        "name_en" : "Caterpie",
+        "name_es" : "Chenipan",
+        "name_jp" : "キャタピー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "011",
+        "name_de" : "Safcon",
+        "name_en" : "Metapod",
+        "name_es" : "Chrysacier",
+        "name_jp" : "トランセル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "012",
+        "name_de" : "Smettbo",
+        "name_en" : "Butterfree",
+        "name_es" : "Papilusion",
+        "name_jp" : "バタフリー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "013",
+        "name_de" : "Hornliu",
+        "name_en" : "Weedle",
+        "name_es" : "Aspicot",
+        "name_jp" : "ビードル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "014",
+        "name_de" : "Kokuna",
+        "name_en" : "Kakuna",
+        "name_es" : "Coconfort",
+        "name_jp" : "コクーン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "015",
+        "name_de" : "Bibor",
+        "name_en" : "Beedrill",
+        "name_es" : "Dardargnan",
+        "name_jp" : "スピアー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "016",
+        "name_de" : "Taubsi",
+        "name_en" : "Pidgey",
+        "name_es" : "Roucool",
+        "name_jp" : "ポッポ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "017",
+        "name_de" : "Tauboga",
+        "name_en" : "Pidgeotto",
+        "name_es" : "Roucoups",
+        "name_jp" : "ピジョン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "018",
+        "name_de" : "Tauboss",
+        "name_en" : "Pidgeot",
+        "name_es" : "Roucarnage",
+        "name_jp" : "ピジョット",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "019",
+        "name_de" : "Rattfratz",
+        "name_en" : "Rattata",
+        "name_es" : "Rattata",
+        "name_jp" : "コラッタ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "020",
+        "name_de" : "Rattikarl",
+        "name_en" : "Raticate",
+        "name_es" : "Rattatac",
+        "name_jp" : "ラッタ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "021",
+        "name_de" : "Habitak",
+        "name_en" : "Spearow",
+        "name_es" : "Piafabec",
+        "name_jp" : "オニスズメ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "022",
+        "name_de" : "Ibitak",
+        "name_en" : "Fearow",
+        "name_es" : "Rapasdepic",
+        "name_jp" : "オニドリル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "023",
+        "name_de" : "Rettan",
+        "name_en" : "Ekans",
+        "name_es" : "Abo",
+        "name_jp" : "アーボ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "024",
+        "name_de" : "Arbok",
+        "name_en" : "Arbok",
+        "name_es" : "Arbok",
+        "name_jp" : "アーボック",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "025",
+        "name_de" : "Pikachu",
+        "name_en" : "Pikachu",
+        "name_es" : "Pikachu",
+        "name_jp" : "ピカチュウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "026",
+        "name_de" : "Raichu",
+        "name_en" : "Raichu",
+        "name_es" : "Raichu",
+        "name_jp" : "ライチュウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "027",
+        "name_de" : "Sandan",
+        "name_en" : "Sandshrew",
+        "name_es" : "Sabelette",
+        "name_jp" : "サンド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "028",
+        "name_de" : "Sandamer",
+        "name_en" : "Sandslash",
+        "name_es" : "Sablaireau",
+        "name_jp" : "サンドパン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "029",
+        "name_de" : "Nidoran♀",
+        "name_en" : "Nidoran♀",
+        "name_es" : "Nidoran♀",
+        "name_jp" : "ニドラン♀",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "030",
+        "name_de" : "Nidorina",
+        "name_en" : "Nidorina",
+        "name_es" : "Nidorina",
+        "name_jp" : "ニドリーナ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "031",
+        "name_de" : "Nidoqueen",
+        "name_en" : "Nidoqueen",
+        "name_es" : "Nidoqueen",
+        "name_jp" : "ニドクイン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "032",
+        "name_de" : "Nidoran♂",
+        "name_en" : "Nidoran♂",
+        "name_es" : "Nidoran♂",
+        "name_jp" : "ニドラン♂",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "033",
+        "name_de" : "Nidorino",
+        "name_en" : "Nidorino",
+        "name_es" : "Nidorino",
+        "name_jp" : "ニドリーノ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "034",
+        "name_de" : "Nidoking",
+        "name_en" : "Nidoking",
+        "name_es" : "Nidoking",
+        "name_jp" : "ニドキング",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "035",
+        "name_de" : "Piepi",
+        "name_en" : "Clefairy",
+        "name_es" : "Mélofée",
+        "name_jp" : "ピッピ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "036",
+        "name_de" : "Pixi",
+        "name_en" : "Clefable",
+        "name_es" : "Mélodelfe",
+        "name_jp" : "ピクシー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "037",
+        "name_de" : "Vulpix",
+        "name_en" : "Vulpix",
+        "name_es" : "Goupix",
+        "name_jp" : "ロコン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "038",
+        "name_de" : "Vulnona",
+        "name_en" : "Ninetales",
+        "name_es" : "Feunard",
+        "name_jp" : "キュウコン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "039",
+        "name_de" : "Pummeluff",
+        "name_en" : "Jigglypuff",
+        "name_es" : "Rondoudou",
+        "name_jp" : "プリン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "040",
+        "name_de" : "Knuddeluff",
+        "name_en" : "Wigglytuff",
+        "name_es" : "Grodoudou",
+        "name_jp" : "プクリン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "041",
+        "name_de" : "Zubat",
+        "name_en" : "Zubat",
+        "name_es" : "Nosferapti",
+        "name_jp" : "ズバット",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "042",
+        "name_de" : "Golbat",
+        "name_en" : "Golbat",
+        "name_es" : "Nosferalto",
+        "name_jp" : "ゴルバット",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "043",
+        "name_de" : "Myrapla",
+        "name_en" : "Oddish",
+        "name_es" : "Mystherbe",
+        "name_jp" : "ナゾノクサ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "044",
+        "name_de" : "Duflor",
+        "name_en" : "Gloom",
+        "name_es" : "Ortide",
+        "name_jp" : "クサイハナ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "045",
+        "name_de" : "Giflor",
+        "name_en" : "Vileplume",
+        "name_es" : "Rafflesia",
+        "name_jp" : "ラフレシア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "046",
+        "name_de" : "Paras",
+        "name_en" : "Paras",
+        "name_es" : "Paras",
+        "name_jp" : "パラス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "047",
+        "name_de" : "Parasek",
+        "name_en" : "Parasect",
+        "name_es" : "Parasect",
+        "name_jp" : "パラセクト",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "048",
+        "name_de" : "Bluzuk",
+        "name_en" : "Venonat",
+        "name_es" : "Mimitoss",
+        "name_jp" : "コンパン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "049",
+        "name_de" : "Omot",
+        "name_en" : "Venomoth",
+        "name_es" : "Aéromite",
+        "name_jp" : "モルフォン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "050",
+        "name_de" : "Digda",
+        "name_en" : "Diglett",
+        "name_es" : "Taupiqueur",
+        "name_jp" : "ディグダ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "051",
+        "name_de" : "Digdri",
+        "name_en" : "Dugtrio",
+        "name_es" : "Triopikeur",
+        "name_jp" : "ダグトリオ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "052",
+        "name_de" : "Mauzi",
+        "name_en" : "Meowth",
+        "name_es" : "Miaouss",
+        "name_jp" : "ニャース",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "053",
+        "name_de" : "Snobilikat",
+        "name_en" : "Persian",
+        "name_es" : "Persian",
+        "name_jp" : "ペルシアン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "054",
+        "name_de" : "Enton",
+        "name_en" : "Psyduck",
+        "name_es" : "Psykokwak",
+        "name_jp" : "コダック",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "055",
+        "name_de" : "Entoron",
+        "name_en" : "Golduck",
+        "name_es" : "Akwakwak",
+        "name_jp" : "ゴルダック",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "056",
+        "name_de" : "Menki",
+        "name_en" : "Mankey",
+        "name_es" : "Férosinge",
+        "name_jp" : "マンキー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "057",
+        "name_de" : "Rasaff",
+        "name_en" : "Primeape",
+        "name_es" : "Colossinge",
+        "name_jp" : "オコリザル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "058",
+        "name_de" : "Fukano",
+        "name_en" : "Growlithe",
+        "name_es" : "Caninos",
+        "name_jp" : "ガーディ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "059",
+        "name_de" : "Arkani",
+        "name_en" : "Arcanine",
+        "name_es" : "Arcanin",
+        "name_jp" : "ウインディ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "060",
+        "name_de" : "Quapsel",
+        "name_en" : "Poliwag",
+        "name_es" : "Ptitard",
+        "name_jp" : "ニョロモ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "061",
+        "name_de" : "Quaputzi",
+        "name_en" : "Poliwhirl",
+        "name_es" : "Têtarte",
+        "name_jp" : "ニョロゾ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "062",
+        "name_de" : "Quappo",
+        "name_en" : "Poliwrath",
+        "name_es" : "Tartard",
+        "name_jp" : "ニョロボン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "063",
+        "name_de" : "Abra",
+        "name_en" : "Abra",
+        "name_es" : "Abra",
+        "name_jp" : "ケーシィ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "064",
+        "name_de" : "Kadabra",
+        "name_en" : "Kadabra",
+        "name_es" : "Kadabra",
+        "name_jp" : "ユンゲラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "065",
+        "name_de" : "Simsala",
+        "name_en" : "Alakazam",
+        "name_es" : "Alakazam",
+        "name_jp" : "フーディン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "066",
+        "name_de" : "Machollo",
+        "name_en" : "Machop",
+        "name_es" : "Machoc",
+        "name_jp" : "ワンリキー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "067",
+        "name_de" : "Maschock",
+        "name_en" : "Machoke",
+        "name_es" : "Machopeur",
+        "name_jp" : "ゴーリキー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "068",
+        "name_de" : "Machomei",
+        "name_en" : "Machamp",
+        "name_es" : "Mackogneur",
+        "name_jp" : "カイリキー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "069",
+        "name_de" : "Knofensa",
+        "name_en" : "Bellsprout",
+        "name_es" : "Chétiflor",
+        "name_jp" : "マダツボミ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "070",
+        "name_de" : "Ultrigaria",
+        "name_en" : "Weepinbell",
+        "name_es" : "Boustiflor",
+        "name_jp" : "ウツドン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "071",
+        "name_de" : "Sarzenia",
+        "name_en" : "Victreebel",
+        "name_es" : "Empiflor",
+        "name_jp" : "ウツボット",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "072",
+        "name_de" : "Tentacha",
+        "name_en" : "Tentacool",
+        "name_es" : "Tentacool",
+        "name_jp" : "メノクラゲ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "073",
+        "name_de" : "Tentoxa",
+        "name_en" : "Tentacruel",
+        "name_es" : "Tentacruel",
+        "name_jp" : "ドククラゲ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "074",
+        "name_de" : "Kleinstein",
+        "name_en" : "Geodude",
+        "name_es" : "Racaillou",
+        "name_jp" : "イシツブテ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "075",
+        "name_de" : "Georok",
+        "name_en" : "Graveler",
+        "name_es" : "Gravalanch",
+        "name_jp" : "ゴローン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "076",
+        "name_de" : "Geowaz",
+        "name_en" : "Golem",
+        "name_es" : "Grolem",
+        "name_jp" : "ゴローニャ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "077",
+        "name_de" : "Ponita",
+        "name_en" : "Ponyta",
+        "name_es" : "Ponyta",
+        "name_jp" : "ポニータ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "078",
+        "name_de" : "Gallopa",
+        "name_en" : "Rapidash",
+        "name_es" : "Galopa",
+        "name_jp" : "ギャロップ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "079",
+        "name_de" : "Flegmon",
+        "name_en" : "Slowpoke",
+        "name_es" : "Ramoloss",
+        "name_jp" : "ヤドン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "080",
+        "name_de" : "Lahmus",
+        "name_en" : "Slowbro",
+        "name_es" : "Flagadoss",
+        "name_jp" : "ヤドラン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "081",
+        "name_de" : "Magnetilo",
+        "name_en" : "Magnemite",
+        "name_es" : "Magnéti",
+        "name_jp" : "コイル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "082",
+        "name_de" : "Magneton",
+        "name_en" : "Magneton",
+        "name_es" : "Magnéton",
+        "name_jp" : "レアコイル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "083",
+        "name_de" : "Porenta",
+        "name_en" : "Farfetch’d",
+        "name_es" : "Canarticho",
+        "name_jp" : "カモネギ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "084",
+        "name_de" : "Dodu",
+        "name_en" : "Doduo",
+        "name_es" : "Doduo",
+        "name_jp" : "ドードー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "085",
+        "name_de" : "Dodri",
+        "name_en" : "Dodrio",
+        "name_es" : "Dodrio",
+        "name_jp" : "ドードリオ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "086",
+        "name_de" : "Jurob",
+        "name_en" : "Seel",
+        "name_es" : "Otaria",
+        "name_jp" : "パウワウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "087",
+        "name_de" : "Jugong",
+        "name_en" : "Dewgong",
+        "name_es" : "Lamantine",
+        "name_jp" : "ジュゴン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "088",
+        "name_de" : "Sleima",
+        "name_en" : "Grimer",
+        "name_es" : "Tadmorv",
+        "name_jp" : "ベトベター",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "089",
+        "name_de" : "Sleimok",
+        "name_en" : "Muk",
+        "name_es" : "Grotadmorv",
+        "name_jp" : "ベトベトン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "090",
+        "name_de" : "Muschas",
+        "name_en" : "Shellder",
+        "name_es" : "Kokiyas",
+        "name_jp" : "シェルダー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "091",
+        "name_de" : "Austos",
+        "name_en" : "Cloyster",
+        "name_es" : "Crustabri",
+        "name_jp" : "パルシェン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "092",
+        "name_de" : "Nebulak",
+        "name_en" : "Gastly",
+        "name_es" : "Fantominus",
+        "name_jp" : "ゴース",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "093",
+        "name_de" : "Alpollo",
+        "name_en" : "Haunter",
+        "name_es" : "Spectrum",
+        "name_jp" : "ゴースト",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "094",
+        "name_de" : "Gengar",
+        "name_en" : "Gengar",
+        "name_es" : "Ectoplasma",
+        "name_jp" : "ゲンガー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "095",
+        "name_de" : "Onix",
+        "name_en" : "Onix",
+        "name_es" : "Onix",
+        "name_jp" : "イワーク",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "096",
+        "name_de" : "Traumato",
+        "name_en" : "Drowzee",
+        "name_es" : "Soporifik",
+        "name_jp" : "スリープ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "097",
+        "name_de" : "Hypno",
+        "name_en" : "Hypno",
+        "name_es" : "Hypnomade",
+        "name_jp" : "スリーパー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "098",
+        "name_de" : "Krabby",
+        "name_en" : "Krabby",
+        "name_es" : "Krabby",
+        "name_jp" : "クラブ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "099",
+        "name_de" : "Kingler",
+        "name_en" : "Kingler",
+        "name_es" : "Krabboss",
+        "name_jp" : "キングラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "100",
+        "name_de" : "Voltobal",
+        "name_en" : "Voltorb",
+        "name_es" : "Voltorbe",
+        "name_jp" : "ビリリダマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "101",
+        "name_de" : "Lektrobal",
+        "name_en" : "Electrode",
+        "name_es" : "Électrode",
+        "name_jp" : "マルマイン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "102",
+        "name_de" : "Owei",
+        "name_en" : "Exeggcute",
+        "name_es" : "Noeunoeuf",
+        "name_jp" : "タマタマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "103",
+        "name_de" : "Kokowei",
+        "name_en" : "Exeggutor",
+        "name_es" : "Noadkoko",
+        "name_jp" : "ナッシー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "104",
+        "name_de" : "Tragosso",
+        "name_en" : "Cubone",
+        "name_es" : "Osselait",
+        "name_jp" : "カラカラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "105",
+        "name_de" : "Knogga",
+        "name_en" : "Marowak",
+        "name_es" : "Ossatueur",
+        "name_jp" : "ガラガラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "106",
+        "name_de" : "Kicklee",
+        "name_en" : "Hitmonlee",
+        "name_es" : "Kicklee",
+        "name_jp" : "サワムラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "107",
+        "name_de" : "Nockchan",
+        "name_en" : "Hitmonchan",
+        "name_es" : "Tygnon",
+        "name_jp" : "エビワラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "108",
+        "name_de" : "Schlurp",
+        "name_en" : "Lickitung",
+        "name_es" : "Excelangue",
+        "name_jp" : "ベロリンガ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "109",
+        "name_de" : "Smogon",
+        "name_en" : "Koffing",
+        "name_es" : "Smogo",
+        "name_jp" : "ドガース",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "110",
+        "name_de" : "Smogmog",
+        "name_en" : "Weezing",
+        "name_es" : "Smogogo",
+        "name_jp" : "マタドガス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "111",
+        "name_de" : "Rihorn",
+        "name_en" : "Rhyhorn",
+        "name_es" : "Rhinocorne",
+        "name_jp" : "サイホーン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "112",
+        "name_de" : "Rizeros",
+        "name_en" : "Rhydon",
+        "name_es" : "Rhinoféros",
+        "name_jp" : "サイドン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "113",
+        "name_de" : "Chaneira",
+        "name_en" : "Chansey",
+        "name_es" : "Leveinard",
+        "name_jp" : "ラッキー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "114",
+        "name_de" : "Tangela",
+        "name_en" : "Tangela",
+        "name_es" : "Saquedeneu",
+        "name_jp" : "モンジャラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "115",
+        "name_de" : "Kangama",
+        "name_en" : "Kangaskhan",
+        "name_es" : "Kangourex",
+        "name_jp" : "ガルーラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "116",
+        "name_de" : "Seeper",
+        "name_en" : "Horsea",
+        "name_es" : "Hypotrempe",
+        "name_jp" : "タッツー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "117",
+        "name_de" : "Seemon",
+        "name_en" : "Seadra",
+        "name_es" : "Hypocéan",
+        "name_jp" : "シードラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "118",
+        "name_de" : "Goldini",
+        "name_en" : "Goldeen",
+        "name_es" : "Poissirène",
+        "name_jp" : "トサキント",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "119",
+        "name_de" : "Golking",
+        "name_en" : "Seaking",
+        "name_es" : "Poissoroy",
+        "name_jp" : "アズマオウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "120",
+        "name_de" : "Sterndu",
+        "name_en" : "Staryu",
+        "name_es" : "Stari",
+        "name_jp" : "ヒトデマン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "121",
+        "name_de" : "Starmie",
+        "name_en" : "Starmie",
+        "name_es" : "Staross",
+        "name_jp" : "スターミー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "122",
+        "name_de" : "Pantimos",
+        "name_en" : "Mr. Mime",
+        "name_es" : "M. Mime",
+        "name_jp" : "バリヤード",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "123",
+        "name_de" : "Sichlor",
+        "name_en" : "Scyther",
+        "name_es" : "Insécateur",
+        "name_jp" : "ストライク",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "124",
+        "name_de" : "Rossana",
+        "name_en" : "Jynx",
+        "name_es" : "Lippoutou",
+        "name_jp" : "ルージュラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "125",
+        "name_de" : "Elektek",
+        "name_en" : "Electabuzz",
+        "name_es" : "Élektek",
+        "name_jp" : "エレブー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "126",
+        "name_de" : "Magmar",
+        "name_en" : "Magmar",
+        "name_es" : "Magmar",
+        "name_jp" : "ブーバー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "127",
+        "name_de" : "Pinsir",
+        "name_en" : "Pinsir",
+        "name_es" : "Scarabrute",
+        "name_jp" : "カイロス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "128",
+        "name_de" : "Tauros",
+        "name_en" : "Tauros",
+        "name_es" : "Tauros",
+        "name_jp" : "ケンタロス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "129",
+        "name_de" : "Karpador",
+        "name_en" : "Magikarp",
+        "name_es" : "Magicarpe",
+        "name_jp" : "コイキング",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "130",
+        "name_de" : "Garados",
+        "name_en" : "Gyarados",
+        "name_es" : "Léviator",
+        "name_jp" : "ギャラドス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "131",
+        "name_de" : "Lapras",
+        "name_en" : "Lapras",
+        "name_es" : "Lokhlass",
+        "name_jp" : "ラプラス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "132",
+        "name_de" : "Ditto",
+        "name_en" : "Ditto",
+        "name_es" : "Métamorph",
+        "name_jp" : "メタモン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "133",
+        "name_de" : "Evoli",
+        "name_en" : "Eevee",
+        "name_es" : "Évoli",
+        "name_jp" : "イーブイ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "134",
+        "name_de" : "Aquana",
+        "name_en" : "Vaporeon",
+        "name_es" : "Aquali",
+        "name_jp" : "シャワーズ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "135",
+        "name_de" : "Blitza",
+        "name_en" : "Jolteon",
+        "name_es" : "Voltali",
+        "name_jp" : "サンダース",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "136",
+        "name_de" : "Flamara",
+        "name_en" : "Flareon",
+        "name_es" : "Pyroli",
+        "name_jp" : "ブースター",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "137",
+        "name_de" : "Porygon",
+        "name_en" : "Porygon",
+        "name_es" : "Porygon",
+        "name_jp" : "ポリゴン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "138",
+        "name_de" : "Amonitas",
+        "name_en" : "Omanyte",
+        "name_es" : "Amonita",
+        "name_jp" : "オムナイト",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "139",
+        "name_de" : "Amoroso",
+        "name_en" : "Omastar",
+        "name_es" : "Amonistar",
+        "name_jp" : "オムスター",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "140",
+        "name_de" : "Kabuto",
+        "name_en" : "Kabuto",
+        "name_es" : "Kabuto",
+        "name_jp" : "カブト",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "141",
+        "name_de" : "Kabutops",
+        "name_en" : "Kabutops",
+        "name_es" : "Kabutops",
+        "name_jp" : "カブトプス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "142",
+        "name_de" : "Aerodactyl",
+        "name_en" : "Aerodactyl",
+        "name_es" : "Ptéra",
+        "name_jp" : "プテラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "143",
+        "name_de" : "Relaxo",
+        "name_en" : "Snorlax",
+        "name_es" : "Ronflex",
+        "name_jp" : "カビゴン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "144",
+        "name_de" : "Arktos",
+        "name_en" : "Articuno",
+        "name_es" : "Artikodin",
+        "name_jp" : "フリーザー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "145",
+        "name_de" : "Zapdos",
+        "name_en" : "Zapdos",
+        "name_es" : "Électhor",
+        "name_jp" : "サンダー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "146",
+        "name_de" : "Lavados",
+        "name_en" : "Moltres",
+        "name_es" : "Sulfura",
+        "name_jp" : "ファイヤー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "147",
+        "name_de" : "Dratini",
+        "name_en" : "Dratini",
+        "name_es" : "Minidraco",
+        "name_jp" : "ミニリュウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "148",
+        "name_de" : "Dragonir",
+        "name_en" : "Dragonair",
+        "name_es" : "Draco",
+        "name_jp" : "ハクリュー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "149",
+        "name_de" : "Dragoran",
+        "name_en" : "Dragonite",
+        "name_es" : "Dracolosse",
+        "name_jp" : "カイリュー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "150",
+        "name_de" : "Mewtu",
+        "name_en" : "Mewtwo",
+        "name_es" : "Mewtwo",
+        "name_jp" : "ミュウツー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "151",
+        "name_de" : "Mew",
+        "name_en" : "Mew",
+        "name_es" : "Mew",
+        "name_jp" : "ミュウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "152",
+        "name_de" : "Endivie",
+        "name_en" : "Chikorita",
+        "name_es" : "Germignon",
+        "name_jp" : "チコリータ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "153",
+        "name_de" : "Lorblatt",
+        "name_en" : "Bayleef",
+        "name_es" : "Macronium",
+        "name_jp" : "ベイリーフ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "154",
+        "name_de" : "Meganie",
+        "name_en" : "Meganium",
+        "name_es" : "Méganium",
+        "name_jp" : "メガニウム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "155",
+        "name_de" : "Feurigel",
+        "name_en" : "Cyndaquil",
+        "name_es" : "Héricendre",
+        "name_jp" : "ヒノアラシ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "156",
+        "name_de" : "Igelavar",
+        "name_en" : "Quilava",
+        "name_es" : "Feurisson",
+        "name_jp" : "マグマラシ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "157",
+        "name_de" : "Tornupto",
+        "name_en" : "Typhlosion",
+        "name_es" : "Typhlosion",
+        "name_jp" : "バクフーン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "158",
+        "name_de" : "Karnimani",
+        "name_en" : "Totodile",
+        "name_es" : "Kaiminus",
+        "name_jp" : "ワニノコ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "159",
+        "name_de" : "Tyracroc",
+        "name_en" : "Croconaw",
+        "name_es" : "Crocrodil",
+        "name_jp" : "アリゲイツ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "160",
+        "name_de" : "Impergator",
+        "name_en" : "Feraligatr",
+        "name_es" : "Aligatueur",
+        "name_jp" : "オーダイル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "161",
+        "name_de" : "Wiesor",
+        "name_en" : "Sentret",
+        "name_es" : "Fouinette",
+        "name_jp" : "オタチ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "162",
+        "name_de" : "Wiesenior",
+        "name_en" : "Furret",
+        "name_es" : "Fouinar",
+        "name_jp" : "オオタチ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "163",
+        "name_de" : "Hoothoot",
+        "name_en" : "Hoothoot",
+        "name_es" : "Hoothoot",
+        "name_jp" : "ホーホー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "164",
+        "name_de" : "Noctuh",
+        "name_en" : "Noctowl",
+        "name_es" : "Noarfang",
+        "name_jp" : "ヨルノズク",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "165",
+        "name_de" : "Ledyba",
+        "name_en" : "Ledyba",
+        "name_es" : "Coxy",
+        "name_jp" : "レディバ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "166",
+        "name_de" : "Ledian",
+        "name_en" : "Ledian",
+        "name_es" : "Coxyclaque",
+        "name_jp" : "レディアン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "167",
+        "name_de" : "Webarak",
+        "name_en" : "Spinarak",
+        "name_es" : "Mimigal",
+        "name_jp" : "イトマル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "168",
+        "name_de" : "Ariados",
+        "name_en" : "Ariados",
+        "name_es" : "Migalos",
+        "name_jp" : "アリアドス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "169",
+        "name_de" : "Iksbat",
+        "name_en" : "Crobat",
+        "name_es" : "Nostenfer",
+        "name_jp" : "クロバット",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "170",
+        "name_de" : "Lampi",
+        "name_en" : "Chinchou",
+        "name_es" : "Loupio",
+        "name_jp" : "チョンチー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "171",
+        "name_de" : "Lanturn",
+        "name_en" : "Lanturn",
+        "name_es" : "Lanturn",
+        "name_jp" : "ランターン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "172",
+        "name_de" : "Pichu",
+        "name_en" : "Pichu",
+        "name_es" : "Pichu",
+        "name_jp" : "ピチュー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "173",
+        "name_de" : "Pii",
+        "name_en" : "Cleffa",
+        "name_es" : "Mélo",
+        "name_jp" : "ピィ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "174",
+        "name_de" : "Fluffeluff",
+        "name_en" : "Igglybuff",
+        "name_es" : "Toudoudou",
+        "name_jp" : "ププリン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "175",
+        "name_de" : "Togepi",
+        "name_en" : "Togepi",
+        "name_es" : "Togepi",
+        "name_jp" : "トゲピー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "176",
+        "name_de" : "Togetic",
+        "name_en" : "Togetic",
+        "name_es" : "Togetic",
+        "name_jp" : "トゲチック",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "177",
+        "name_de" : "Natu",
+        "name_en" : "Natu",
+        "name_es" : "Natu",
+        "name_jp" : "ネイティ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "178",
+        "name_de" : "Xatu",
+        "name_en" : "Xatu",
+        "name_es" : "Xatu",
+        "name_jp" : "ネイティオ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "179",
+        "name_de" : "Voltilamm",
+        "name_en" : "Mareep",
+        "name_es" : "Wattouat",
+        "name_jp" : "メリープ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "180",
+        "name_de" : "Waaty",
+        "name_en" : "Flaaffy",
+        "name_es" : "Lainergie",
+        "name_jp" : "モココ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "181",
+        "name_de" : "Ampharos",
+        "name_en" : "Ampharos",
+        "name_es" : "Pharamp",
+        "name_jp" : "デンリュウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "182",
+        "name_de" : "Blubella",
+        "name_en" : "Bellossom",
+        "name_es" : "Joliflor",
+        "name_jp" : "キレイハナ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "183",
+        "name_de" : "Marill",
+        "name_en" : "Marill",
+        "name_es" : "Marill",
+        "name_jp" : "マリル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "184",
+        "name_de" : "Azumarill",
+        "name_en" : "Azumarill",
+        "name_es" : "Azumarill",
+        "name_jp" : "マリルリ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "185",
+        "name_de" : "Mogelbaum",
+        "name_en" : "Sudowoodo",
+        "name_es" : "Simularbre",
+        "name_jp" : "ウソッキー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "186",
+        "name_de" : "Quaxo",
+        "name_en" : "Politoed",
+        "name_es" : "Tarpaud",
+        "name_jp" : "ニョロトノ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "187",
+        "name_de" : "Hoppspross",
+        "name_en" : "Hoppip",
+        "name_es" : "Granivol",
+        "name_jp" : "ハネッコ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "188",
+        "name_de" : "Hubelupf",
+        "name_en" : "Skiploom",
+        "name_es" : "Floravol",
+        "name_jp" : "ポポッコ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "189",
+        "name_de" : "Papungha",
+        "name_en" : "Jumpluff",
+        "name_es" : "Cotovol",
+        "name_jp" : "ワタッコ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "190",
+        "name_de" : "Griffel",
+        "name_en" : "Aipom",
+        "name_es" : "Capumain",
+        "name_jp" : "エイパム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "191",
+        "name_de" : "Sonnkern",
+        "name_en" : "Sunkern",
+        "name_es" : "Tournegrin",
+        "name_jp" : "ヒマナッツ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "192",
+        "name_de" : "Sonnflora",
+        "name_en" : "Sunflora",
+        "name_es" : "Héliatronc",
+        "name_jp" : "キマワリ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "193",
+        "name_de" : "Yanma",
+        "name_en" : "Yanma",
+        "name_es" : "Yanma",
+        "name_jp" : "ヤンヤンマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "194",
+        "name_de" : "Felino",
+        "name_en" : "Wooper",
+        "name_es" : "Axoloto",
+        "name_jp" : "ウパー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "195",
+        "name_de" : "Morlord",
+        "name_en" : "Quagsire",
+        "name_es" : "Maraiste",
+        "name_jp" : "ヌオー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "196",
+        "name_de" : "Psiana",
+        "name_en" : "Espeon",
+        "name_es" : "Mentali",
+        "name_jp" : "エーフィ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "197",
+        "name_de" : "Nachtara",
+        "name_en" : "Umbreon",
+        "name_es" : "Noctali",
+        "name_jp" : "ブラッキー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "198",
+        "name_de" : "Kramurx",
+        "name_en" : "Murkrow",
+        "name_es" : "Cornèbre",
+        "name_jp" : "ヤミカラス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "199",
+        "name_de" : "Laschoking",
+        "name_en" : "Slowking",
+        "name_es" : "Roigada",
+        "name_jp" : "ヤドキング",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "200",
+        "name_de" : "Traunfugil",
+        "name_en" : "Misdreavus",
+        "name_es" : "Feuforêve",
+        "name_jp" : "ムウマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "201",
+        "name_de" : "Icognito",
+        "name_en" : "Unown",
+        "name_es" : "Zarbi",
+        "name_jp" : "アンノーン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "202",
+        "name_de" : "Woingenau",
+        "name_en" : "Wobbuffet",
+        "name_es" : "Qulbutoké",
+        "name_jp" : "ソーナンス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "203",
+        "name_de" : "Girafarig",
+        "name_en" : "Girafarig",
+        "name_es" : "Girafarig",
+        "name_jp" : "キリンリキ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "204",
+        "name_de" : "Tannza",
+        "name_en" : "Pineco",
+        "name_es" : "Pomdepik",
+        "name_jp" : "クヌギダマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "205",
+        "name_de" : "Forstellka",
+        "name_en" : "Forretress",
+        "name_es" : "Foretress",
+        "name_jp" : "フォレトス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "206",
+        "name_de" : "Dummisel",
+        "name_en" : "Dunsparce",
+        "name_es" : "Insolourdo",
+        "name_jp" : "ノコッチ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "207",
+        "name_de" : "Skorgla",
+        "name_en" : "Gligar",
+        "name_es" : "Scorplane",
+        "name_jp" : "グライガー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "208",
+        "name_de" : "Stahlos",
+        "name_en" : "Steelix",
+        "name_es" : "Steelix",
+        "name_jp" : "ハガネール",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "209",
+        "name_de" : "Snubbull",
+        "name_en" : "Snubbull",
+        "name_es" : "Snubbull",
+        "name_jp" : "ブルー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "210",
+        "name_de" : "Granbull",
+        "name_en" : "Granbull",
+        "name_es" : "Granbull",
+        "name_jp" : "グランブル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "211",
+        "name_de" : "Baldorfish",
+        "name_en" : "Qwilfish",
+        "name_es" : "Qwilfish",
+        "name_jp" : "ハリーセン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "212",
+        "name_de" : "Scherox",
+        "name_en" : "Scizor",
+        "name_es" : "Cizayox",
+        "name_jp" : "ハッサム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "213",
+        "name_de" : "Pottrott",
+        "name_en" : "Shuckle",
+        "name_es" : "Caratroc",
+        "name_jp" : "ツボツボ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "214",
+        "name_de" : "Skaraborn",
+        "name_en" : "Heracross",
+        "name_es" : "Scarhino",
+        "name_jp" : "ヘラクロス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "215",
+        "name_de" : "Sniebel",
+        "name_en" : "Sneasel",
+        "name_es" : "Farfuret",
+        "name_jp" : "ニューラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "216",
+        "name_de" : "Teddiursa",
+        "name_en" : "Teddiursa",
+        "name_es" : "Teddiursa",
+        "name_jp" : "ヒメグマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "217",
+        "name_de" : "Ursaring",
+        "name_en" : "Ursaring",
+        "name_es" : "Ursaring",
+        "name_jp" : "リングマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "218",
+        "name_de" : "Schneckmag",
+        "name_en" : "Slugma",
+        "name_es" : "Limagma",
+        "name_jp" : "マグマッグ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "219",
+        "name_de" : "Magcargo",
+        "name_en" : "Magcargo",
+        "name_es" : "Volcaropod",
+        "name_jp" : "マグカルゴ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "220",
+        "name_de" : "Quiekel",
+        "name_en" : "Swinub",
+        "name_es" : "Marcacrin",
+        "name_jp" : "ウリムー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "221",
+        "name_de" : "Keifel",
+        "name_en" : "Piloswine",
+        "name_es" : "Cochignon",
+        "name_jp" : "イノムー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "222",
+        "name_de" : "Corasonn",
+        "name_en" : "Corsola",
+        "name_es" : "Corayon",
+        "name_jp" : "サニーゴ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "223",
+        "name_de" : "Remoraid",
+        "name_en" : "Remoraid",
+        "name_es" : "Rémoraid",
+        "name_jp" : "テッポウオ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "224",
+        "name_de" : "Octillery",
+        "name_en" : "Octillery",
+        "name_es" : "Octillery",
+        "name_jp" : "オクタン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "225",
+        "name_de" : "Botogel",
+        "name_en" : "Delibird",
+        "name_es" : "Cadoizo",
+        "name_jp" : "デリバード",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "226",
+        "name_de" : "Mantax",
+        "name_en" : "Mantine",
+        "name_es" : "Démanta",
+        "name_jp" : "マンタイン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "227",
+        "name_de" : "Panzaeron",
+        "name_en" : "Skarmory",
+        "name_es" : "Airmure",
+        "name_jp" : "エアームド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "228",
+        "name_de" : "Hunduster",
+        "name_en" : "Houndour",
+        "name_es" : "Malosse",
+        "name_jp" : "デルビル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "229",
+        "name_de" : "Hundemon",
+        "name_en" : "Houndoom",
+        "name_es" : "Démolosse",
+        "name_jp" : "ヘルガー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "230",
+        "name_de" : "Seedraking",
+        "name_en" : "Kingdra",
+        "name_es" : "Hyporoi",
+        "name_jp" : "キングドラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "231",
+        "name_de" : "Phanpy",
+        "name_en" : "Phanpy",
+        "name_es" : "Phanpy",
+        "name_jp" : "ゴマゾウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "232",
+        "name_de" : "Donphan",
+        "name_en" : "Donphan",
+        "name_es" : "Donphan",
+        "name_jp" : "ドンファン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "233",
+        "name_de" : "Porygon2",
+        "name_en" : "Porygon2",
+        "name_es" : "Porygon2",
+        "name_jp" : "ポリゴン２",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "234",
+        "name_de" : "Damhirplex",
+        "name_en" : "Stantler",
+        "name_es" : "Cerfrousse",
+        "name_jp" : "オドシシ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "235",
+        "name_de" : "Farbeagle",
+        "name_en" : "Smeargle",
+        "name_es" : "Queulorior",
+        "name_jp" : "ドーブル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "236",
+        "name_de" : "Rabauz",
+        "name_en" : "Tyrogue",
+        "name_es" : "Debugant",
+        "name_jp" : "バルキー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "237",
+        "name_de" : "Kapoera",
+        "name_en" : "Hitmontop",
+        "name_es" : "Kapoera",
+        "name_jp" : "カポエラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "238",
+        "name_de" : "Kussilla",
+        "name_en" : "Smoochum",
+        "name_es" : "Lippouti",
+        "name_jp" : "ムチュール",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "239",
+        "name_de" : "Elekid",
+        "name_en" : "Elekid",
+        "name_es" : "Élekid",
+        "name_jp" : "エレキッド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "240",
+        "name_de" : "Magby",
+        "name_en" : "Magby",
+        "name_es" : "Magby",
+        "name_jp" : "ブビィ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "241",
+        "name_de" : "Miltank",
+        "name_en" : "Miltank",
+        "name_es" : "Écrémeuh",
+        "name_jp" : "ミルタンク",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "242",
+        "name_de" : "Heiteira",
+        "name_en" : "Blissey",
+        "name_es" : "Leuphorie",
+        "name_jp" : "ハピナス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "243",
+        "name_de" : "Raikou",
+        "name_en" : "Raikou",
+        "name_es" : "Raikou",
+        "name_jp" : "ライコウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "244",
+        "name_de" : "Entei",
+        "name_en" : "Entei",
+        "name_es" : "Entei",
+        "name_jp" : "エンテイ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "245",
+        "name_de" : "Suicune",
+        "name_en" : "Suicune",
+        "name_es" : "Suicune",
+        "name_jp" : "スイクン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "246",
+        "name_de" : "Larvitar",
+        "name_en" : "Larvitar",
+        "name_es" : "Embrylex",
+        "name_jp" : "ヨーギラス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "247",
+        "name_de" : "Pupitar",
+        "name_en" : "Pupitar",
+        "name_es" : "Ymphect",
+        "name_jp" : "サナギラス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "248",
+        "name_de" : "Despotar",
+        "name_en" : "Tyranitar",
+        "name_es" : "Tyranocif",
+        "name_jp" : "バンギラス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "249",
+        "name_de" : "Lugia",
+        "name_en" : "Lugia",
+        "name_es" : "Lugia",
+        "name_jp" : "ルギア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "250",
+        "name_de" : "Ho-Oh",
+        "name_en" : "Ho-Oh",
+        "name_es" : "Ho-Oh",
+        "name_jp" : "ホウオウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "251",
+        "name_de" : "Celebi",
+        "name_en" : "Celebi",
+        "name_es" : "Celebi",
+        "name_jp" : "セレビィ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "252",
+        "name_de" : "Geckarbor",
+        "name_en" : "Treecko",
+        "name_es" : "Arcko",
+        "name_jp" : "キモリ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "253",
+        "name_de" : "Reptain",
+        "name_en" : "Grovyle",
+        "name_es" : "Massko",
+        "name_jp" : "ジュプトル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "254",
+        "name_de" : "Gewaldro",
+        "name_en" : "Sceptile",
+        "name_es" : "Jungko",
+        "name_jp" : "ジュカイン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "255",
+        "name_de" : "Flemmli",
+        "name_en" : "Torchic",
+        "name_es" : "Poussifeu",
+        "name_jp" : "アチャモ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "256",
+        "name_de" : "Jungglut",
+        "name_en" : "Combusken",
+        "name_es" : "Galifeu",
+        "name_jp" : "ワカシャモ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "257",
+        "name_de" : "Lohgock",
+        "name_en" : "Blaziken",
+        "name_es" : "Braségali",
+        "name_jp" : "バシャーモ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "258",
+        "name_de" : "Hydropi",
+        "name_en" : "Mudkip",
+        "name_es" : "Gobou",
+        "name_jp" : "ミズゴロウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "259",
+        "name_de" : "Moorabbel",
+        "name_en" : "Marshtomp",
+        "name_es" : "Flobio",
+        "name_jp" : "ヌマクロー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "260",
+        "name_de" : "Sumpex",
+        "name_en" : "Swampert",
+        "name_es" : "Laggron",
+        "name_jp" : "ラグラージ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "261",
+        "name_de" : "Fiffyen",
+        "name_en" : "Poochyena",
+        "name_es" : "Medhyèna",
+        "name_jp" : "ポチエナ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "262",
+        "name_de" : "Magnayen",
+        "name_en" : "Mightyena",
+        "name_es" : "Grahyèna",
+        "name_jp" : "グラエナ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "263",
+        "name_de" : "Zigzachs",
+        "name_en" : "Zigzagoon",
+        "name_es" : "Zigzaton",
+        "name_jp" : "ジグザグマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "264",
+        "name_de" : "Geradaks",
+        "name_en" : "Linoone",
+        "name_es" : "Linéon",
+        "name_jp" : "マッスグマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "265",
+        "name_de" : "Waumpel",
+        "name_en" : "Wurmple",
+        "name_es" : "Chenipotte",
+        "name_jp" : "ケムッソ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "266",
+        "name_de" : "Schaloko",
+        "name_en" : "Silcoon",
+        "name_es" : "Armulys",
+        "name_jp" : "カラサリス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "267",
+        "name_de" : "Papinella",
+        "name_en" : "Beautifly",
+        "name_es" : "Charmillon",
+        "name_jp" : "アゲハント",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "268",
+        "name_de" : "Panekon",
+        "name_en" : "Cascoon",
+        "name_es" : "Blindalys",
+        "name_jp" : "マユルド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "269",
+        "name_de" : "Pudox",
+        "name_en" : "Dustox",
+        "name_es" : "Papinox",
+        "name_jp" : "ドクケイル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "270",
+        "name_de" : "Loturzel",
+        "name_en" : "Lotad",
+        "name_es" : "Nénupiot",
+        "name_jp" : "ハスボー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "271",
+        "name_de" : "Lombrero",
+        "name_en" : "Lombre",
+        "name_es" : "Lombre",
+        "name_jp" : "ハスブレロ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "272",
+        "name_de" : "Kappalores",
+        "name_en" : "Ludicolo",
+        "name_es" : "Ludicolo",
+        "name_jp" : "ルンパッパ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "273",
+        "name_de" : "Samurzel",
+        "name_en" : "Seedot",
+        "name_es" : "Grainipiot",
+        "name_jp" : "タネボー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "274",
+        "name_de" : "Blanas",
+        "name_en" : "Nuzleaf",
+        "name_es" : "Pifeuil",
+        "name_jp" : "コノハナ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "275",
+        "name_de" : "Tengulist",
+        "name_en" : "Shiftry",
+        "name_es" : "Tengalice",
+        "name_jp" : "ダーテング",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "276",
+        "name_de" : "Schwalbini",
+        "name_en" : "Taillow",
+        "name_es" : "Nirondelle",
+        "name_jp" : "スバメ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "277",
+        "name_de" : "Schwalboss",
+        "name_en" : "Swellow",
+        "name_es" : "Hélédelle",
+        "name_jp" : "オオスバメ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "278",
+        "name_de" : "Wingull",
+        "name_en" : "Wingull",
+        "name_es" : "Goélise",
+        "name_jp" : "キャモメ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "279",
+        "name_de" : "Pelipper",
+        "name_en" : "Pelipper",
+        "name_es" : "Bekipan",
+        "name_jp" : "ペリッパー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "280",
+        "name_de" : "Trasla",
+        "name_en" : "Ralts",
+        "name_es" : "Tarsal",
+        "name_jp" : "ラルトス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "281",
+        "name_de" : "Kirlia",
+        "name_en" : "Kirlia",
+        "name_es" : "Kirlia",
+        "name_jp" : "キルリア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "282",
+        "name_de" : "Guardevoir",
+        "name_en" : "Gardevoir",
+        "name_es" : "Gardevoir",
+        "name_jp" : "サーナイト",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "283",
+        "name_de" : "Gehweiher",
+        "name_en" : "Surskit",
+        "name_es" : "Arakdo",
+        "name_jp" : "アメタマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "284",
+        "name_de" : "Maskeregen",
+        "name_en" : "Masquerain",
+        "name_es" : "Maskadra",
+        "name_jp" : "アメモース",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "285",
+        "name_de" : "Knilz",
+        "name_en" : "Shroomish",
+        "name_es" : "Balignon",
+        "name_jp" : "キノココ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "286",
+        "name_de" : "Kapilz",
+        "name_en" : "Breloom",
+        "name_es" : "Chapignon",
+        "name_jp" : "キノガッサ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "287",
+        "name_de" : "Bummelz",
+        "name_en" : "Slakoth",
+        "name_es" : "Parecool",
+        "name_jp" : "ナマケロ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "288",
+        "name_de" : "Muntier",
+        "name_en" : "Vigoroth",
+        "name_es" : "Vigoroth",
+        "name_jp" : "ヤルキモノ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "289",
+        "name_de" : "Letarking",
+        "name_en" : "Slaking",
+        "name_es" : "Monaflèmit",
+        "name_jp" : "ケッキング",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "290",
+        "name_de" : "Nincada",
+        "name_en" : "Nincada",
+        "name_es" : "Ningale",
+        "name_jp" : "ツチニン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "291",
+        "name_de" : "Ninjask",
+        "name_en" : "Ninjask",
+        "name_es" : "Ninjask",
+        "name_jp" : "テッカニン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "292",
+        "name_de" : "Ninjatom",
+        "name_en" : "Shedinja",
+        "name_es" : "Munja",
+        "name_jp" : "ヌケニン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "293",
+        "name_de" : "Flurmel",
+        "name_en" : "Whismur",
+        "name_es" : "Chuchmur",
+        "name_jp" : "ゴニョニョ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "294",
+        "name_de" : "Krakeelo",
+        "name_en" : "Loudred",
+        "name_es" : "Ramboum",
+        "name_jp" : "ドゴーム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "295",
+        "name_de" : "Krawumms",
+        "name_en" : "Exploud",
+        "name_es" : "Brouhabam",
+        "name_jp" : "バクオング",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "296",
+        "name_de" : "Makuhita",
+        "name_en" : "Makuhita",
+        "name_es" : "Makuhita",
+        "name_jp" : "マクノシタ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "297",
+        "name_de" : "Hariyama",
+        "name_en" : "Hariyama",
+        "name_es" : "Hariyama",
+        "name_jp" : "ハリテヤマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "298",
+        "name_de" : "Azurill",
+        "name_en" : "Azurill",
+        "name_es" : "Azurill",
+        "name_jp" : "ルリリ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "299",
+        "name_de" : "Nasgnet",
+        "name_en" : "Nosepass",
+        "name_es" : "Tarinor",
+        "name_jp" : "ノズパス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "300",
+        "name_de" : "Eneco",
+        "name_en" : "Skitty",
+        "name_es" : "Skitty",
+        "name_jp" : "エネコ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "301",
+        "name_de" : "Enekoro",
+        "name_en" : "Delcatty",
+        "name_es" : "Delcatty",
+        "name_jp" : "エネコロロ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "302",
+        "name_de" : "Zobiris",
+        "name_en" : "Sableye",
+        "name_es" : "Ténéfix",
+        "name_jp" : "ヤミラミ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "303",
+        "name_de" : "Flunkifer",
+        "name_en" : "Mawile",
+        "name_es" : "Mysdibule",
+        "name_jp" : "クチート",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "304",
+        "name_de" : "Stollunior",
+        "name_en" : "Aron",
+        "name_es" : "Galekid",
+        "name_jp" : "ココドラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "305",
+        "name_de" : "Stollrak",
+        "name_en" : "Lairon",
+        "name_es" : "Galegon",
+        "name_jp" : "コドラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "306",
+        "name_de" : "Stolloss",
+        "name_en" : "Aggron",
+        "name_es" : "Galeking",
+        "name_jp" : "ボスゴドラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "307",
+        "name_de" : "Meditie",
+        "name_en" : "Meditite",
+        "name_es" : "Méditikka",
+        "name_jp" : "アサナン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "308",
+        "name_de" : "Meditalis",
+        "name_en" : "Medicham",
+        "name_es" : "Charmina",
+        "name_jp" : "チャーレム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "309",
+        "name_de" : "Frizelbliz",
+        "name_en" : "Electrike",
+        "name_es" : "Dynavolt",
+        "name_jp" : "ラクライ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "310",
+        "name_de" : "Voltenso",
+        "name_en" : "Manectric",
+        "name_es" : "Élecsprint",
+        "name_jp" : "ライボルト",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "311",
+        "name_de" : "Plusle",
+        "name_en" : "Plusle",
+        "name_es" : "Posipi",
+        "name_jp" : "プラスル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "312",
+        "name_de" : "Minun",
+        "name_en" : "Minun",
+        "name_es" : "Négapi",
+        "name_jp" : "マイナン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "313",
+        "name_de" : "Volbeat",
+        "name_en" : "Volbeat",
+        "name_es" : "Muciole",
+        "name_jp" : "バルビート",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "314",
+        "name_de" : "Illumise",
+        "name_en" : "Illumise",
+        "name_es" : "Lumivole",
+        "name_jp" : "イルミーゼ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "315",
+        "name_de" : "Roselia",
+        "name_en" : "Roselia",
+        "name_es" : "Rosélia",
+        "name_jp" : "ロゼリア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "316",
+        "name_de" : "Schluppuck",
+        "name_en" : "Gulpin",
+        "name_es" : "Gloupti",
+        "name_jp" : "ゴクリン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "317",
+        "name_de" : "Schlukwech",
+        "name_en" : "Swalot",
+        "name_es" : "Avaltout",
+        "name_jp" : "マルノーム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "318",
+        "name_de" : "Kanivanha",
+        "name_en" : "Carvanha",
+        "name_es" : "Carvanha",
+        "name_jp" : "キバニア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "319",
+        "name_de" : "Tohaido",
+        "name_en" : "Sharpedo",
+        "name_es" : "Sharpedo",
+        "name_jp" : "サメハダー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "320",
+        "name_de" : "Wailmer",
+        "name_en" : "Wailmer",
+        "name_es" : "Wailmer",
+        "name_jp" : "ホエルコ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "321",
+        "name_de" : "Wailord",
+        "name_en" : "Wailord",
+        "name_es" : "Wailord",
+        "name_jp" : "ホエルオー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "322",
+        "name_de" : "Camaub",
+        "name_en" : "Numel",
+        "name_es" : "Chamallot",
+        "name_jp" : "ドンメル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "323",
+        "name_de" : "Camerupt",
+        "name_en" : "Camerupt",
+        "name_es" : "Camérupt",
+        "name_jp" : "バクーダ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "324",
+        "name_de" : "Qurtel",
+        "name_en" : "Torkoal",
+        "name_es" : "Chartor",
+        "name_jp" : "コータス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "325",
+        "name_de" : "Spoink",
+        "name_en" : "Spoink",
+        "name_es" : "Spoink",
+        "name_jp" : "バネブー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "326",
+        "name_de" : "Groink",
+        "name_en" : "Grumpig",
+        "name_es" : "Groret",
+        "name_jp" : "ブーピッグ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "327",
+        "name_de" : "Pandir",
+        "name_en" : "Spinda",
+        "name_es" : "Spinda",
+        "name_jp" : "パッチール",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "328",
+        "name_de" : "Knacklion",
+        "name_en" : "Trapinch",
+        "name_es" : "Kraknoix",
+        "name_jp" : "ナックラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "329",
+        "name_de" : "Vibrava",
+        "name_en" : "Vibrava",
+        "name_es" : "Vibraninf",
+        "name_jp" : "ビブラーバ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "330",
+        "name_de" : "Libelldra",
+        "name_en" : "Flygon",
+        "name_es" : "Libégon",
+        "name_jp" : "フライゴン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "331",
+        "name_de" : "Tuska",
+        "name_en" : "Cacnea",
+        "name_es" : "Cacnea",
+        "name_jp" : "サボネア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "332",
+        "name_de" : "Noktuska",
+        "name_en" : "Cacturne",
+        "name_es" : "Cacturne",
+        "name_jp" : "ノクタス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "333",
+        "name_de" : "Wablu",
+        "name_en" : "Swablu",
+        "name_es" : "Tylton",
+        "name_jp" : "チルット",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "334",
+        "name_de" : "Altaria",
+        "name_en" : "Altaria",
+        "name_es" : "Altaria",
+        "name_jp" : "チルタリス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "335",
+        "name_de" : "Sengo",
+        "name_en" : "Zangoose",
+        "name_es" : "Mangriff",
+        "name_jp" : "ザングース",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "336",
+        "name_de" : "Vipitis",
+        "name_en" : "Seviper",
+        "name_es" : "Séviper",
+        "name_jp" : "ハブネーク",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "337",
+        "name_de" : "Lunastein",
+        "name_en" : "Lunatone",
+        "name_es" : "Séléroc",
+        "name_jp" : "ルナトーン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "338",
+        "name_de" : "Sonnfel",
+        "name_en" : "Solrock",
+        "name_es" : "Solaroc",
+        "name_jp" : "ソルロック",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "339",
+        "name_de" : "Schmerbe",
+        "name_en" : "Barboach",
+        "name_es" : "Barloche",
+        "name_jp" : "ドジョッチ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "340",
+        "name_de" : "Welsar",
+        "name_en" : "Whiscash",
+        "name_es" : "Barbicha",
+        "name_jp" : "ナマズン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "341",
+        "name_de" : "Krebscorps",
+        "name_en" : "Corphish",
+        "name_es" : "Écrapince",
+        "name_jp" : "ヘイガニ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "342",
+        "name_de" : "Krebutack",
+        "name_en" : "Crawdaunt",
+        "name_es" : "Colhomard",
+        "name_jp" : "シザリガー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "343",
+        "name_de" : "Puppance",
+        "name_en" : "Baltoy",
+        "name_es" : "Balbuto",
+        "name_jp" : "ヤジロン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "344",
+        "name_de" : "Lepumentas",
+        "name_en" : "Claydol",
+        "name_es" : "Kaorine",
+        "name_jp" : "ネンドール",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "345",
+        "name_de" : "Liliep",
+        "name_en" : "Lileep",
+        "name_es" : "Lilia",
+        "name_jp" : "リリーラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "346",
+        "name_de" : "Wielie",
+        "name_en" : "Cradily",
+        "name_es" : "Vacilys",
+        "name_jp" : "ユレイドル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "347",
+        "name_de" : "Anorith",
+        "name_en" : "Anorith",
+        "name_es" : "Anorith",
+        "name_jp" : "アノプス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "348",
+        "name_de" : "Armaldo",
+        "name_en" : "Armaldo",
+        "name_es" : "Armaldo",
+        "name_jp" : "アーマルド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "349",
+        "name_de" : "Barschwa",
+        "name_en" : "Feebas",
+        "name_es" : "Barpau",
+        "name_jp" : "ヒンバス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "350",
+        "name_de" : "Milotic",
+        "name_en" : "Milotic",
+        "name_es" : "Milobellus",
+        "name_jp" : "ミロカロス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "351",
+        "name_de" : "Formeo",
+        "name_en" : "Castform",
+        "name_es" : "Morphéo",
+        "name_jp" : "ポワルン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "352",
+        "name_de" : "Kecleon",
+        "name_en" : "Kecleon",
+        "name_es" : "Kecleon",
+        "name_jp" : "カクレオン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "353",
+        "name_de" : "Shuppet",
+        "name_en" : "Shuppet",
+        "name_es" : "Polichombr",
+        "name_jp" : "カゲボウズ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "354",
+        "name_de" : "Banette",
+        "name_en" : "Banette",
+        "name_es" : "Branette",
+        "name_jp" : "ジュペッタ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "355",
+        "name_de" : "Zwirrlicht",
+        "name_en" : "Duskull",
+        "name_es" : "Skelénox",
+        "name_jp" : "ヨマワル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "356",
+        "name_de" : "Zwirrklop",
+        "name_en" : "Dusclops",
+        "name_es" : "Téraclope",
+        "name_jp" : "サマヨール",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "357",
+        "name_de" : "Tropius",
+        "name_en" : "Tropius",
+        "name_es" : "Tropius",
+        "name_jp" : "トロピウス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "358",
+        "name_de" : "Palimpalim",
+        "name_en" : "Chimecho",
+        "name_es" : "Éoko",
+        "name_jp" : "チリーン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "359",
+        "name_de" : "Absol",
+        "name_en" : "Absol",
+        "name_es" : "Absol",
+        "name_jp" : "アブソル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "360",
+        "name_de" : "Isso",
+        "name_en" : "Wynaut",
+        "name_es" : "Okéoké",
+        "name_jp" : "ソーナノ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "361",
+        "name_de" : "Schneppke",
+        "name_en" : "Snorunt",
+        "name_es" : "Stalgamin",
+        "name_jp" : "ユキワラシ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "362",
+        "name_de" : "Firnontor",
+        "name_en" : "Glalie",
+        "name_es" : "Oniglali",
+        "name_jp" : "オニゴーリ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "363",
+        "name_de" : "Seemops",
+        "name_en" : "Spheal",
+        "name_es" : "Obalie",
+        "name_jp" : "タマザラシ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "364",
+        "name_de" : "Seejong",
+        "name_en" : "Sealeo",
+        "name_es" : "Phogleur",
+        "name_jp" : "トドグラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "365",
+        "name_de" : "Walraisa",
+        "name_en" : "Walrein",
+        "name_es" : "Kaimorse",
+        "name_jp" : "トドゼルガ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "366",
+        "name_de" : "Perlu",
+        "name_en" : "Clamperl",
+        "name_es" : "Coquiperl",
+        "name_jp" : "パールル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "367",
+        "name_de" : "Aalabyss",
+        "name_en" : "Huntail",
+        "name_es" : "Serpang",
+        "name_jp" : "ハンテール",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "368",
+        "name_de" : "Saganabyss",
+        "name_en" : "Gorebyss",
+        "name_es" : "Rosabyss",
+        "name_jp" : "サクラビス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "369",
+        "name_de" : "Relicanth",
+        "name_en" : "Relicanth",
+        "name_es" : "Relicanth",
+        "name_jp" : "ジーランス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "370",
+        "name_de" : "Liebiskus",
+        "name_en" : "Luvdisc",
+        "name_es" : "Lovdisc",
+        "name_jp" : "ラブカス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "371",
+        "name_de" : "Kindwurm",
+        "name_en" : "Bagon",
+        "name_es" : "Draby",
+        "name_jp" : "タツベイ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "372",
+        "name_de" : "Draschel",
+        "name_en" : "Shelgon",
+        "name_es" : "Drackhaus",
+        "name_jp" : "コモルー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "373",
+        "name_de" : "Brutalanda",
+        "name_en" : "Salamence",
+        "name_es" : "Drattak",
+        "name_jp" : "ボーマンダ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "374",
+        "name_de" : "Tanhel",
+        "name_en" : "Beldum",
+        "name_es" : "Terhal",
+        "name_jp" : "ダンバル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "375",
+        "name_de" : "Metang",
+        "name_en" : "Metang",
+        "name_es" : "Métang",
+        "name_jp" : "メタング",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "376",
+        "name_de" : "Metagross",
+        "name_en" : "Metagross",
+        "name_es" : "Métalosse",
+        "name_jp" : "メタグロス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "377",
+        "name_de" : "Regirock",
+        "name_en" : "Regirock",
+        "name_es" : "Regirock",
+        "name_jp" : "レジロック",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "378",
+        "name_de" : "Regice",
+        "name_en" : "Regice",
+        "name_es" : "Regice",
+        "name_jp" : "レジアイス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "379",
+        "name_de" : "Registeel",
+        "name_en" : "Registeel",
+        "name_es" : "Registeel",
+        "name_jp" : "レジスチル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "380",
+        "name_de" : "Latias",
+        "name_en" : "Latias",
+        "name_es" : "Latias",
+        "name_jp" : "ラティアス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "381",
+        "name_de" : "Latios",
+        "name_en" : "Latios",
+        "name_es" : "Latios",
+        "name_jp" : "ラティオス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "382",
+        "name_de" : "Kyogre",
+        "name_en" : "Kyogre",
+        "name_es" : "Kyogre",
+        "name_jp" : "カイオーガ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "383",
+        "name_de" : "Groudon",
+        "name_en" : "Groudon",
+        "name_es" : "Groudon",
+        "name_jp" : "グラードン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "384",
+        "name_de" : "Rayquaza",
+        "name_en" : "Rayquaza",
+        "name_es" : "Rayquaza",
+        "name_jp" : "レックウザ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "385",
+        "name_de" : "Jirachi",
+        "name_en" : "Jirachi",
+        "name_es" : "Jirachi",
+        "name_jp" : "ジラーチ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "386",
+        "name_de" : "Deoxys",
+        "name_en" : "Deoxys",
+        "name_es" : "Deoxys",
+        "name_jp" : "デオキシス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "387",
+        "name_de" : "Chelast",
+        "name_en" : "Turtwig",
+        "name_es" : "Tortipouss",
+        "name_jp" : "ナエトル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "388",
+        "name_de" : "Chelcarain",
+        "name_en" : "Grotle",
+        "name_es" : "Boskara",
+        "name_jp" : "ハヤシガメ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "389",
+        "name_de" : "Chelterrar",
+        "name_en" : "Torterra",
+        "name_es" : "Torterra",
+        "name_jp" : "ドダイトス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "390",
+        "name_de" : "Panflam",
+        "name_en" : "Chimchar",
+        "name_es" : "Ouisticram",
+        "name_jp" : "ヒコザル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "391",
+        "name_de" : "Panpyro",
+        "name_en" : "Monferno",
+        "name_es" : "Chimpenfeu",
+        "name_jp" : "モウカザル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "392",
+        "name_de" : "Panferno",
+        "name_en" : "Infernape",
+        "name_es" : "Simiabraz",
+        "name_jp" : "ゴウカザル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "393",
+        "name_de" : "Plinfa",
+        "name_en" : "Piplup",
+        "name_es" : "Tiplouf",
+        "name_jp" : "ポッチャマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "394",
+        "name_de" : "Pliprin",
+        "name_en" : "Prinplup",
+        "name_es" : "Prinplouf",
+        "name_jp" : "ポッタイシ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "395",
+        "name_de" : "Impoleon",
+        "name_en" : "Empoleon",
+        "name_es" : "Pingoléon",
+        "name_jp" : "エンペルト",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "396",
+        "name_de" : "Staralili",
+        "name_en" : "Starly",
+        "name_es" : "Étourmi",
+        "name_jp" : "ムックル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "397",
+        "name_de" : "Staravia",
+        "name_en" : "Staravia",
+        "name_es" : "Étourvol",
+        "name_jp" : "ムクバード",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "398",
+        "name_de" : "Staraptor",
+        "name_en" : "Staraptor",
+        "name_es" : "Étouraptor",
+        "name_jp" : "ムクホーク",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "399",
+        "name_de" : "Bidiza",
+        "name_en" : "Bidoof",
+        "name_es" : "Keunotor",
+        "name_jp" : "ビッパ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "400",
+        "name_de" : "Bidifas",
+        "name_en" : "Bibarel",
+        "name_es" : "Castorno",
+        "name_jp" : "ビーダル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "401",
+        "name_de" : "Zirpurze",
+        "name_en" : "Kricketot",
+        "name_es" : "Crikzik",
+        "name_jp" : "コロボーシ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "402",
+        "name_de" : "Zirpeise",
+        "name_en" : "Kricketune",
+        "name_es" : "Mélokrik",
+        "name_jp" : "コロトック",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "403",
+        "name_de" : "Sheinux",
+        "name_en" : "Shinx",
+        "name_es" : "Lixy",
+        "name_jp" : "コリンク",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "404",
+        "name_de" : "Luxio",
+        "name_en" : "Luxio",
+        "name_es" : "Luxio",
+        "name_jp" : "ルクシオ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "405",
+        "name_de" : "Luxtra",
+        "name_en" : "Luxray",
+        "name_es" : "Luxray",
+        "name_jp" : "レントラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "406",
+        "name_de" : "Knospi",
+        "name_en" : "Budew",
+        "name_es" : "Rozbouton",
+        "name_jp" : "スボミー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "407",
+        "name_de" : "Roserade",
+        "name_en" : "Roserade",
+        "name_es" : "Roserade",
+        "name_jp" : "ロズレイド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "408",
+        "name_de" : "Koknodon",
+        "name_en" : "Cranidos",
+        "name_es" : "Kranidos",
+        "name_jp" : "ズガイドス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "409",
+        "name_de" : "Rameidon",
+        "name_en" : "Rampardos",
+        "name_es" : "Charkos",
+        "name_jp" : "ラムパルド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "410",
+        "name_de" : "Schilterus",
+        "name_en" : "Shieldon",
+        "name_es" : "Dinoclier",
+        "name_jp" : "タテトプス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "411",
+        "name_de" : "Bollterus",
+        "name_en" : "Bastiodon",
+        "name_es" : "Bastiodon",
+        "name_jp" : "トリデプス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "412",
+        "name_de" : "Burmy",
+        "name_en" : "Burmy",
+        "name_es" : "Cheniti",
+        "name_jp" : "ミノムッチ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "413",
+        "name_de" : "Burmadame",
+        "name_en" : "Wormadam",
+        "name_es" : "Cheniselle",
+        "name_jp" : "ミノマダム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "414",
+        "name_de" : "Moterpel",
+        "name_en" : "Mothim",
+        "name_es" : "Papilord",
+        "name_jp" : "ガーメイル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "415",
+        "name_de" : "Wadribie",
+        "name_en" : "Combee",
+        "name_es" : "Apitrini",
+        "name_jp" : "ミツハニー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "416",
+        "name_de" : "Honweisel",
+        "name_en" : "Vespiquen",
+        "name_es" : "Apireine",
+        "name_jp" : "ビークイン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "417",
+        "name_de" : "Pachirisu",
+        "name_en" : "Pachirisu",
+        "name_es" : "Pachirisu",
+        "name_jp" : "パチリス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "418",
+        "name_de" : "Bamelin",
+        "name_en" : "Buizel",
+        "name_es" : "Mustébouée",
+        "name_jp" : "ブイゼル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "419",
+        "name_de" : "Bojelin",
+        "name_en" : "Floatzel",
+        "name_es" : "Mustéflott",
+        "name_jp" : "フローゼル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "420",
+        "name_de" : "Kikugi",
+        "name_en" : "Cherubi",
+        "name_es" : "Ceribou",
+        "name_jp" : "チェリンボ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "421",
+        "name_de" : "Kinoso",
+        "name_en" : "Cherrim",
+        "name_es" : "Ceriflor",
+        "name_jp" : "チェリム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "422",
+        "name_de" : "Schalellos",
+        "name_en" : "Shellos",
+        "name_es" : "Sancoki",
+        "name_jp" : "カラナクシ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "423",
+        "name_de" : "Gastrodon",
+        "name_en" : "Gastrodon",
+        "name_es" : "Tritosor",
+        "name_jp" : "トリトドン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "424",
+        "name_de" : "Ambidiffel",
+        "name_en" : "Ambipom",
+        "name_es" : "Capidextre",
+        "name_jp" : "エテボース",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "425",
+        "name_de" : "Driftlon",
+        "name_en" : "Drifloon",
+        "name_es" : "Baudrive",
+        "name_jp" : "フワンテ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "426",
+        "name_de" : "Drifzepeli",
+        "name_en" : "Drifblim",
+        "name_es" : "Grodrive",
+        "name_jp" : "フワライド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "427",
+        "name_de" : "Haspiror",
+        "name_en" : "Buneary",
+        "name_es" : "Laporeille",
+        "name_jp" : "ミミロル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "428",
+        "name_de" : "Schlapor",
+        "name_en" : "Lopunny",
+        "name_es" : "Lockpin",
+        "name_jp" : "ミミロップ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "429",
+        "name_de" : "Traunmagil",
+        "name_en" : "Mismagius",
+        "name_es" : "Magirêve",
+        "name_jp" : "ムウマージ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "430",
+        "name_de" : "Kramshef",
+        "name_en" : "Honchkrow",
+        "name_es" : "Corboss",
+        "name_jp" : "ドンカラス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "431",
+        "name_de" : "Charmian",
+        "name_en" : "Glameow",
+        "name_es" : "Chaglam",
+        "name_jp" : "ニャルマー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "432",
+        "name_de" : "Shnurgarst",
+        "name_en" : "Purugly",
+        "name_es" : "Chaffreux",
+        "name_jp" : "ブニャット",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "433",
+        "name_de" : "Klingplim",
+        "name_en" : "Chingling",
+        "name_es" : "Korillon",
+        "name_jp" : "リーシャン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "434",
+        "name_de" : "Skunkapuh",
+        "name_en" : "Stunky",
+        "name_es" : "Moufouette",
+        "name_jp" : "スカンプー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "435",
+        "name_de" : "Skuntank",
+        "name_en" : "Skuntank",
+        "name_es" : "Moufflair",
+        "name_jp" : "スカタンク",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "436",
+        "name_de" : "Bronzel",
+        "name_en" : "Bronzor",
+        "name_es" : "Archéomire",
+        "name_jp" : "ドーミラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "437",
+        "name_de" : "Bronzong",
+        "name_en" : "Bronzong",
+        "name_es" : "Archéodong",
+        "name_jp" : "ドータクン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "438",
+        "name_de" : "Mobai",
+        "name_en" : "Bonsly",
+        "name_es" : "Manzaï",
+        "name_jp" : "ウソハチ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "439",
+        "name_de" : "Pantimimi",
+        "name_en" : "Mime Jr.",
+        "name_es" : "Mime Jr.",
+        "name_jp" : "マネネ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "440",
+        "name_de" : "Wonneira",
+        "name_en" : "Happiny",
+        "name_es" : "Ptiravi",
+        "name_jp" : "ピンプク",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "441",
+        "name_de" : "Plaudagei",
+        "name_en" : "Chatot",
+        "name_es" : "Pijako",
+        "name_jp" : "ペラップ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "442",
+        "name_de" : "Kryppuk",
+        "name_en" : "Spiritomb",
+        "name_es" : "Spiritomb",
+        "name_jp" : "ミカルゲ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "443",
+        "name_de" : "Kaumalat",
+        "name_en" : "Gible",
+        "name_es" : "Griknot",
+        "name_jp" : "フカマル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "444",
+        "name_de" : "Knarksel",
+        "name_en" : "Gabite",
+        "name_es" : "Carmache",
+        "name_jp" : "ガバイト",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "445",
+        "name_de" : "Knakrack",
+        "name_en" : "Garchomp",
+        "name_es" : "Carchacrok",
+        "name_jp" : "ガブリアス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "446",
+        "name_de" : "Mampfaxo",
+        "name_en" : "Munchlax",
+        "name_es" : "Goinfrex",
+        "name_jp" : "ゴンベ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "447",
+        "name_de" : "Riolu",
+        "name_en" : "Riolu",
+        "name_es" : "Riolu",
+        "name_jp" : "リオル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "448",
+        "name_de" : "Lucario",
+        "name_en" : "Lucario",
+        "name_es" : "Lucario",
+        "name_jp" : "ルカリオ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "449",
+        "name_de" : "Hippopotas",
+        "name_en" : "Hippopotas",
+        "name_es" : "Hippopotas",
+        "name_jp" : "ヒポポタス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "450",
+        "name_de" : "Hippoterus",
+        "name_en" : "Hippowdon",
+        "name_es" : "Hippodocus",
+        "name_jp" : "カバルドン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "451",
+        "name_de" : "Pionskora",
+        "name_en" : "Skorupi",
+        "name_es" : "Rapion",
+        "name_jp" : "スコルピ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "452",
+        "name_de" : "Piondragi",
+        "name_en" : "Drapion",
+        "name_es" : "Drascore",
+        "name_jp" : "ドラピオン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "453",
+        "name_de" : "Glibunkel",
+        "name_en" : "Croagunk",
+        "name_es" : "Cradopaud",
+        "name_jp" : "グレッグル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "454",
+        "name_de" : "Toxiquak",
+        "name_en" : "Toxicroak",
+        "name_es" : "Coatox",
+        "name_jp" : "ドクロッグ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "455",
+        "name_de" : "Venuflibis",
+        "name_en" : "Carnivine",
+        "name_es" : "Vortente",
+        "name_jp" : "マスキッパ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "456",
+        "name_de" : "Finneon",
+        "name_en" : "Finneon",
+        "name_es" : "Écayon",
+        "name_jp" : "ケイコウオ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "457",
+        "name_de" : "Lumineon",
+        "name_en" : "Lumineon",
+        "name_es" : "Luminéon",
+        "name_jp" : "ネオラント",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "458",
+        "name_de" : "Mantirps",
+        "name_en" : "Mantyke",
+        "name_es" : "Babimanta",
+        "name_jp" : "タマンタ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "459",
+        "name_de" : "Shnebedeck",
+        "name_en" : "Snover",
+        "name_es" : "Blizzi",
+        "name_jp" : "ユキカブリ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "460",
+        "name_de" : "Rexblisar",
+        "name_en" : "Abomasnow",
+        "name_es" : "Blizzaroi",
+        "name_jp" : "ユキノオー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "461",
+        "name_de" : "Snibunna",
+        "name_en" : "Weavile",
+        "name_es" : "Dimoret",
+        "name_jp" : "マニューラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "462",
+        "name_de" : "Magnezone",
+        "name_en" : "Magnezone",
+        "name_es" : "Magnézone",
+        "name_jp" : "ジバコイル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "463",
+        "name_de" : "Schlurplek",
+        "name_en" : "Lickilicky",
+        "name_es" : "Coudlangue",
+        "name_jp" : "ベロベルト",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "464",
+        "name_de" : "Rihornior",
+        "name_en" : "Rhyperior",
+        "name_es" : "Rhinastoc",
+        "name_jp" : "ドサイドン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "465",
+        "name_de" : "Tangoloss",
+        "name_en" : "Tangrowth",
+        "name_es" : "Bouldeneu",
+        "name_jp" : "モジャンボ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "466",
+        "name_de" : "Elevoltek",
+        "name_en" : "Electivire",
+        "name_es" : "Élekable",
+        "name_jp" : "エレキブル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "467",
+        "name_de" : "Magbrant",
+        "name_en" : "Magmortar",
+        "name_es" : "Maganon",
+        "name_jp" : "ブーバーン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "468",
+        "name_de" : "Togekiss",
+        "name_en" : "Togekiss",
+        "name_es" : "Togekiss",
+        "name_jp" : "トゲキッス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "469",
+        "name_de" : "Yanmega",
+        "name_en" : "Yanmega",
+        "name_es" : "Yanmega",
+        "name_jp" : "メガヤンマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "470",
+        "name_de" : "Folipurba",
+        "name_en" : "Leafeon",
+        "name_es" : "Phyllali",
+        "name_jp" : "リーフィア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "471",
+        "name_de" : "Glaziola",
+        "name_en" : "Glaceon",
+        "name_es" : "Givrali",
+        "name_jp" : "グレイシア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "472",
+        "name_de" : "Skorgro",
+        "name_en" : "Gliscor",
+        "name_es" : "Scorvol",
+        "name_jp" : "グライオン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "473",
+        "name_de" : "Mamutel",
+        "name_en" : "Mamoswine",
+        "name_es" : "Mammochon",
+        "name_jp" : "マンムー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "474",
+        "name_de" : "Porygon-Z",
+        "name_en" : "Porygon-Z",
+        "name_es" : "Porygon-Z",
+        "name_jp" : "ポリゴンＺ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "475",
+        "name_de" : "Galagladi",
+        "name_en" : "Gallade",
+        "name_es" : "Gallame",
+        "name_jp" : "エルレイド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "476",
+        "name_de" : "Voluminas",
+        "name_en" : "Probopass",
+        "name_es" : "Tarinorme",
+        "name_jp" : "ダイノーズ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "477",
+        "name_de" : "Zwirrfinst",
+        "name_en" : "Dusknoir",
+        "name_es" : "Noctunoir",
+        "name_jp" : "ヨノワール",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "478",
+        "name_de" : "Frosdedje",
+        "name_en" : "Froslass",
+        "name_es" : "Momartik",
+        "name_jp" : "ユキメノコ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "479",
+        "name_de" : "Rotom",
+        "name_en" : "Rotom",
+        "name_es" : "Motisma",
+        "name_jp" : "ロトム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "480",
+        "name_de" : "Selfe",
+        "name_en" : "Uxie",
+        "name_es" : "Créhelf",
+        "name_jp" : "ユクシー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "481",
+        "name_de" : "Vesprit",
+        "name_en" : "Mesprit",
+        "name_es" : "Créfollet",
+        "name_jp" : "エムリット",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "482",
+        "name_de" : "Tobutz",
+        "name_en" : "Azelf",
+        "name_es" : "Créfadet",
+        "name_jp" : "アグノム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "483",
+        "name_de" : "Dialga",
+        "name_en" : "Dialga",
+        "name_es" : "Dialga",
+        "name_jp" : "ディアルガ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "484",
+        "name_de" : "Palkia",
+        "name_en" : "Palkia",
+        "name_es" : "Palkia",
+        "name_jp" : "パルキア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "485",
+        "name_de" : "Heatran",
+        "name_en" : "Heatran",
+        "name_es" : "Heatran",
+        "name_jp" : "ヒードラン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "486",
+        "name_de" : "Regigigas",
+        "name_en" : "Regigigas",
+        "name_es" : "Regigigas",
+        "name_jp" : "レジギガス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "487",
+        "name_de" : "Giratina",
+        "name_en" : "Giratina",
+        "name_es" : "Giratina",
+        "name_jp" : "ギラティナ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "488",
+        "name_de" : "Cresselia",
+        "name_en" : "Cresselia",
+        "name_es" : "Cresselia",
+        "name_jp" : "クレセリア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "489",
+        "name_de" : "Phione",
+        "name_en" : "Phione",
+        "name_es" : "Phione",
+        "name_jp" : "フィオネ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "490",
+        "name_de" : "Manaphy",
+        "name_en" : "Manaphy",
+        "name_es" : "Manaphy",
+        "name_jp" : "マナフィ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "491",
+        "name_de" : "Darkrai",
+        "name_en" : "Darkrai",
+        "name_es" : "Darkrai",
+        "name_jp" : "ダークライ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "492",
+        "name_de" : "Shaymin",
+        "name_en" : "Shaymin",
+        "name_es" : "Shaymin",
+        "name_jp" : "シェイミ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "493",
+        "name_de" : "Arceus",
+        "name_en" : "Arceus",
+        "name_es" : "Arceus",
+        "name_jp" : "アルセウス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "494",
+        "name_de" : "Victini",
+        "name_en" : "Victini",
+        "name_es" : "Victini",
+        "name_jp" : "ビクティニ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "495",
+        "name_de" : "Serpifeu",
+        "name_en" : "Snivy",
+        "name_es" : "Vipélierre",
+        "name_jp" : "ツタージャ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "496",
+        "name_de" : "Efoserp",
+        "name_en" : "Servine",
+        "name_es" : "Lianaja",
+        "name_jp" : "ジャノビー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "497",
+        "name_de" : "Serpiroyal",
+        "name_en" : "Serperior",
+        "name_es" : "Majaspic",
+        "name_jp" : "ジャローダ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "498",
+        "name_de" : "Floink",
+        "name_en" : "Tepig",
+        "name_es" : "Gruikui",
+        "name_jp" : "ポカブ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "499",
+        "name_de" : "Ferkokel",
+        "name_en" : "Pignite",
+        "name_es" : "Grotichon",
+        "name_jp" : "チャオブー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "500",
+        "name_de" : "Flambirex",
+        "name_en" : "Emboar",
+        "name_es" : "Roitiflam",
+        "name_jp" : "エンブオー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "501",
+        "name_de" : "Ottaro",
+        "name_en" : "Oshawott",
+        "name_es" : "Moustillon",
+        "name_jp" : "ミジュマル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "502",
+        "name_de" : "Zwottronin",
+        "name_en" : "Dewott",
+        "name_es" : "Mateloutre",
+        "name_jp" : "フタチマル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "503",
+        "name_de" : "Admurai",
+        "name_en" : "Samurott",
+        "name_es" : "Clamiral",
+        "name_jp" : "ダイケンキ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "504",
+        "name_de" : "Nagelotz",
+        "name_en" : "Patrat",
+        "name_es" : "Ratentif",
+        "name_jp" : "ミネズミ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "505",
+        "name_de" : "Kukmarda",
+        "name_en" : "Watchog",
+        "name_es" : "Miradar",
+        "name_jp" : "ミルホッグ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "506",
+        "name_de" : "Yorkleff",
+        "name_en" : "Lillipup",
+        "name_es" : "Ponchiot",
+        "name_jp" : "ヨーテリー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "507",
+        "name_de" : "Terribark",
+        "name_en" : "Herdier",
+        "name_es" : "Ponchien",
+        "name_jp" : "ハーデリア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "508",
+        "name_de" : "Bissbark",
+        "name_en" : "Stoutland",
+        "name_es" : "Mastouffe",
+        "name_jp" : "ムーランド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "509",
+        "name_de" : "Felilou",
+        "name_en" : "Purrloin",
+        "name_es" : "Chacripan",
+        "name_jp" : "チョロネコ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "510",
+        "name_de" : "Kleoparda",
+        "name_en" : "Liepard",
+        "name_es" : "Léopardus",
+        "name_jp" : "レパルダス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "511",
+        "name_de" : "Vegimak",
+        "name_en" : "Pansage",
+        "name_es" : "Feuillajou",
+        "name_jp" : "ヤナップ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "512",
+        "name_de" : "Vegichita",
+        "name_en" : "Simisage",
+        "name_es" : "Feuiloutan",
+        "name_jp" : "ヤナッキー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "513",
+        "name_de" : "Grillmak",
+        "name_en" : "Pansear",
+        "name_es" : "Flamajou",
+        "name_jp" : "バオップ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "514",
+        "name_de" : "Grillchita",
+        "name_en" : "Simisear",
+        "name_es" : "Flamoutan",
+        "name_jp" : "バオッキー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "515",
+        "name_de" : "Sodamak",
+        "name_en" : "Panpour",
+        "name_es" : "Flotajou",
+        "name_jp" : "ヒヤップ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "516",
+        "name_de" : "Sodachita",
+        "name_en" : "Simipour",
+        "name_es" : "Flotoutan",
+        "name_jp" : "ヒヤッキー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "517",
+        "name_de" : "Somniam",
+        "name_en" : "Munna",
+        "name_es" : "Munna",
+        "name_jp" : "ムンナ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "518",
+        "name_de" : "Somnivora",
+        "name_en" : "Musharna",
+        "name_es" : "Mushana",
+        "name_jp" : "ムシャーナ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "519",
+        "name_de" : "Dusselgurr",
+        "name_en" : "Pidove",
+        "name_es" : "Poichigeon",
+        "name_jp" : "マメパト",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "520",
+        "name_de" : "Navitaub",
+        "name_en" : "Tranquill",
+        "name_es" : "Colombeau",
+        "name_jp" : "ハトーボー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "521",
+        "name_de" : "Fasasnob",
+        "name_en" : "Unfezant",
+        "name_es" : "Déflaisan",
+        "name_jp" : "ケンホロウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "522",
+        "name_de" : "Elezeba",
+        "name_en" : "Blitzle",
+        "name_es" : "Zébibron",
+        "name_jp" : "シママ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "523",
+        "name_de" : "Zebritz",
+        "name_en" : "Zebstrika",
+        "name_es" : "Zéblitz",
+        "name_jp" : "ゼブライカ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "524",
+        "name_de" : "Kiesling",
+        "name_en" : "Roggenrola",
+        "name_es" : "Nodulithe",
+        "name_jp" : "ダンゴロ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "525",
+        "name_de" : "Sedimantur",
+        "name_en" : "Boldore",
+        "name_es" : "Géolithe",
+        "name_jp" : "ガントル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "526",
+        "name_de" : "Brockoloss",
+        "name_en" : "Gigalith",
+        "name_es" : "Gigalithe",
+        "name_jp" : "ギガイアス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "527",
+        "name_de" : "Fleknoil",
+        "name_en" : "Woobat",
+        "name_es" : "Chovsourir",
+        "name_jp" : "コロモリ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "528",
+        "name_de" : "Fletiamo",
+        "name_en" : "Swoobat",
+        "name_es" : "Rhinolove",
+        "name_jp" : "ココロモリ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "529",
+        "name_de" : "Rotomurf",
+        "name_en" : "Drilbur",
+        "name_es" : "Rototaupe",
+        "name_jp" : "モグリュー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "530",
+        "name_de" : "Stalobor",
+        "name_en" : "Excadrill",
+        "name_es" : "Minotaupe",
+        "name_jp" : "ドリュウズ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "531",
+        "name_de" : "Ohrdoch",
+        "name_en" : "Audino",
+        "name_es" : "Nanméouïe",
+        "name_jp" : "タブンネ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "532",
+        "name_de" : "Praktibalk",
+        "name_en" : "Timburr",
+        "name_es" : "Charpenti",
+        "name_jp" : "ドッコラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "533",
+        "name_de" : "Strepoli",
+        "name_en" : "Gurdurr",
+        "name_es" : "Ouvrifier",
+        "name_jp" : "ドテッコツ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "534",
+        "name_de" : "Meistagrif",
+        "name_en" : "Conkeldurr",
+        "name_es" : "Bétochef",
+        "name_jp" : "ローブシン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "535",
+        "name_de" : "Schallquap",
+        "name_en" : "Tympole",
+        "name_es" : "Tritonde",
+        "name_jp" : "オタマロ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "536",
+        "name_de" : "Mebrana",
+        "name_en" : "Palpitoad",
+        "name_es" : "Batracné",
+        "name_jp" : "ガマガル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "537",
+        "name_de" : "Branawarz",
+        "name_en" : "Seismitoad",
+        "name_es" : "Crapustule",
+        "name_jp" : "ガマゲロゲ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "538",
+        "name_de" : "Jiutesto",
+        "name_en" : "Throh",
+        "name_es" : "Judokrak",
+        "name_jp" : "ナゲキ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "539",
+        "name_de" : "Karadonis",
+        "name_en" : "Sawk",
+        "name_es" : "Karaclée",
+        "name_jp" : "ダゲキ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "540",
+        "name_de" : "Strawickl",
+        "name_en" : "Sewaddle",
+        "name_es" : "Larveyette",
+        "name_jp" : "クルミル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "541",
+        "name_de" : "Folikon",
+        "name_en" : "Swadloon",
+        "name_es" : "Couverdure",
+        "name_jp" : "クルマユ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "542",
+        "name_de" : "Matrifol",
+        "name_en" : "Leavanny",
+        "name_es" : "Manternel",
+        "name_jp" : "ハハコモリ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "543",
+        "name_de" : "Toxiped",
+        "name_en" : "Venipede",
+        "name_es" : "Venipatte",
+        "name_jp" : "フシデ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "544",
+        "name_de" : "Rollum",
+        "name_en" : "Whirlipede",
+        "name_es" : "Scobolide",
+        "name_jp" : "ホイーガ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "545",
+        "name_de" : "Cerapendra",
+        "name_en" : "Scolipede",
+        "name_es" : "Brutapode",
+        "name_jp" : "ペンドラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "546",
+        "name_de" : "Waumboll",
+        "name_en" : "Cottonee",
+        "name_es" : "Doudouvet",
+        "name_jp" : "モンメン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "547",
+        "name_de" : "Elfun",
+        "name_en" : "Whimsicott",
+        "name_es" : "Farfaduvet",
+        "name_jp" : "エルフーン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "548",
+        "name_de" : "Lilminip",
+        "name_en" : "Petilil",
+        "name_es" : "Chlorobule",
+        "name_jp" : "チュリネ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "549",
+        "name_de" : "Dressella",
+        "name_en" : "Lilligant",
+        "name_es" : "Fragilady",
+        "name_jp" : "ドレディア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "550",
+        "name_de" : "Barschuft",
+        "name_en" : "Basculin",
+        "name_es" : "Bargantua",
+        "name_jp" : "バスラオ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "551",
+        "name_de" : "Ganovil",
+        "name_en" : "Sandile",
+        "name_es" : "Mascaïman",
+        "name_jp" : "メグロコ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "552",
+        "name_de" : "Rokkaiman",
+        "name_en" : "Krokorok",
+        "name_es" : "Escroco",
+        "name_jp" : "ワルビル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "553",
+        "name_de" : "Rabigator",
+        "name_en" : "Krookodile",
+        "name_es" : "Crocorible",
+        "name_jp" : "ワルビアル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "554",
+        "name_de" : "Flampion",
+        "name_en" : "Darumaka",
+        "name_es" : "Darumarond",
+        "name_jp" : "ダルマッカ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "555",
+        "name_de" : "Flampivian",
+        "name_en" : "Darmanitan",
+        "name_es" : "Darumacho",
+        "name_jp" : "ヒヒダルマ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "556",
+        "name_de" : "Maracamba",
+        "name_en" : "Maractus",
+        "name_es" : "Maracachi",
+        "name_jp" : "マラカッチ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "557",
+        "name_de" : "Lithomith",
+        "name_en" : "Dwebble",
+        "name_es" : "Crabicoque",
+        "name_jp" : "イシズマイ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "558",
+        "name_de" : "Castellith",
+        "name_en" : "Crustle",
+        "name_es" : "Crabaraque",
+        "name_jp" : "イワパレス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "559",
+        "name_de" : "Zurrokex",
+        "name_en" : "Scraggy",
+        "name_es" : "Baggiguane",
+        "name_jp" : "ズルッグ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "560",
+        "name_de" : "Irokex",
+        "name_en" : "Scrafty",
+        "name_es" : "Baggaïd",
+        "name_jp" : "ズルズキン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "561",
+        "name_de" : "Symvolara",
+        "name_en" : "Sigilyph",
+        "name_es" : "Cryptéro",
+        "name_jp" : "シンボラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "562",
+        "name_de" : "Makabaja",
+        "name_en" : "Yamask",
+        "name_es" : "Tutafeh",
+        "name_jp" : "デスマス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "563",
+        "name_de" : "Echnatoll",
+        "name_en" : "Cofagrigus",
+        "name_es" : "Tutankafer",
+        "name_jp" : "デスカーン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "564",
+        "name_de" : "Galapaflos",
+        "name_en" : "Tirtouga",
+        "name_es" : "Carapagos",
+        "name_jp" : "プロトーガ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "565",
+        "name_de" : "Karippas",
+        "name_en" : "Carracosta",
+        "name_es" : "Mégapagos",
+        "name_jp" : "アバゴーラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "566",
+        "name_de" : "Flapteryx",
+        "name_en" : "Archen",
+        "name_es" : "Arkéapti",
+        "name_jp" : "アーケン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "567",
+        "name_de" : "Aeropteryx",
+        "name_en" : "Archeops",
+        "name_es" : "Aéroptéryx",
+        "name_jp" : "アーケオス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "568",
+        "name_de" : "Unrat%C3%BCtox",
+        "name_en" : "Trubbish",
+        "name_es" : "Miamiasme",
+        "name_jp" : "ヤブクロン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "569",
+        "name_de" : "Deponitox",
+        "name_en" : "Garbodor",
+        "name_es" : "Miasmax",
+        "name_jp" : "ダストダス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "570",
+        "name_de" : "Zorua",
+        "name_en" : "Zorua",
+        "name_es" : "Zorua",
+        "name_jp" : "ゾロア",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "571",
+        "name_de" : "Zoroark",
+        "name_en" : "Zoroark",
+        "name_es" : "Zoroark",
+        "name_jp" : "ゾロアーク",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "572",
+        "name_de" : "Picochilla",
+        "name_en" : "Minccino",
+        "name_es" : "Chinchidou",
+        "name_jp" : "チラーミィ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "573",
+        "name_de" : "Chillabell",
+        "name_en" : "Cinccino",
+        "name_es" : "Pashmilla",
+        "name_jp" : "チラチーノ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "574",
+        "name_de" : "Mollimorba",
+        "name_en" : "Gothita",
+        "name_es" : "Scrutella",
+        "name_jp" : "ゴチム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "575",
+        "name_de" : "Hypnomorba",
+        "name_en" : "Gothorita",
+        "name_es" : "Mesmérella",
+        "name_jp" : "ゴチミル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "576",
+        "name_de" : "Morbitesse",
+        "name_en" : "Gothitelle",
+        "name_es" : "Sidérella",
+        "name_jp" : "ゴチルゼル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "577",
+        "name_de" : "Monozyto",
+        "name_en" : "Solosis",
+        "name_es" : "Nucléos",
+        "name_jp" : "ユニラン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "578",
+        "name_de" : "Mitodos",
+        "name_en" : "Duosion",
+        "name_es" : "Méios",
+        "name_jp" : "ダブラン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "579",
+        "name_de" : "Zytomega",
+        "name_en" : "Reuniclus",
+        "name_es" : "Symbios",
+        "name_jp" : "ランクルス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "580",
+        "name_de" : "Piccolente",
+        "name_en" : "Ducklett",
+        "name_es" : "Couaneton",
+        "name_jp" : "コアルヒー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "581",
+        "name_de" : "Swaroness",
+        "name_en" : "Swanna",
+        "name_es" : "Lakmécygne",
+        "name_jp" : "スワンナ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "582",
+        "name_de" : "Gelatini",
+        "name_en" : "Vanillite",
+        "name_es" : "Sorbébé",
+        "name_jp" : "バニプッチ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "583",
+        "name_de" : "Gelatroppo",
+        "name_en" : "Vanillish",
+        "name_es" : "Sorboul",
+        "name_jp" : "バニリッチ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "584",
+        "name_de" : "Gelatwino",
+        "name_en" : "Vanilluxe",
+        "name_es" : "Sorbouboul",
+        "name_jp" : "バイバニラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "585",
+        "name_de" : "Sesokitz",
+        "name_en" : "Deerling",
+        "name_es" : "Vivaldaim",
+        "name_jp" : "シキジカ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "586",
+        "name_de" : "Kronjuwild",
+        "name_en" : "Sawsbuck",
+        "name_es" : "Haydaim",
+        "name_jp" : "メブキジカ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "587",
+        "name_de" : "Emolga",
+        "name_en" : "Emolga",
+        "name_es" : "Emolga",
+        "name_jp" : "エモンガ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "588",
+        "name_de" : "Laukaps",
+        "name_en" : "Karrablast",
+        "name_es" : "Carabing",
+        "name_jp" : "カブルモ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "589",
+        "name_de" : "Cavalanzas",
+        "name_en" : "Escavalier",
+        "name_es" : "Lançargot",
+        "name_jp" : "シュバルゴ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "590",
+        "name_de" : "Tarnpignon",
+        "name_en" : "Foongus",
+        "name_es" : "Trompignon",
+        "name_jp" : "タマゲタケ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "591",
+        "name_de" : "Hutsassa",
+        "name_en" : "Amoonguss",
+        "name_es" : "Gaulet",
+        "name_jp" : "モロバレル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "592",
+        "name_de" : "Quabbel",
+        "name_en" : "Frillish",
+        "name_es" : "Viskuse",
+        "name_jp" : "プルリル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "593",
+        "name_de" : "Apoquallyp",
+        "name_en" : "Jellicent",
+        "name_es" : "Moyade",
+        "name_jp" : "ブルンゲル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "594",
+        "name_de" : "Mamolida",
+        "name_en" : "Alomomola",
+        "name_es" : "Mamanbo",
+        "name_jp" : "ママンボウ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "595",
+        "name_de" : "Wattzapf",
+        "name_en" : "Joltik",
+        "name_es" : "Statitik",
+        "name_jp" : "バチュル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "596",
+        "name_de" : "Voltula",
+        "name_en" : "Galvantula",
+        "name_es" : "Mygavolt",
+        "name_jp" : "デンチュラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "597",
+        "name_de" : "Kastadur",
+        "name_en" : "Ferroseed",
+        "name_es" : "Grindur",
+        "name_jp" : "テッシード",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "598",
+        "name_de" : "Tentantel",
+        "name_en" : "Ferrothorn",
+        "name_es" : "Noacier",
+        "name_jp" : "ナットレイ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "599",
+        "name_de" : "Klikk",
+        "name_en" : "Klink",
+        "name_es" : "Tic",
+        "name_jp" : "ギアル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "600",
+        "name_de" : "Kliklak",
+        "name_en" : "Klang",
+        "name_es" : "Clic",
+        "name_jp" : "ギギアル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "601",
+        "name_de" : "Klikdiklak",
+        "name_en" : "Klinklang",
+        "name_es" : "Cliticlic",
+        "name_jp" : "ギギギアル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "602",
+        "name_de" : "Zapplardin",
+        "name_en" : "Tynamo",
+        "name_es" : "Anchwatt",
+        "name_jp" : "シビシラス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "603",
+        "name_de" : "Zapplalek",
+        "name_en" : "Eelektrik",
+        "name_es" : "Lampéroie",
+        "name_jp" : "シビビール",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "604",
+        "name_de" : "Zapplarang",
+        "name_en" : "Eelektross",
+        "name_es" : "Ohmassacre",
+        "name_jp" : "シビルドン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "605",
+        "name_de" : "Pygraulon",
+        "name_en" : "Elgyem",
+        "name_es" : "Lewsor",
+        "name_jp" : "リグレー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "606",
+        "name_de" : "Megalon",
+        "name_en" : "Beheeyem",
+        "name_es" : "Neitram",
+        "name_jp" : "オーベム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "607",
+        "name_de" : "Lichtel",
+        "name_en" : "Litwick",
+        "name_es" : "Funécire",
+        "name_jp" : "ヒトモシ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "608",
+        "name_de" : "Laternecto",
+        "name_en" : "Lampent",
+        "name_es" : "Mélancolux",
+        "name_jp" : "ランプラー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "609",
+        "name_de" : "Skelabra",
+        "name_en" : "Chandelure",
+        "name_es" : "Lugulabre",
+        "name_jp" : "シャンデラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "610",
+        "name_de" : "Milza",
+        "name_en" : "Axew",
+        "name_es" : "Coupenotte",
+        "name_jp" : "キバゴ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "611",
+        "name_de" : "Sharfax",
+        "name_en" : "Fraxure",
+        "name_es" : "Incisache",
+        "name_jp" : "オノンド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "612",
+        "name_de" : "Maxax",
+        "name_en" : "Haxorus",
+        "name_es" : "Tranchodon",
+        "name_jp" : "オノノクス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "613",
+        "name_de" : "Petznief",
+        "name_en" : "Cubchoo",
+        "name_es" : "Polarhume",
+        "name_jp" : "クマシュン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "614",
+        "name_de" : "Siberio",
+        "name_en" : "Beartic",
+        "name_es" : "Polagriffe",
+        "name_jp" : "ツンベアー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "615",
+        "name_de" : "Frigometri",
+        "name_en" : "Cryogonal",
+        "name_es" : "Hexagel",
+        "name_jp" : "フリージオ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "616",
+        "name_de" : "Schnuthelm",
+        "name_en" : "Shelmet",
+        "name_es" : "Escargaume",
+        "name_jp" : "チョボマキ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "617",
+        "name_de" : "Hydragil",
+        "name_en" : "Accelgor",
+        "name_es" : "Limaspeed",
+        "name_jp" : "アギルダー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "618",
+        "name_de" : "Flunschlik",
+        "name_en" : "Stunfisk",
+        "name_es" : "Limonde",
+        "name_jp" : "マッギョ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "619",
+        "name_de" : "Lin-Fu",
+        "name_en" : "Mienfoo",
+        "name_es" : "Kungfouine",
+        "name_jp" : "コジョフー",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "620",
+        "name_de" : "Wie-Shu",
+        "name_en" : "Mienshao",
+        "name_es" : "Shaofouine",
+        "name_jp" : "コジョンド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "621",
+        "name_de" : "Shardrago",
+        "name_en" : "Druddigon",
+        "name_es" : "Drakkarmin",
+        "name_jp" : "クリムガン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "622",
+        "name_de" : "Golbit",
+        "name_en" : "Golett",
+        "name_es" : "Gringolem",
+        "name_jp" : "ゴビット",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "623",
+        "name_de" : "Golgantes",
+        "name_en" : "Golurk",
+        "name_es" : "Golemastoc",
+        "name_jp" : "ゴルーグ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "624",
+        "name_de" : "Gladiantri",
+        "name_en" : "Pawniard",
+        "name_es" : "Scalpion",
+        "name_jp" : "コマタナ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "625",
+        "name_de" : "Caesurio",
+        "name_en" : "Bisharp",
+        "name_es" : "Scalproie",
+        "name_jp" : "キリキザン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "626",
+        "name_de" : "Bisofank",
+        "name_en" : "Bouffalant",
+        "name_es" : "Frison",
+        "name_jp" : "バッフロン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "627",
+        "name_de" : "Geronimatz",
+        "name_en" : "Rufflet",
+        "name_es" : "Furaiglon",
+        "name_jp" : "ワシボン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "628",
+        "name_de" : "Washakwil",
+        "name_en" : "Braviary",
+        "name_es" : "Gueriaigle",
+        "name_jp" : "ウォーグル",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "629",
+        "name_de" : "Skallyk",
+        "name_en" : "Vullaby",
+        "name_es" : "Vostourno",
+        "name_jp" : "バルチャイ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "630",
+        "name_de" : "Grypheldis",
+        "name_en" : "Mandibuzz",
+        "name_es" : "Vaututrice",
+        "name_jp" : "バルジーナ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "631",
+        "name_de" : "Furnifra%C3%9F",
+        "name_en" : "Heatmor",
+        "name_es" : "Aflamanoir",
+        "name_jp" : "クイタラン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "632",
+        "name_de" : "Fermicula",
+        "name_en" : "Durant",
+        "name_es" : "Fermite",
+        "name_jp" : "アイアント",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "633",
+        "name_de" : "Kapuno",
+        "name_en" : "Deino",
+        "name_es" : "Solochi",
+        "name_jp" : "モノズ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "634",
+        "name_de" : "Duodino",
+        "name_en" : "Zweilous",
+        "name_es" : "Diamat",
+        "name_jp" : "ジヘッド",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "635",
+        "name_de" : "Trikephalo",
+        "name_en" : "Hydreigon",
+        "name_es" : "Trioxhydre",
+        "name_jp" : "サザンドラ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "636",
+        "name_de" : "Ignivor",
+        "name_en" : "Larvesta",
+        "name_es" : "Pyronille",
+        "name_jp" : "メラルバ",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "637",
+        "name_de" : "Ramoth",
+        "name_en" : "Volcarona",
+        "name_es" : "Pyrax",
+        "name_jp" : "ウルガモス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "638",
+        "name_de" : "Kobalium",
+        "name_en" : "Cobalion",
+        "name_es" : "Cobaltium",
+        "name_jp" : "コバルオン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "639",
+        "name_de" : "Terrakium",
+        "name_en" : "Terrakion",
+        "name_es" : "Terrakium",
+        "name_jp" : "テラキオン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "640",
+        "name_de" : "Viridium",
+        "name_en" : "Virizion",
+        "name_es" : "Viridium",
+        "name_jp" : "ビリジオン",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "641",
+        "name_de" : "Boreos",
+        "name_en" : "Tornadus",
+        "name_es" : "Boréas",
+        "name_jp" : "トルネロス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "642",
+        "name_de" : "Voltolos",
+        "name_en" : "Thundurus",
+        "name_es" : "Fulguris",
+        "name_jp" : "ボルトロス",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "643",
+        "name_de" : "Reshiram",
+        "name_en" : "Reshiram",
+        "name_es" : "Reshiram",
+        "name_jp" : "レシラム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "644",
+        "name_de" : "Zekrom",
+        "name_en" : "Zekrom",
+        "name_es" : "Zekrom",
+        "name_jp" : "ゼクロム",
+        "catchableInPokeMMO" : true
+    },
+    {
+        "number" : "645",
+        "name_de" : "Demeteros",
+        "name_en" : "Landorus",
+        "name_es" : "Démétéros",
+        "name_jp" : "ランドロス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "646",
+        "name_de" : "Kyurem",
+        "name_en" : "Kyurem",
+        "name_es" : "Kyurem",
+        "name_jp" : "キュレム",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "647",
+        "name_de" : "Keldeo",
+        "name_en" : "Keldeo",
+        "name_es" : "Keldeo",
+        "name_jp" : "ケルディオ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "648",
+        "name_de" : "Meloetta",
+        "name_en" : "Meloetta",
+        "name_es" : "Meloetta",
+        "name_jp" : "メロエッタ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "649",
+        "name_de" : "Genesect",
+        "name_en" : "Genesect",
+        "name_es" : "Genesect",
+        "name_jp" : "ゲノセクト",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "650",
+        "name_de" : "Igamaro",
+        "name_en" : "Chespin",
+        "name_es" : "Marisson",
+        "name_jp" : "ハリマロン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "651",
+        "name_de" : "Igastarnish",
+        "name_en" : "Quilladin",
+        "name_es" : "Boguérisse",
+        "name_jp" : "ハリボーグ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "652",
+        "name_de" : "Brigaron",
+        "name_en" : "Chesnaught",
+        "name_es" : "Blindépique",
+        "name_jp" : "ブリガロン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "653",
+        "name_de" : "Fynx",
+        "name_en" : "Fennekin",
+        "name_es" : "Feunnec",
+        "name_jp" : "フォッコ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "654",
+        "name_de" : "Rutena",
+        "name_en" : "Braixen",
+        "name_es" : "Roussil",
+        "name_jp" : "テールナー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "655",
+        "name_de" : "Fennexis",
+        "name_en" : "Delphox",
+        "name_es" : "Goupelin",
+        "name_jp" : "マフォクシー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "656",
+        "name_de" : "Froxy",
+        "name_en" : "Froakie",
+        "name_es" : "Grenousse",
+        "name_jp" : "ケロマツ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "657",
+        "name_de" : "Amphizel",
+        "name_en" : "Frogadier",
+        "name_es" : "Croâporal",
+        "name_jp" : "ゲコガシラ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "658",
+        "name_de" : "Quajutsu",
+        "name_en" : "Greninja",
+        "name_es" : "Amphinobi",
+        "name_jp" : "ゲッコウガ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "659",
+        "name_de" : "Scoppel",
+        "name_en" : "Bunnelby",
+        "name_es" : "Sapereau",
+        "name_jp" : "ホルビー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "660",
+        "name_de" : "Grebbit",
+        "name_en" : "Diggersby",
+        "name_es" : "Excavarenne",
+        "name_jp" : "ホルード",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "661",
+        "name_de" : "Dartiri",
+        "name_en" : "Fletchling",
+        "name_es" : "Passerouge",
+        "name_jp" : "ヤヤコマ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "662",
+        "name_de" : "Dartignis",
+        "name_en" : "Fletchinder",
+        "name_es" : "Braisillon",
+        "name_jp" : "ヒノヤコマ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "663",
+        "name_de" : "Fiaro",
+        "name_en" : "Talonflame",
+        "name_es" : "Flambusard",
+        "name_jp" : "ファイアロー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "664",
+        "name_de" : "Purmel",
+        "name_en" : "Scatterbug",
+        "name_es" : "Lépidonille",
+        "name_jp" : "コフキムシ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "665",
+        "name_de" : "Puponcho",
+        "name_en" : "Spewpa",
+        "name_es" : "Pérégrain",
+        "name_jp" : "コフーライ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "666",
+        "name_de" : "Vivillon",
+        "name_en" : "Vivillon",
+        "name_es" : "Prismillon",
+        "name_jp" : "ビビヨン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "667",
+        "name_de" : "Leufeo",
+        "name_en" : "Litleo",
+        "name_es" : "Hélionceau",
+        "name_jp" : "シシコ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "668",
+        "name_de" : "Pyroleo",
+        "name_en" : "Pyroar",
+        "name_es" : "Némélios",
+        "name_jp" : "カエンジシ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "669",
+        "name_de" : "Flab%C3%A9b%C3%A9",
+        "name_en" : "Flabébé",
+        "name_es" : "Flabébé",
+        "name_jp" : "フラベベ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "670",
+        "name_de" : "Floette",
+        "name_en" : "Floette",
+        "name_es" : "Floette",
+        "name_jp" : "フラエッテ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "671",
+        "name_de" : "Florges",
+        "name_en" : "Florges",
+        "name_es" : "Florges",
+        "name_jp" : "フラージェス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "672",
+        "name_de" : "M%C3%A4hikel",
+        "name_en" : "Skiddo",
+        "name_es" : "Cabriolaine",
+        "name_jp" : "メェークル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "673",
+        "name_de" : "Chevrumm",
+        "name_en" : "Gogoat",
+        "name_es" : "Chevroum",
+        "name_jp" : "ゴーゴート",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "674",
+        "name_de" : "Pam-Pam",
+        "name_en" : "Pancham",
+        "name_es" : "Pandespiègle",
+        "name_jp" : "ヤンチャム",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "675",
+        "name_de" : "Pandagro",
+        "name_en" : "Pangoro",
+        "name_es" : "Pandarbare",
+        "name_jp" : "ゴロンダ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "676",
+        "name_de" : "Coiffwaff",
+        "name_en" : "Furfrou",
+        "name_es" : "Couafarel",
+        "name_jp" : "トリミアン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "677",
+        "name_de" : "Psiau",
+        "name_en" : "Espurr",
+        "name_es" : "Psystigri",
+        "name_jp" : "ニャスパー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "678",
+        "name_de" : "Psiaugon",
+        "name_en" : "Meowstic",
+        "name_es" : "Mistigrix",
+        "name_jp" : "ニャオニクス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "679",
+        "name_de" : "Gramokles",
+        "name_en" : "Honedge",
+        "name_es" : "Monorpale",
+        "name_jp" : "ヒトツキ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "680",
+        "name_de" : "Duokles",
+        "name_en" : "Doublade",
+        "name_es" : "Dimoclès",
+        "name_jp" : "ニダンギル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "681",
+        "name_de" : "Durengard",
+        "name_en" : "Aegislash",
+        "name_es" : "Exagide",
+        "name_jp" : "ギルガルド",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "682",
+        "name_de" : "Parfi",
+        "name_en" : "Spritzee",
+        "name_es" : "Fluvetin",
+        "name_jp" : "シュシュプ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "683",
+        "name_de" : "Parfinesse",
+        "name_en" : "Aromatisse",
+        "name_es" : "Cocotine",
+        "name_jp" : "フレフワン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "684",
+        "name_de" : "Flauschling",
+        "name_en" : "Swirlix",
+        "name_es" : "Sucroquin",
+        "name_jp" : "ペロッパフ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "685",
+        "name_de" : "Sabbaione",
+        "name_en" : "Slurpuff",
+        "name_es" : "Cupcanaille",
+        "name_jp" : "ペロリーム",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "686",
+        "name_de" : "Iscalar",
+        "name_en" : "Inkay",
+        "name_es" : "Sepiatop",
+        "name_jp" : "マーイーカ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "687",
+        "name_de" : "Calamanero",
+        "name_en" : "Malamar",
+        "name_es" : "Sepiatroce",
+        "name_jp" : "カラマネロ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "688",
+        "name_de" : "Bithora",
+        "name_en" : "Binacle",
+        "name_es" : "Opermine",
+        "name_jp" : "カメテテ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "689",
+        "name_de" : "Thanathora",
+        "name_en" : "Barbaracle",
+        "name_es" : "Golgopathe",
+        "name_jp" : "ガメノデス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "690",
+        "name_de" : "Algitt",
+        "name_en" : "Skrelp",
+        "name_es" : "Venalgue",
+        "name_jp" : "クズモー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "691",
+        "name_de" : "Tandrak",
+        "name_en" : "Dragalge",
+        "name_es" : "Kravarech",
+        "name_jp" : "ドラミドロ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "692",
+        "name_de" : "Scampisto",
+        "name_en" : "Clauncher",
+        "name_es" : "Flingouste",
+        "name_jp" : "ウデッポウ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "693",
+        "name_de" : "Wummer",
+        "name_en" : "Clawitzer",
+        "name_es" : "Gamblast",
+        "name_jp" : "ブロスター",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "694",
+        "name_de" : "Eguana",
+        "name_en" : "Helioptile",
+        "name_es" : "Galvaran",
+        "name_jp" : "エリキテル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "695",
+        "name_de" : "Elezard",
+        "name_en" : "Heliolisk",
+        "name_es" : "Iguolta",
+        "name_jp" : "エレザード",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "696",
+        "name_de" : "Balgoras",
+        "name_en" : "Tyrunt",
+        "name_es" : "Ptyranidur",
+        "name_jp" : "チゴラス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "697",
+        "name_de" : "Monargoras",
+        "name_en" : "Tyrantrum",
+        "name_es" : "Rexillius",
+        "name_jp" : "ガチゴラス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "698",
+        "name_de" : "Amarino",
+        "name_en" : "Amaura",
+        "name_es" : "Amagara",
+        "name_jp" : "アマルス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "699",
+        "name_de" : "Amagarga",
+        "name_en" : "Aurorus",
+        "name_es" : "Dragmara",
+        "name_jp" : "アマルルガ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "700",
+        "name_de" : "Feelinara",
+        "name_en" : "Sylveon",
+        "name_es" : "Nymphali",
+        "name_jp" : "ニンフィア",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "701",
+        "name_de" : "Resladero",
+        "name_en" : "Hawlucha",
+        "name_es" : "Brutalibré",
+        "name_jp" : "ルチャブル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "702",
+        "name_de" : "Dedenne",
+        "name_en" : "Dedenne",
+        "name_es" : "Dedenne",
+        "name_jp" : "デデンネ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "703",
+        "name_de" : "Rocara",
+        "name_en" : "Carbink",
+        "name_es" : "Strassie",
+        "name_jp" : "メレシー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "704",
+        "name_de" : "Viscora",
+        "name_en" : "Goomy",
+        "name_es" : "Mucuscule",
+        "name_jp" : "ヌメラ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "705",
+        "name_de" : "Viscargot",
+        "name_en" : "Sliggoo",
+        "name_es" : "Colimucus",
+        "name_jp" : "ヌメイル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "706",
+        "name_de" : "Viscogon",
+        "name_en" : "Goodra",
+        "name_es" : "Muplodocus",
+        "name_jp" : "ヌメルゴン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "707",
+        "name_de" : "Clavion",
+        "name_en" : "Klefki",
+        "name_es" : "Trousselin",
+        "name_jp" : "クレッフィ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "708",
+        "name_de" : "Paragoni",
+        "name_en" : "Phantump",
+        "name_es" : "Brocélôme",
+        "name_jp" : "ボクレー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "709",
+        "name_de" : "Trombork",
+        "name_en" : "Trevenant",
+        "name_es" : "Desséliande",
+        "name_jp" : "オーロット",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "710",
+        "name_de" : "Irrbis",
+        "name_en" : "Pumpkaboo",
+        "name_es" : "Pitrouille",
+        "name_jp" : "バケッチャ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "711",
+        "name_de" : "Pumpdjinn",
+        "name_en" : "Gourgeist",
+        "name_es" : "Banshitrouye",
+        "name_jp" : "パンプジン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "712",
+        "name_de" : "Arktip",
+        "name_en" : "Bergmite",
+        "name_es" : "Grelaçon",
+        "name_jp" : "カチコール",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "713",
+        "name_de" : "Arktilas",
+        "name_en" : "Avalugg",
+        "name_es" : "Séracrawl",
+        "name_jp" : "クレベース",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "714",
+        "name_de" : "EF-eM",
+        "name_en" : "Noibat",
+        "name_es" : "Sonistrelle",
+        "name_jp" : "オンバット",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "715",
+        "name_de" : "UHaFnir",
+        "name_en" : "Noivern",
+        "name_es" : "Bruyverne",
+        "name_jp" : "オンバーン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "716",
+        "name_de" : "Xerneas",
+        "name_en" : "Xerneas",
+        "name_es" : "Xerneas",
+        "name_jp" : "ゼルネアス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "717",
+        "name_de" : "Yveltal",
+        "name_en" : "Yveltal",
+        "name_es" : "Yveltal",
+        "name_jp" : "イベルタル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "718",
+        "name_de" : "Zygarde",
+        "name_en" : "Zygarde",
+        "name_es" : "Zygarde",
+        "name_jp" : "ジガルデ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "719",
+        "name_de" : "Diancie",
+        "name_en" : "Diancie",
+        "name_es" : "Diancie",
+        "name_jp" : "ディアンシー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "720",
+        "name_de" : "Hoopa",
+        "name_en" : "Hoopa",
+        "name_es" : "Hoopa",
+        "name_jp" : "フーパ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "721",
+        "name_de" : "Volcanion",
+        "name_en" : "Volcanion",
+        "name_es" : "Volcanion",
+        "name_jp" : "ボルケニオン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "722",
+        "name_de" : "Bauz",
+        "name_en" : "Rowlet",
+        "name_es" : "Brindibou",
+        "name_jp" : "モクロー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "723",
+        "name_de" : "Arboretoss",
+        "name_en" : "Dartrix",
+        "name_es" : "Efflèche",
+        "name_jp" : "フクスロー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "724",
+        "name_de" : "Silvarro",
+        "name_en" : "Decidueye",
+        "name_es" : "Archéduc",
+        "name_jp" : "ジュナイパー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "725",
+        "name_de" : "Flamiau",
+        "name_en" : "Litten",
+        "name_es" : "Flamiaou",
+        "name_jp" : "ニャビー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "726",
+        "name_de" : "Miezunder",
+        "name_en" : "Torracat",
+        "name_es" : "Matoufeu",
+        "name_jp" : "ニャヒート",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "727",
+        "name_de" : "Fuegro",
+        "name_en" : "Incineroar",
+        "name_es" : "Félinferno",
+        "name_jp" : "ガオガエン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "728",
+        "name_de" : "Robball",
+        "name_en" : "Popplio",
+        "name_es" : "Otaquin",
+        "name_jp" : "アシマリ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "729",
+        "name_de" : "Marikeck",
+        "name_en" : "Brionne",
+        "name_es" : "Otarlette",
+        "name_jp" : "オシャマリ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "730",
+        "name_de" : "Primarene",
+        "name_en" : "Primarina",
+        "name_es" : "Oratoria",
+        "name_jp" : "アシレーヌ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "731",
+        "name_de" : "Peppeck",
+        "name_en" : "Pikipek",
+        "name_es" : "Picassaut",
+        "name_jp" : "ツツケラ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "732",
+        "name_de" : "Trompeck",
+        "name_en" : "Trumbeak",
+        "name_es" : "Piclairon",
+        "name_jp" : "ケララッパ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "733",
+        "name_de" : "Tukanon",
+        "name_en" : "Toucannon",
+        "name_es" : "Bazoucan",
+        "name_jp" : "ドデカバシ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "734",
+        "name_de" : "Mangunior",
+        "name_en" : "Yungoos",
+        "name_es" : "Manglouton",
+        "name_jp" : "ヤングース",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "735",
+        "name_de" : "Manguspektor",
+        "name_en" : "Gumshoos",
+        "name_es" : "Argouste",
+        "name_jp" : "デカグース",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "736",
+        "name_de" : "Mabula",
+        "name_en" : "Grubbin",
+        "name_es" : "Larvibule",
+        "name_jp" : "アゴジムシ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "737",
+        "name_de" : "Akkup",
+        "name_en" : "Charjabug",
+        "name_es" : "Chrysapile",
+        "name_jp" : "デンヂムシ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "738",
+        "name_de" : "Donarion",
+        "name_en" : "Vikavolt",
+        "name_es" : "Lucanon",
+        "name_jp" : "クワガノン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "739",
+        "name_de" : "Krabbox",
+        "name_en" : "Crabrawler",
+        "name_es" : "Crabagarre",
+        "name_jp" : "マケンカニ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "740",
+        "name_de" : "Krawell",
+        "name_en" : "Crabominable",
+        "name_es" : "Crabominable",
+        "name_jp" : "ケケンカニ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "741",
+        "name_de" : "Choreogel",
+        "name_en" : "Oricorio",
+        "name_es" : "Plumeline",
+        "name_jp" : "オドリドリ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "742",
+        "name_de" : "Wommel",
+        "name_en" : "Cutiefly",
+        "name_es" : "Bombydou",
+        "name_jp" : "アブリー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "743",
+        "name_de" : "Bandelby",
+        "name_en" : "Ribombee",
+        "name_es" : "Rubombelle",
+        "name_jp" : "アブリボン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "744",
+        "name_de" : "Wuffels",
+        "name_en" : "Rockruff",
+        "name_es" : "Rocabot",
+        "name_jp" : "イワンコ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "745",
+        "name_de" : "Wolwerock",
+        "name_en" : "Lycanroc",
+        "name_es" : "Lougaroc",
+        "name_jp" : "ルガルガン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "746",
+        "name_de" : "Lusardin",
+        "name_en" : "Wishiwashi",
+        "name_es" : "Froussardine",
+        "name_jp" : "ヨワシ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "747",
+        "name_de" : "Garstella",
+        "name_en" : "Mareanie",
+        "name_es" : "Vorastérie",
+        "name_jp" : "ヒドイデ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "748",
+        "name_de" : "Aggrostella",
+        "name_en" : "Toxapex",
+        "name_es" : "Prédastérie",
+        "name_jp" : "ドヒドイデ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "749",
+        "name_de" : "Pampuli",
+        "name_en" : "Mudbray",
+        "name_es" : "Tiboudet",
+        "name_jp" : "ドロバンコ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "750",
+        "name_de" : "Pampross",
+        "name_en" : "Mudsdale",
+        "name_es" : "Bourrinos",
+        "name_jp" : "バンバドロ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "751",
+        "name_de" : "Araqua",
+        "name_en" : "Dewpider",
+        "name_es" : "Araqua",
+        "name_jp" : "シズクモ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "752",
+        "name_de" : "Aranestro",
+        "name_en" : "Araquanid",
+        "name_es" : "Tarenbulle",
+        "name_jp" : "オニシズクモ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "753",
+        "name_de" : "Imantis",
+        "name_en" : "Fomantis",
+        "name_es" : "Mimantis",
+        "name_jp" : "カリキリ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "754",
+        "name_de" : "Mantidea",
+        "name_en" : "Lurantis",
+        "name_es" : "Floramantis",
+        "name_jp" : "ラランテス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "755",
+        "name_de" : "Bubungus",
+        "name_en" : "Morelull",
+        "name_es" : "Spododo",
+        "name_jp" : "ネマシュ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "756",
+        "name_de" : "Lamellux",
+        "name_en" : "Shiinotic",
+        "name_es" : "Lampignon",
+        "name_jp" : "マシェード",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "757",
+        "name_de" : "Molunk",
+        "name_en" : "Salandit",
+        "name_es" : "Tritox",
+        "name_jp" : "ヤトウモリ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "758",
+        "name_de" : "Amfira",
+        "name_en" : "Salazzle",
+        "name_es" : "Malamandre",
+        "name_jp" : "エンニュート",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "759",
+        "name_de" : "Velursi",
+        "name_en" : "Stufful",
+        "name_es" : "Nounourson",
+        "name_jp" : "ヌイコグマ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "760",
+        "name_de" : "Kosturso",
+        "name_en" : "Bewear",
+        "name_es" : "Chelours",
+        "name_jp" : "キテルグマ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "761",
+        "name_de" : "Frubberl",
+        "name_en" : "Bounsweet",
+        "name_es" : "Croquine",
+        "name_jp" : "アマカジ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "762",
+        "name_de" : "Frubaila",
+        "name_en" : "Steenee",
+        "name_es" : "Candine",
+        "name_jp" : "アママイコ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "763",
+        "name_de" : "Fruyal",
+        "name_en" : "Tsareena",
+        "name_es" : "Sucreine",
+        "name_jp" : "アマージョ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "764",
+        "name_de" : "Curelei",
+        "name_en" : "Comfey",
+        "name_es" : "Guérilande",
+        "name_jp" : "キュワワー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "765",
+        "name_de" : "Kommandutan",
+        "name_en" : "Oranguru",
+        "name_es" : "Gouroutan",
+        "name_jp" : "ヤレユータン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "766",
+        "name_de" : "Quartermak",
+        "name_en" : "Passimian",
+        "name_es" : "Quartermac",
+        "name_jp" : "ナゲツケサル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "767",
+        "name_de" : "Rei%C3%9Flaus",
+        "name_en" : "Wimpod",
+        "name_es" : "Sovkipou",
+        "name_jp" : "コソクムシ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "768",
+        "name_de" : "Tectass",
+        "name_en" : "Golisopod",
+        "name_es" : "Sarmuraï",
+        "name_jp" : "グソクムシャ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "769",
+        "name_de" : "Sankabuh",
+        "name_en" : "Sandygast",
+        "name_es" : "Bacabouh",
+        "name_jp" : "スナバァ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "770",
+        "name_de" : "Colossand",
+        "name_en" : "Palossand",
+        "name_es" : "Trépassable",
+        "name_jp" : "シロデスナ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "771",
+        "name_de" : "Gufa",
+        "name_en" : "Pyukumuku",
+        "name_es" : "Concombaffe",
+        "name_jp" : "ナマコブシ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "772",
+        "name_de" : "Typ:Null",
+        "name_en" : "Type: Null",
+        "name_es" : "Type:0",
+        "name_jp" : "タイプ：ヌル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "773",
+        "name_de" : "Amigento",
+        "name_en" : "Silvally",
+        "name_es" : "Silvallié",
+        "name_jp" : "シルヴァディ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "774",
+        "name_de" : "Meteno",
+        "name_en" : "Minior",
+        "name_es" : "Météno",
+        "name_jp" : "メテノ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "775",
+        "name_de" : "Koalelu",
+        "name_en" : "Komala",
+        "name_es" : "Dodoala",
+        "name_jp" : "ネッコアラ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "776",
+        "name_de" : "Tortunator",
+        "name_en" : "Turtonator",
+        "name_es" : "Boumata",
+        "name_jp" : "バクガメス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "777",
+        "name_de" : "Togedemaru",
+        "name_en" : "Togedemaru",
+        "name_es" : "Togedemaru",
+        "name_jp" : "トゲデマル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "778",
+        "name_de" : "Mimigma",
+        "name_en" : "Mimikyu",
+        "name_es" : "Mimiqui",
+        "name_jp" : "ミミッキュ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "779",
+        "name_de" : "Knirfish",
+        "name_en" : "Bruxish",
+        "name_es" : "Denticrisse",
+        "name_jp" : "ハギギシリ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "780",
+        "name_de" : "Sen-Long",
+        "name_en" : "Drampa",
+        "name_es" : "Draïeul",
+        "name_jp" : "ジジーロン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "781",
+        "name_de" : "Moruda",
+        "name_en" : "Dhelmise",
+        "name_es" : "Sinistrail",
+        "name_jp" : "ダダリン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "782",
+        "name_de" : "Miniras",
+        "name_en" : "Jangmo-o",
+        "name_es" : "Bébécaille",
+        "name_jp" : "ジャラコ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "783",
+        "name_de" : "Mediras",
+        "name_en" : "Hakamo-o",
+        "name_es" : "Écaïd",
+        "name_jp" : "ジャランゴ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "784",
+        "name_de" : "Grandiras",
+        "name_en" : "Kommo-o",
+        "name_es" : "Ékaïser",
+        "name_jp" : "ジャラランガ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "785",
+        "name_de" : "Kapu-Riki",
+        "name_en" : "Tapu Koko",
+        "name_es" : "Tokorico",
+        "name_jp" : "カプ・コケコ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "786",
+        "name_de" : "Kapu-Fala",
+        "name_en" : "Tapu Lele",
+        "name_es" : "Tokopiyon",
+        "name_jp" : "カプ・テテフ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "787",
+        "name_de" : "Kapu-Toro",
+        "name_en" : "Tapu Bulu",
+        "name_es" : "Tokotoro",
+        "name_jp" : "カプ・ブルル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "788",
+        "name_de" : "Kapu-Kime",
+        "name_en" : "Tapu Fini",
+        "name_es" : "Tokopisco",
+        "name_jp" : "カプ・レヒレ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "789",
+        "name_de" : "Cosmog",
+        "name_en" : "Cosmog",
+        "name_es" : "Cosmog",
+        "name_jp" : "コスモッグ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "790",
+        "name_de" : "Cosmovum",
+        "name_en" : "Cosmoem",
+        "name_es" : "Cosmovum",
+        "name_jp" : "コスモウム",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "791",
+        "name_de" : "Solgaleo",
+        "name_en" : "Solgaleo",
+        "name_es" : "Solgaleo",
+        "name_jp" : "ソルガレオ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "792",
+        "name_de" : "Lunala",
+        "name_en" : "Lunala",
+        "name_es" : "Lunala",
+        "name_jp" : "ルナアーラ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "793",
+        "name_de" : "Anego",
+        "name_en" : "Nihilego",
+        "name_es" : "Zéroïd",
+        "name_jp" : "ウツロイド",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "794",
+        "name_de" : "Masskito",
+        "name_en" : "Buzzwole",
+        "name_es" : "Mouscoto",
+        "name_jp" : "マッシブーン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "795",
+        "name_de" : "Schabelle",
+        "name_en" : "Pheromosa",
+        "name_es" : "Cancrelove",
+        "name_jp" : "フェローチェ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "796",
+        "name_de" : "Voltriant",
+        "name_en" : "Xurkitree",
+        "name_es" : "Câblifère",
+        "name_jp" : "デンジュモク",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "797",
+        "name_de" : "Kaguron",
+        "name_en" : "Celesteela",
+        "name_es" : "Bamboiselle",
+        "name_jp" : "テッカグヤ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "798",
+        "name_de" : "Katagami",
+        "name_en" : "Kartana",
+        "name_es" : "Katagami",
+        "name_jp" : "カミツルギ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "799",
+        "name_de" : "Schlingking",
+        "name_en" : "Guzzlord",
+        "name_es" : "Engloutyran",
+        "name_jp" : "アクジキング",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "800",
+        "name_de" : "Necrozma",
+        "name_en" : "Necrozma",
+        "name_es" : "Necrozma",
+        "name_jp" : "ネクロズマ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "801",
+        "name_de" : "Magearna",
+        "name_en" : "Magearna",
+        "name_es" : "Magearna",
+        "name_jp" : "マギアナ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "802",
+        "name_de" : "Marshadow",
+        "name_en" : "Marshadow",
+        "name_es" : "Marshadow",
+        "name_jp" : "マーシャドー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "803",
+        "name_de" : "Venicro",
+        "name_en" : "Poipole",
+        "name_es" : "Vémini",
+        "name_jp" : "ベベノム",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "804",
+        "name_de" : "Agoyon",
+        "name_en" : "Naganadel",
+        "name_es" : "Mandrillon",
+        "name_jp" : "アーゴヨン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "805",
+        "name_de" : "Muramura",
+        "name_en" : "Stakataka",
+        "name_es" : "Ama-Ama",
+        "name_jp" : "ツンデツンデ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "806",
+        "name_de" : "Kopplosio",
+        "name_en" : "Blacephalon",
+        "name_es" : "Pierroteknik",
+        "name_jp" : "ズガドーン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "807",
+        "name_de" : "Zeraora",
+        "name_en" : "Zeraora",
+        "name_es" : "Zeraora",
+        "name_jp" : "ゼラオラ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "808",
+        "name_de" : "Meltan",
+        "name_en" : "Meltan",
+        "name_es" : "Meltan",
+        "name_jp" : "メルタン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "809",
+        "name_de" : "Melmetal",
+        "name_en" : "Melmetal",
+        "name_es" : "Melmetal",
+        "name_jp" : "メルメタル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "810",
+        "name_de" : "Chimpep",
+        "name_en" : "Grookey",
+        "name_es" : "Ouistempo",
+        "name_jp" : "サルノリ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "811",
+        "name_de" : "Chimstix",
+        "name_en" : "Thwackey",
+        "name_es" : "Badabouin",
+        "name_jp" : "バチンキー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "812",
+        "name_de" : "Gortrom",
+        "name_en" : "Rillaboom",
+        "name_es" : "Gorythmic",
+        "name_jp" : "ゴリランダー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "813",
+        "name_de" : "Hopplo",
+        "name_en" : "Scorbunny",
+        "name_es" : "Flambino",
+        "name_jp" : "ヒバニー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "814",
+        "name_de" : "Kickerlo",
+        "name_en" : "Raboot",
+        "name_es" : "Lapyro",
+        "name_jp" : "ラビフット",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "815",
+        "name_de" : "Liberlo",
+        "name_en" : "Cinderace",
+        "name_es" : "Pyrobut",
+        "name_jp" : "エースバーン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "816",
+        "name_de" : "Memmeon",
+        "name_en" : "Sobble",
+        "name_es" : "Larméléon",
+        "name_jp" : "メッソン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "817",
+        "name_de" : "Phlegleon",
+        "name_en" : "Drizzile",
+        "name_es" : "Arrozard",
+        "name_jp" : "ジメレオン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "818",
+        "name_de" : "Intelleon",
+        "name_en" : "Inteleon",
+        "name_es" : "Lézargus",
+        "name_jp" : "インテレオン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "819",
+        "name_de" : "Raffel",
+        "name_en" : "Skwovet",
+        "name_es" : "Rongourmand",
+        "name_jp" : "ホシガリス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "820",
+        "name_de" : "Schlaraffel",
+        "name_en" : "Greedent",
+        "name_es" : "Rongrigou",
+        "name_jp" : "ヨクバリス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "821",
+        "name_de" : "Meikro",
+        "name_en" : "Rookidee",
+        "name_es" : "Minisange",
+        "name_jp" : "ココガラ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "822",
+        "name_de" : "Kranoviz",
+        "name_en" : "Corvisquire",
+        "name_es" : "Bleuseille",
+        "name_jp" : "アオガラス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "823",
+        "name_de" : "Krarmor",
+        "name_en" : "Corviknight",
+        "name_es" : "Corvaillus",
+        "name_jp" : "アーマーガア",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "824",
+        "name_de" : "Sensect",
+        "name_en" : "Blipbug",
+        "name_es" : "Larvadar",
+        "name_jp" : "サッチムシ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "825",
+        "name_de" : "Keradar",
+        "name_en" : "Dottler",
+        "name_es" : "Coléodôme",
+        "name_jp" : "レドームシ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "826",
+        "name_de" : "Maritellit",
+        "name_en" : "Orbeetle",
+        "name_es" : "Astronelle",
+        "name_jp" : "イオルブ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "827",
+        "name_de" : "Kleptifux",
+        "name_en" : "Nickit",
+        "name_es" : "Goupilou",
+        "name_jp" : "クスネ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "828",
+        "name_de" : "Gaunux",
+        "name_en" : "Thievul",
+        "name_es" : "Roublenard",
+        "name_jp" : "フォクスライ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "829",
+        "name_de" : "Cottini",
+        "name_en" : "Gossifleur",
+        "name_es" : "Tournicoton",
+        "name_jp" : "ヒメンカ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "830",
+        "name_de" : "Cottomi",
+        "name_en" : "Eldegoss",
+        "name_es" : "Blancoton",
+        "name_jp" : "ワタシラガ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "831",
+        "name_de" : "Wolly",
+        "name_en" : "Wooloo",
+        "name_es" : "Moumouton",
+        "name_jp" : "ウールー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "832",
+        "name_de" : "Zwollock",
+        "name_en" : "Dubwool",
+        "name_es" : "Moumouflon",
+        "name_jp" : "バイウールー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "833",
+        "name_de" : "Kamehaps",
+        "name_en" : "Chewtle",
+        "name_es" : "Khélocrok",
+        "name_jp" : "カムカメ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "834",
+        "name_de" : "Kamalm",
+        "name_en" : "Drednaw",
+        "name_es" : "Torgamord",
+        "name_jp" : "カジリガメ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "835",
+        "name_de" : "Voldi",
+        "name_en" : "Yamper",
+        "name_es" : "Voltoutou",
+        "name_jp" : "ワンパチ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "836",
+        "name_de" : "Bellektro",
+        "name_en" : "Boltund",
+        "name_es" : "Fulgudog",
+        "name_jp" : "パルスワン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "837",
+        "name_de" : "Klonkett",
+        "name_en" : "Rolycoly",
+        "name_es" : "Charbi",
+        "name_jp" : "タンドン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "838",
+        "name_de" : "Wagong",
+        "name_en" : "Carkol",
+        "name_es" : "Wagomine",
+        "name_jp" : "トロッゴン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "839",
+        "name_de" : "Montecarbo",
+        "name_en" : "Coalossal",
+        "name_es" : "Monthracite",
+        "name_jp" : "セキタンザン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "840",
+        "name_de" : "Knapfel",
+        "name_en" : "Applin",
+        "name_es" : "Verpom",
+        "name_jp" : "カジッチュ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "841",
+        "name_de" : "Drapfel",
+        "name_en" : "Flapple",
+        "name_es" : "Pomdrapi",
+        "name_jp" : "アップリュー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "842",
+        "name_de" : "Schlapfel",
+        "name_en" : "Appletun",
+        "name_es" : "Dratatin",
+        "name_jp" : "タルップル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "843",
+        "name_de" : "Salanga",
+        "name_en" : "Silicobra",
+        "name_es" : "Dunaja",
+        "name_jp" : "スナヘビ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "844",
+        "name_de" : "Sanaconda",
+        "name_en" : "Sandaconda",
+        "name_es" : "Dunaconda",
+        "name_jp" : "サダイジャ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "845",
+        "name_de" : "Urgl",
+        "name_en" : "Cramorant",
+        "name_es" : "Nigosier",
+        "name_jp" : "ウッウ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "846",
+        "name_de" : "Pikuda",
+        "name_en" : "Arrokuda",
+        "name_es" : "Embrochet",
+        "name_jp" : "サシカマス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "847",
+        "name_de" : "Barrakiefa",
+        "name_en" : "Barraskewda",
+        "name_es" : "Hastacuda",
+        "name_jp" : "カマスジョー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "848",
+        "name_de" : "Toxel",
+        "name_en" : "Toxel",
+        "name_es" : "Toxizap",
+        "name_jp" : "エレズン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "849",
+        "name_de" : "Riffex",
+        "name_en" : "Toxtricity",
+        "name_es" : "Salarsen",
+        "name_jp" : "ストリンダー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "850",
+        "name_de" : "Thermopod",
+        "name_en" : "Sizzlipede",
+        "name_es" : "Grillepattes",
+        "name_jp" : "ヤクデ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "851",
+        "name_de" : "Infernopod",
+        "name_en" : "Centiskorch",
+        "name_es" : "Scolocendre",
+        "name_jp" : "マルヤクデ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "852",
+        "name_de" : "Klopptopus",
+        "name_en" : "Clobbopus",
+        "name_es" : "Poulpaf",
+        "name_jp" : "タタッコ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "853",
+        "name_de" : "Kaocto",
+        "name_en" : "Grapploct",
+        "name_es" : "Krakos",
+        "name_jp" : "オトスパス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "854",
+        "name_de" : "Fatalitee",
+        "name_en" : "Sinistea",
+        "name_es" : "Théffroi",
+        "name_jp" : "ヤバチャ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "855",
+        "name_de" : "Mortipot",
+        "name_en" : "Polteageist",
+        "name_es" : "Polthégeist",
+        "name_jp" : "ポットデス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "856",
+        "name_de" : "Brimova",
+        "name_en" : "Hatenna",
+        "name_es" : "Bibichut",
+        "name_jp" : "ミブリム",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "857",
+        "name_de" : "Brimano",
+        "name_en" : "Hattrem",
+        "name_es" : "Chapotus",
+        "name_jp" : "テブリム",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "858",
+        "name_de" : "Silembrim",
+        "name_en" : "Hatterene",
+        "name_es" : "Sorcilence",
+        "name_jp" : "ブリムオン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "859",
+        "name_de" : "B%C3%A4hmon",
+        "name_en" : "Impidimp",
+        "name_es" : "Grimalin",
+        "name_jp" : "ベロバー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "860",
+        "name_de" : "Pelzebub",
+        "name_en" : "Morgrem",
+        "name_es" : "Fourbelin",
+        "name_jp" : "ギモー",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "861",
+        "name_de" : "Olangaar",
+        "name_en" : "Grimmsnarl",
+        "name_es" : "Angoliath",
+        "name_jp" : "オーロンゲ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "862",
+        "name_de" : "Barrikadax",
+        "name_en" : "Obstagoon",
+        "name_es" : "Ixon",
+        "name_jp" : "タチフサグマ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "863",
+        "name_de" : "Mauzinger",
+        "name_en" : "Perrserker",
+        "name_es" : "Berserkatt",
+        "name_jp" : "ニャイキング",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "864",
+        "name_de" : "Gorgasonn",
+        "name_en" : "Cursola",
+        "name_es" : "Corayôme",
+        "name_jp" : "サニゴーン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "865",
+        "name_de" : "Lauchzelot",
+        "name_en" : "Sirfetch’d",
+        "name_es" : "Palarticho",
+        "name_jp" : "ネギガナイト",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "866",
+        "name_de" : "Pantifrost",
+        "name_en" : "Mr. Rime",
+        "name_es" : "M. Glaquette",
+        "name_jp" : "バリコオル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "867",
+        "name_de" : "Oghnatoll",
+        "name_en" : "Runerigus",
+        "name_es" : "Tutétékri",
+        "name_jp" : "デスバーン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "868",
+        "name_de" : "Hokumil",
+        "name_en" : "Milcery",
+        "name_es" : "Crèmy",
+        "name_jp" : "マホミル",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "869",
+        "name_de" : "Pokusan",
+        "name_en" : "Alcremie",
+        "name_es" : "Charmilly",
+        "name_jp" : "マホイップ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "870",
+        "name_de" : "Legios",
+        "name_en" : "Falinks",
+        "name_es" : "Hexadron",
+        "name_jp" : "タイレーツ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "871",
+        "name_de" : "Britzigel",
+        "name_en" : "Pincurchin",
+        "name_es" : "Wattapik",
+        "name_jp" : "バチンウニ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "872",
+        "name_de" : "Snomnom",
+        "name_en" : "Snom",
+        "name_es" : "Frissonille",
+        "name_jp" : "ユキハミ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "873",
+        "name_de" : "Mottineva",
+        "name_en" : "Frosmoth",
+        "name_es" : "Beldeneige",
+        "name_jp" : "モスノウ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "874",
+        "name_de" : "Humanolith",
+        "name_en" : "Stonjourner",
+        "name_es" : "Dolman",
+        "name_jp" : "イシヘンジン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "875",
+        "name_de" : "Kubuin",
+        "name_en" : "Eiscue",
+        "name_es" : "Bekaglaçon",
+        "name_jp" : "コオリッポ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "876",
+        "name_de" : "Servol",
+        "name_en" : "Indeedee",
+        "name_es" : "Wimessir",
+        "name_jp" : "イエッサン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "877",
+        "name_de" : "Morpeko",
+        "name_en" : "Morpeko",
+        "name_es" : "Morpeko",
+        "name_jp" : "モルペコ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "878",
+        "name_de" : "Kupfanti",
+        "name_en" : "Cufant",
+        "name_es" : "Charibari",
+        "name_jp" : "ゾウドウ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "879",
+        "name_de" : "Patinaraja",
+        "name_en" : "Copperajah",
+        "name_es" : "Pachyradjah",
+        "name_jp" : "ダイオウドウ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "880",
+        "name_de" : "Lectragon",
+        "name_en" : "Dracozolt",
+        "name_es" : "Galvagon",
+        "name_jp" : "パッチラゴン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "881",
+        "name_de" : "Lecryodon",
+        "name_en" : "Arctozolt",
+        "name_es" : "Galvagla",
+        "name_jp" : "パッチルドン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "882",
+        "name_de" : "Pescragon",
+        "name_en" : "Dracovish",
+        "name_es" : "Hydragon",
+        "name_jp" : "ウオノラゴン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "883",
+        "name_de" : "Pescryodon",
+        "name_en" : "Arctovish",
+        "name_es" : "Hydragla",
+        "name_jp" : "ウオチルドン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "884",
+        "name_de" : "Duraludon",
+        "name_en" : "Duraludon",
+        "name_es" : "Duralugon",
+        "name_jp" : "ジュラルドン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "885",
+        "name_de" : "Grolldra",
+        "name_en" : "Dreepy",
+        "name_es" : "Fantyrm",
+        "name_jp" : "ドラメシヤ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "886",
+        "name_de" : "Phandra",
+        "name_en" : "Drakloak",
+        "name_es" : "Dispareptil",
+        "name_jp" : "ドロンチ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "887",
+        "name_de" : "Katapuldra",
+        "name_en" : "Dragapult",
+        "name_es" : "Lanssorien",
+        "name_jp" : "ドラパルト",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "888",
+        "name_de" : "Zacian",
+        "name_en" : "Zacian",
+        "name_es" : "Zacian",
+        "name_jp" : "ザシアン",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "889",
+        "name_de" : "Zamazenta",
+        "name_en" : "Zamazenta",
+        "name_es" : "Zamazenta",
+        "name_jp" : "ザマゼンタ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "890",
+        "name_de" : "Endynalos",
+        "name_en" : "Eternatus",
+        "name_es" : "Éthernatos",
+        "name_jp" : "ムゲンダイナ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "891",
+        "name_de" : "Dakuma",
+        "name_en" : "Kubfu",
+        "name_es" : "Wushours",
+        "name_jp" : "ダクマ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "892",
+        "name_de" : "Wulaosu",
+        "name_en" : "Urshifu",
+        "name_es" : "Shifours",
+        "name_jp" : "ウーラオス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "893",
+        "name_de" : "Zarude",
+        "name_en" : "Zarude",
+        "name_es" : "Zarude",
+        "name_jp" : "ザルード",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "894",
+        "name_de" : "Regieleki",
+        "name_en" : "Regieleki",
+        "name_es" : "Regieleki",
+        "name_jp" : "レジエレキ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "895",
+        "name_de" : "Regidrago",
+        "name_en" : "Regidrago",
+        "name_es" : "Regidrago",
+        "name_jp" : "レジドラゴ",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "896",
+        "name_de" : "Polaross",
+        "name_en" : "Glastrier",
+        "name_es" : "Blizzeval",
+        "name_jp" : "ブリザポス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "897",
+        "name_de" : "Phantoross",
+        "name_en" : "Spectrier",
+        "name_es" : "Spectreval",
+        "name_jp" : "レイスポス",
+        "catchableInPokeMMO" : false
+    },
+    {
+        "number" : "898",
+        "name_de" : "Coronospa",
+        "name_en" : "Calyrex",
+        "name_es" : "Sylveroy",
+        "name_jp" : "バドレックス",
+        "catchableInPokeMMO" : false
+    }
+]

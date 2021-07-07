@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Pool404">
+  <title>NaviMate – Navigator for PokeMate Scripts</title>
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+  <link href="assets/lib/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
+  <script src="assets/lib/jquery-3.6.0.min.js"></script>
+  <script src="sync.js"></script>
+  <script>if (window.module) module = window.module;</script>
+</head>
+<body>
+  <div class="container-fluid">
+   <div class="row">
+      <div class="col-12 col-sm-4 col-md-3 col-xl-2 p-2 placeholder"></div>
+      <div class="col-12 col-sm-4 col-md-3 col-xl-2 p-2 text-white bg-dark sidebar">
+        <div class="headline"><svg class="sidebar-icon" style="background-image:url(assets/icons/system/sysicon.png)"></svg>NaviMator</div>
+        <hr>
+        <div class="headline"><svg class="sidebar-icon" style="background-image:url(assets/icons/ui/pokeball.svg)"></svg>Live Control</div>
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li>
+            <div class="nav-link active" data-page="current">Current values</div>
+          </li>
+          <li>
+            <div class="nav-link" data-page="activities">Bot Activities</div>
+          </li>
+        </ul>
+        <hr>
+        <div class="headline"><svg class="sidebar-icon" style="background-image:url(assets/icons/ui/ditto.svg)"></svg>Settings</div>
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li>
+            <div class="nav-link" data-page="config">Configuration</div>
+          </li>
+          <li>
+            <div class="nav-link" data-page="strategy">Strategy</div>
+          </li>
+          <li>
+            <div class="nav-link" data-page="pokemon">Pokémon</div>
+          </li>
+        </ul>
+
+        <div class="scriptinfo">
+          <h6>Script for PokeMate.jar</h6>
+          <code>require "scripts/script"</code>
+        </div>
+
+      </div>
+
+      <main class="col-12 col-sm-8 col-md-9 col-xl-10 p-4">
+
+      <div class="page active" id="page_current">
+        <h1>Current Values</h1>
+
+        <h2>PP</h2>
+        <div class="contentPlaceholder" id="PP_Current"></div>
+
+        <div class='row g-3 mb-3'>
+          <div class='col-6 md-col-4'></div>
+          <div class='col-auto'>
+            <input type="button" class="resetAll btn btn-secondary" data-resetgroup="PP_Current" value="Reset all to base">
+          </div>
+        </div>
+
+        <h2>Items</h2>
+        <div class="contentPlaceholder" id="Item_Current"></div>
+      </div>
+
+      <div class="page" id="page_activities">
+        <h1>Bot activities</h1>
+
+        <h2>Routes</h2>
+        <div class="contentPlaceholder" id="Activities_Routes"></div>
+
+        <h2>Behavior</h2>
+        <div class="contentPlaceholder" id="Activities_Behavior"></div>
+
+      </div>
+
+      <div class="page" id="page_pokemon">
+        <h1>Pokémon</h1>
+        <div class="topBar col-12 col-sm-8 col-md-9 col-xl-10 p-4">
+          <div class="row">
+            <div class="col-5">
+              <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="pokemonListfilterText">Filter</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Filter" id="pokemonListfilter" aria-describedby="pokemonListfilterText">
+              </div>
+            </div>
+            <div class="col-3">
+              <div id="languageChanger">
+                <div class="flag active" style="background-image:url(assets/icons/ui/flag_en.svg)" data-language="en">en</div>
+                <div class="flag" style="background-image:url(assets/icons/ui/flag_de.svg)" data-language="de">de</div>
+                <div class="flag" style="background-image:url(assets/icons/ui/flag_es.svg)" data-language="es">es</div>
+                <div class="flag" style="background-image:url(assets/icons/ui/flag_jp.svg)" data-language="jp">jp</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div title="This is incomplete. You can help by editing the pokemonList.json!" class="col-auto custom-control custom-switch">
+                <input type="checkbox" checked class="custom-control-input" id="showOnlyCatchables">
+                <label class="custom-control-label" for="showOnlyCatchables">Only show catchable in pokemmo</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2>Catching all</h2>
+        <div class="contentPlaceholder" id="Pokemon_Catch"></div>
+        <h2>Catching individual</h2>
+        <div id="PokemonList"></div>
+      </div>
+
+      <div class="page" id="page_strategy">
+        <h1>Strategy</h1>
+        <h2>Catching</h2>
+        <div class="contentPlaceholder" id="Strategy_Catching"></div>
+        <h2>Fighting</h2>
+        <div class="contentPlaceholder" id="Strategy_Fighting"></div>
+        <h2>EXP-Training</h2>
+        <div class="contentPlaceholder" id="Strategy_EXPTraining"></div>
+        <h2>EV-Training</h2>
+        <div class="contentPlaceholder" id="Strategy_EVTraining"></div>
+        <h2>Thief</h2>
+        <div class="contentPlaceholder" id="Strategy_Thief"></div>
+        <h2>Pay day</h2>
+        <div class="contentPlaceholder" id="Strategy_PayDay"></div>
+      </div>
+
+      <div class="page" id="page_config">
+        <h1>Configuration</h1>
+        <h2>Base-PP Values</h2>
+        <div class="contentPlaceholder" id="PP_Base"></div>
+        <h2>Hotkeys</h2>
+        <div class="contentPlaceholder" id="Setting_Hotkey"></div>
+        <h2>Hotkeys (Field Moves)</h2>
+        <div class="contentPlaceholder" id="Setting_HotkeyFM"></div>
+        <h2>Behaviour</h2>
+        <h3>Waiting Time (ms)</h3>
+        <div class="contentPlaceholder" id="Setting_WaitingTime"></div>
+        <h3>Steps</h3>
+        <div class="contentPlaceholder" id="Setting_Steps"></div>
+      </div>
+
+      </main>
+    </div> 
+  </div>
+
+
+
+
+<script>
+
+/********************/
+/**Database*Control**/
+/********************/
+
+// Update Database all 500ms
+(function(){
+  readDatabase();
+  $("input[type=number]").removeClass("attention-increased attention-decreased");
+  lines.forEach(function(line){
+    line = line.split(" = ");
+    thisItemConfigs = line[0];
+    thisItemValueNew = line[1];
+    if(thisItemValueNew == "true"){
+      thisItemValueNew = true;
+    }
+    if(thisItemValueNew == "false"){
+      thisItemValueNew = false;
+    }
+    if($("input#" + thisItemConfigs).length > 0){
+      thisItem = $("input#" + thisItemConfigs);
+      thisItemValueOld = thisItem.val();
+      if(thisItemValueNew != thisItemValueOld){
+        if(thisItem.is(":focus") || thisItem.hasClass("thisItemValuehasBeenChanged")){
+          thisItem.removeClass("thisItemValuehasBeenChanged");
+        }else{
+          if(thisItem.attr('type') == 'number'){
+            thisItem.val(thisItemValueNew);
+            if(thisItemValueNew > thisItemValueOld){
+              thisItem.addClass("attention-increased")
+            }
+            else if(thisItemValueNew < thisItemValueOld){
+              thisItem.addClass("attention-decreased")
+            }
+          }else if(thisItem.attr('type') == 'checkbox'){
+              thisItem.prop('checked', thisItemValueNew);
+          }
+        }
+      }
+    }
+  });
+  setTimeout(arguments.callee, 500);
+})();
+
+
+// Fill UI content initially
+lines.forEach(function(line, idx){
+  line = line.split(" = ");
+  thisItemConfigs = line[0];
+  thisItemValue = line[1];
+  thisItemConfig = thisItemConfigs.split("_");
+  thisItemParentElement = $("#" + thisItemConfig[1] + "_" + thisItemConfig[2]);
+ 
+  if(thisItemParentElement.length > 0){
+    if(thisItemConfig[0] == "int"){
+      thisItemElementGroup = "group_" + thisItemConfig[1] + "_" + thisItemConfig[2] + "_Line" + idx;
+      isCurrentlyZero = ""
+      if(thisItemValue <= 0){
+        isCurrentlyZero = " isCurrentlyZero"
+      }
+      thisItemParentElement.append(
+        "<div class='row g-3 mb-3' id='"+ thisItemElementGroup +"'>" +
+          "<div class='col-3 md-col-2'>" +
+            "<label for='"+thisItemConfigs+"' class='form-label'>" + thisItemConfig[3] + "</label>" +
+          "</div>" +
+          "<div class='col-3 md-col-2'>" +
+            "<input type='number' class='form-control"+ isCurrentlyZero +"' id='" + thisItemConfigs + "' value='" + thisItemValue + "'>" +
+          "</div>" +
+        "</div>"
+      );
+      if(thisItemConfig[2] == "Current" && $("#" + thisItemConfig[0] + "_" + thisItemConfig[1] + "_Base_" + thisItemConfig[3]).length > 0){
+        $("#" + thisItemElementGroup).append(
+          "<div class='col-auto'>" +
+            "<input type='button' class='reset btn btn-primary' data-resetgroup='" + thisItemConfig[1] + "_" + thisItemConfig[2] + "' data-resettarget='" + thisItemConfigs + "' data-resetbase='" + thisItemConfig[0] + "_" + thisItemConfig[1] + "_Base_" + thisItemConfig[3] + "' value='Reset to base'>" +
+          "</div>"
+        );
+      }
+    }else if(thisItemConfig[0] == "bool"){
+      thisItemElementGroup = "group_" + thisItemConfig[1] + "_" + thisItemConfig[2] + "_Line" + idx;
+      if(thisItemValue == "true"){
+        checked = "checked";
+      }else{
+        checked = "";
+      }
+      thisItemParentElement.append(
+        "<div class='row g-3 mb-4' id='"+ thisItemElementGroup +"'>" +
+          "<div class='col-3 md-col-2'>" + thisItemConfig[3] + "</div>" +
+          "<div class='col-auto'>" +
+            "<div class='col-auto custom-control custom-switch dataBaseControlSwitch'>" +
+              "<input type='checkbox' "+ checked +" class='custom-control-input' id='" + thisItemConfigs + "'>" +
+              "<label class='custom-control-label' for='"+thisItemConfigs+"'></label>" +
+            "</div>" +
+          "</div>" +
+        "</div>"
+      );
+    }else if(thisItemConfig[0] == "array"){
+      thisItemElementGroup = "group_" + thisItemConfig[1] + "_" + thisItemConfig[2] + "_Line" + idx;
+
+      thisItemValue = thisItemValue.replace("[","");
+      thisItemValue = thisItemValue.replace("]","");
+      thisItemValue = thisItemValue.replace("]","");
+      thisItemValue = thisItemValue.replaceAll("\"","");
+      thisItemValue = thisItemValue.split(",");
+
+      dropdownItems = ""
+      $.each(thisItemValue, function(index, value){
+        dropdownItems = dropdownItems + "<a class='dropdown-item' data-newvalue='" + value + "' href='#'>" + value + "</a>";
+      });
+
+      thisItemParentElement.append(
+        "<div class='row g-3 mb-4' id='"+ thisItemElementGroup +"'>" +
+          "<div class='col-3 md-col-2'>" + thisItemConfig[3] + "</div>" +
+          "<div class='col-auto'>" +
+
+            "<div class='dropdown'>" + 
+              "<button class='btn btn-secondary dropdown-toggle' type='button' data-dropdowngroup='" + thisItemConfigs + "'>" + 
+                thisItemValue[0] + 
+              "</button>" + 
+              "<div class='dropdown-menu' id='" + thisItemConfigs + "'>" +
+                dropdownItems +
+              "</div>" + 
+            "</div>" + 
+
+          "</div>" +
+        "</div>"
+      );
+    }
+  }
+});
+
+
+// Load the pokemon list from JSON
+$.getJSON( "pokemonList.json", function( data ) {
+  var individualPokemonSettings = [];
+  content = "";
+
+  lines.forEach(function(line, idx){
+    line = line.split(" = ");
+    thisItemConfigs = line[0];
+    thisItemValue = line[1];
+    thisItemConfig = thisItemConfigs.split("_");
+    if(thisItemConfig[0] == "pokemonArray"){
+      individualPokemonSettings.push(thisItemConfig[1] + "_" + thisItemConfig[2] + "_" + thisItemConfig[3]);
+    }
+  });
+  
+  $.each( data, function( key, val ) {
+    pokemonNumber = parseInt(val.number)
+    
+    $.each( individualPokemonSettings, function( pkmKey, individualPokemonSetting ) {
+      window[individualPokemonSetting] = "";
+      if(jQuery.inArray(pokemonNumber, window["pokemonArray_" + individualPokemonSetting]) !== -1){
+        window[individualPokemonSetting] = "checked"
+      }
+    });
+
+    content = content + 
+      "<div class='pokemonListLine' data-pokemonnumber='" + pokemonNumber + "' data-catchable='" +  val.catchableInPokeMMO + "'>" + 
+        "<div class='row'>" +
+          "<div class='col-1 numberAndImage' style='background-image:url(assets/icons/pkm/pkm_" + val.number + ".png)'>" + pokemonNumber + "</div>" +
+          
+          "<div class='pokemonNameLanguage col-5'><span class='en active'>" + val.name_en + "</span><span class='de'>" + val.name_de + "</span><span class='es'>" + val.name_es + "</span><span class='jp'>" + val.name_jp + "</span></div>";
+
+            $.each( individualPokemonSettings, function( pkmKey, individualPokemonSetting ) {
+              individualPokemonSettingInfos = individualPokemonSetting.split("_");
+              individualPokemonSettingName = individualPokemonSettingInfos[2]
+
+              content = content + 
+              "<div class='col-3 custom-control custom-switch dataBaseControlSwitchforArrays'>" +
+                "<input type='checkbox' "+ window[individualPokemonSetting] +" class='custom-control-input' id='pokemonArray_" + individualPokemonSetting + "__" + pokemonNumber +"'>" +
+                "<label class='custom-control-label' for='pokemonArray_" + individualPokemonSetting + "__" + pokemonNumber +"'>" + individualPokemonSettingName + "</label>" +
+              "</div>";
+            });
+
+          content = content +
+        "</div>" +
+      "</div>"
+  });
+
+  $('#PokemonList').append(content);
+
+
+  // Update arrays through bool inputs in pokemon list
+  $(".dataBaseControlSwitchforArrays input[type=checkbox]").change(function() {
+    thisPokemonArray = $(this).attr('id');
+    thisPokemonArrayParts = thisPokemonArray.split("__");
+    thisPokemonNumber = parseInt(thisPokemonArrayParts[1]);
+    thisListName = thisPokemonArrayParts[0];
+    thisListContent = eval(thisListName);
+    
+    if($(this).is(':checked')){
+      if( $.inArray(thisPokemonNumber, thisListContent) == -1 ) {
+        console.log("Adding pokemon #" + thisPokemonNumber + " to list: " + thisListName)
+        thisListContent.push(thisPokemonNumber);
+      }
+    }else{
+      if( $.inArray(thisPokemonNumber, thisListContent) !== -1 ) {
+        console.log("Removing pokemon #" + thisPokemonNumber + " from list: " + thisListName);
+        newList = jQuery.grep(thisListContent, function(value) {
+          return value != thisPokemonNumber;
+        });
+        window[thisListName] = newList;
+      }
+    }
+    //console.log(thisListContent)
+    writeDatabase();
+  });
+});
+
+
+
+
+
+// Update int inputs
+$("input[type=number]").change(function() {
+  window[$(this).attr('id')] = parseInt($(this).val());
+  if(isNaN(window[$(this).attr('id')])){
+    window[$(this).attr('id')] = 0
+  }
+  $(this).addClass("thisItemValuehasBeenChanged");
+  if(window[$(this).attr('id')] <= 0){
+    $(this).addClass("isCurrentlyZero");
+  }else{
+    $(this).removeClass("isCurrentlyZero");
+  }
+  writeDatabase();
+});
+
+// Reset buttons
+$("input[type=button].reset").click(function() {
+  resetBase = $(this).data("resetbase");
+  resetTarget = $(this).data("resettarget");
+  resetValue = parseInt($("#" + resetBase).val());
+  window[$("#" + resetTarget).attr('id')] = resetValue;
+  $("#" + resetTarget).val(resetValue);
+  $("#" + resetTarget).addClass("thisItemValuehasBeenChanged");
+  writeDatabase();
+});
+
+// Reset all button
+$("input[type=button].resetAll").click(function() {
+  resetGroup = $(this).data("resetgroup");
+  time = 0;
+  $("input[type=button][data-resetgroup='" + resetGroup + "'].reset").each(function() {
+    var self = $(this);
+    setTimeout( function(){ self.click(); }, time)
+    time += 10;
+  });
+});
+
+// Update bool inputs
+$(".dataBaseControlSwitch input[type=checkbox]").change(function() {
+  if($(this).is(':checked')){
+    thisnewValueHere = true;
+  }else{
+    thisnewValueHere = false;
+  }
+  window[$(this).attr('id')] = thisnewValueHere;
+  writeDatabase();
+});
+
+// Update dropdown inputs
+$(".dropdown-item").click(function() {
+  $(this).parent().slideUp();
+  $(this).parent().removeClass("open");
+  dropdowngroup = $(this).parent().attr("id");
+  newValue = $(this).data("newvalue");
+  //console.log(dropdowngroup);
+  //console.log(newValue);
+  $("button.dropdown-toggle[data-dropdowngroup='" + dropdowngroup + "']").html(newValue);
+  newArray = [newValue];
+  $(this).siblings().each( function () {
+    newArray.push($(this).data("newvalue"));
+  });
+  //console.log(newArray);
+  window[dropdowngroup] = newArray;
+  writeDatabase();
+});
+
+
+
+
+/*******************/
+/********UI*********/
+/*******************/
+
+// Menu navigation
+$(".sidebar .nav .nav-link").click(function() {
+  if(!$(this).hasClass("active")){
+    $(".sidebar .nav .nav-link").removeClass("active");
+    $(this).addClass("active");
+    newPage = $(this).data("page");
+    $("main .page").slideUp();
+    $("main .page#page_" + newPage).slideDown();
+  }
+});
+
+// Display message if no content is found
+$( ".page>.contentPlaceholder" ).each(function() {
+  if($(this).is(':empty')){
+    $(this).append("<p style='margin-bottom:20px'>No settings found.</p>");
+  }
+});
+
+// Dropdown Button
+$("button.dropdown-toggle").click(function() {
+  dropdowngroup = ".dropdown-menu#" + $(this).data("dropdowngroup");
+  //console.log(dropdowngroup);
+  if($(dropdowngroup).hasClass("open")){
+    $(dropdowngroup).slideUp();
+    $(dropdowngroup).removeClass("open");
+  }else{
+    $(dropdowngroup).slideDown();
+    $(dropdowngroup).addClass("open");
+  }
+});
+
+
+
+
+
+
+/*******************/
+/***POKEMON*LIST****/
+/*******************/
+
+// pokemonlist language changer
+$("#languageChanger .flag").click(function() {
+  newLanguage = $(this).data("language");
+  $("#languageChanger .flag, .pokemonNameLanguage span").removeClass("active");
+  $(".pokemonNameLanguage span." + newLanguage).addClass("active");
+  $(this).addClass("active");
+});
+
+// pokemonlist switch to show only catchables
+$("#showOnlyCatchables").change(function() {
+  if($(this).is(':checked')){
+    $(".pokemonListLine[data-catchable='false']").fadeOut();
+  }else{
+    $(".pokemonListLine[data-catchable='false']").fadeIn();
+  }
+});
+
+// pokemonlist live-filter
+$("#pokemonListfilter").on("keyup", function() {
+  var value = $(this).val().toLowerCase();
+  $(".pokemonListLine").filter(function() {
+    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+  });
+});
+
+
+
+
+</script>
+
+
+  </body>
+</html>

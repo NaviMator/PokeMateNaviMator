@@ -1,0 +1,36 @@
+/* Basic Layout */
+@media (min-width:576px){.sidebar{min-height:100vh; position:fixed; z-index:10;}}
+@media (max-width:575px){.placeholder{display:none;}}
+.sidebar{padding-bottom:100px !important;}
+.sidebar hr{border-color:rgba(0,0,0,.3);}
+.sidebar .headline{line-height:32px; margin:15px; font-weight:bold; font-size:1.1em; opacity:1;}
+.sidebar .headline .sidebar-icon{background-size:100%; background-repeat:no-repeat; background-position:center left; width:32px; height:32px; margin-top:-5px; margin-right:10px;}
+.sidebar .scriptinfo{position:absolute; bottom:15px; left:15px; font-size:12px; width:calc(100% - 30px);}
+.sidebar .scriptinfo h6{margin-left:5px;}
+.sidebar .scriptinfo code{color:#fff; background:rgba(0, 0, 0, 0.2); border-radius:10px; display:block; width:100%; padding:10px 20px;}
+.nav-link{cursor:pointer;}
+.page{display:none}
+.page.active{display:block;}
+.page>.contentPlaceholder{margin-bottom:60px;}
+
+/* Elements */
+.custom-switch label{cursor:pointer;}
+input.isCurrentlyZero{color:#eee}
+input.attention-increased{border-color:rgb(20 160 0); box-shadow:0 0 3px 2px rgb(20 160 0 / 30%);}
+input.attention-decreased{border-color:rgb(160 20 0); box-shadow:0 0 3px 2px rgb(160 20 0 / 30%);}
+.dataBaseControlSwitch label{transform:scale(1.5); transform-origin:left; margin-left:18px;}
+.dropdown-toggle{min-width:160px;}
+
+/* Pokemon list */
+#page_pokemon{padding-top:120px;}
+.topBar{width:100%; background:#fff; position: fixed; top:0; right:0; z-index:9; box-shadow:0px 0px 10px 0px rgba(0,0,0,0.5);}
+.topBar #languageChanger .flag{width:30px; height:30px; background-size:contain; opacity:.4; display:inline-block; text-indent:99px; overflow:hidden; cursor:pointer; border:1px solid #000; border-radius:8px;}
+.topBar #languageChanger .flag.active{opacity:1;}
+#PokemonList .pokemonListLine>div{height:48px; align-items:center; margin:0 -24px 10px -24px;}
+#PokemonList .pokemonListLine:nth-child(odd)>div{background:#e5e5e5;}
+#PokemonList .pokemonListLine .numberAndImage{background-repeat:no-repeat; background-position:left 15px center; background-size:contain; padding-left:60px;}
+#PokemonList .pokemonListLine .pokemonNameLanguage span{display:none;}
+#PokemonList .pokemonListLine .pokemonNameLanguage span.active{display:block;}
+#PokemonList .pokemonListLine[data-catchable="false"]{display:none;}
+
+
