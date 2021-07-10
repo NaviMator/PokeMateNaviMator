@@ -105,10 +105,10 @@ function actionRunAway()
 		isItMyTurnJet()
 		randomWaitingTime()
 
-		-- Swap if trapped or something is wrong
+		-- Swap if trapped or something is wrong (untested)
 		if triedToRun >= 2 then
-			MessageBox("Propably trapped. Fight manually.") -- Temporary function. Should start to fight.
-			break
+			print("Propably trapped. Trying to fight.")
+			actionFight()
 		end
 		triedToRun = triedToRun + 1
 
@@ -132,6 +132,7 @@ end
 function actionThrowBall()
 
 	isItMyTurnJet()
+	randomWaitingTime()
 	readDatabase()
 
 	if int_Item_Current_Pokeball > 0 then
@@ -166,6 +167,7 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 
 	isItMyTurnJet()
 	randomWaitingTime()
+	dontDefeat = false
 
 	-- Look for possible attacks
 	if strategy == "sleep" then
@@ -204,6 +206,7 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 		nextEnemyTargetID = 1
 	end
 
+	-- Start strategy
 	if bool_Hidden_Setting_Debug == true then print("Starting strategy: " .. strategy) end
 	didAttack = false
 	expiredPPAttacks = 0
@@ -216,19 +219,19 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 				if arrayContains(availableAttacks, attackInfos.ID) then
 
 					if arrayContains(notEffectiveAgainst[Battle.Active.GetPokemonType1(1, nextEnemyTargetNumber)], attackInfos.Type) or arrayContains(notEffectiveAgainst[Battle.Active.GetPokemonType2(1, nextEnemyTargetNumber)], attackInfos.Type) then
-					
 						print("Enemy is immune against " .. attackInfos.Name .. " (" .. pokemonTypes[attackInfos.Type] .. ")")
-
-					elseif arrayContains(notVeryEffectiveAgainst[Battle.Active.GetPokemonType1(1, nextEnemyTargetNumber)], attackInfos.Type) or arrayContains(notVeryEffectiveAgainst[Battle.Active.GetPokemonType2(1, nextEnemyTargetNumber)], attackInfos.Type) then
-				
-						if skippingResistantEnemies then
-							print("Enemy is strong against " .. attackInfos.Name .. " (" .. pokemonTypes[attackInfos.Type] .. ")")
-						end
-	
 					else
 
+						if dontDefeat == false then
+							if arrayContains(notVeryEffectiveAgainst[Battle.Active.GetPokemonType1(1, nextEnemyTargetNumber)], attackInfos.Type) or arrayContains(notVeryEffectiveAgainst[Battle.Active.GetPokemonType2(1, nextEnemyTargetNumber)], attackInfos.Type) then
+								if skippingResistantEnemies then
+									print("Enemy is strong against " .. attackInfos.Name .. " (" .. pokemonTypes[attackInfos.Type] .. ")")
+									actionRunAway()
+								end
+							end
+						end
+						
 						if attackInfos.PP > 0 then
-
 							isItMyTurnJet()
 							print("Attacking with " .. attackInfos.Name .. " (" .. attackInfos.PP - 1 .. " PP left)")
 							Battle.DoAction(0, 0, "SKILL", attackInfos.ID, nextEnemyTargetID)
@@ -241,9 +244,9 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 								actionRunHome()
 							elseif strategy == "weaken" and bool_Strategy_Catching_HealWhenFalseSwipePPAreEmpty then
 								actionRunHome()
-							elseif strategy == "payday" and bool_Strategy_PayDay_HealWhenPayDayPPAreEmpty then
+							elseif strategy == "payday" and bool_Strategy_PayDayThief_HealWhenPayDayPPAreEmpty then
 								actionRunHome()
-							elseif strategy == "thief" and bool_Strategy_Thief_HealWhenThiefPPAreEmpty then
+							elseif strategy == "thief" and bool_Strategy_PayDayThief_HealWhenThiefPPAreEmpty then
 								actionRunHome()
 							end
 						end
@@ -267,7 +270,7 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 
 	if expiredPPAttacks == tableLength(ownPokemonAttacks) and dontDefeat ~= true and Trainer.IsInBattle() then
 		Battle.DoAction(0, 0, "SKILL", 165, nextEnemyTargetID)
-		print("Struggle is real")
+		print("Struggle is real.")
 		didAttack = true
 	end
 
@@ -315,6 +318,7 @@ function actionSpecialAttack(specialAttackStrategy, skippingResistantEnemies)
 		randomWaitingTime()
 		readDatabase()
 		
+		--[[ Should not be necessary anymore
 		-- Run away and walk home if I die
 		if Battle.Active.GetPokemonHealth(0, 0) <= 0 then
 			print("Died in battle :(")
@@ -323,6 +327,7 @@ function actionSpecialAttack(specialAttackStrategy, skippingResistantEnemies)
 			returnAfterHealing = true
 			actionRunHome()
 		end
+		]]
 
 		fightAnalysis()
 
@@ -342,12 +347,7 @@ function actionSpecialAttack(specialAttackStrategy, skippingResistantEnemies)
 			if arrayContains(failedStrategies, specialAttackStrategy) == false then
 				attackEnemy(ownPokemonAttacks, specialAttackStrategy, skippingResistantEnemies)
 			else
-				print("No PP for " .. specialAttackStrategy .. " left.")
-				if specialAttackStrategy == "payday" and bool_Strategy_PayDayThief_HealWhenPayDayPPAreEmpty then
-					actionRunHome()
-				elseif specialAttackStrategy == "thief" and bool_Strategy_PayDayThief_HealWhenThiefPPAreEmpty then
-					actionRunHome()
-				end
+				actionRunAway()
 			end
 		end
 

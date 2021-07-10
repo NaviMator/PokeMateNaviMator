@@ -85,17 +85,7 @@ function behaviorInBattle()
 		if Battle.Active.GetPokemonRarity(1, PokemonNr) == "SHINY" then
 			MessageBox("ENEMY IS SERIOUSLY SHINY!!!")
 			catchIt = true
-			Stop(); -- Temporary Trust-Workaround
-		end
-	end
-
-	-- Check if horde battle
-	if Battle.GetBattleType() == "HORDE_BATTLE" then
-		print("Enemys brought friends")
-		if array_Activities_Behavior_Task[1] == "EXP-Training" and bool_Strategy_Fighting_FightAgainstHordes == true then
-			if bool_Hidden_Setting_Debug == true then print("Fighting Horde") end
-		else
-			actionRunAway()
+			Stop() -- Temporary Trust-Workaround
 		end
 	end
 
@@ -108,6 +98,16 @@ function behaviorInBattle()
 			else
 				print("Enemy is Pokemon # " .. tostring(enemyPokemonID) .. " and Type " .. tostring(Battle.Active.GetPokemonType1(1, PokemonNr)) .. " and " .. tostring(Battle.Active.GetPokemonType2(1, PokemonNr)))
 			end
+		end
+	end
+
+	-- Check if horde battle
+	if Battle.GetBattleType() == "HORDE_BATTLE" then
+		print("Enemys brought friends")
+		if array_Activities_Behavior_Task[1] == "EXP-Training" and bool_Strategy_Fighting_FightAgainstHordes == true then
+			if bool_Hidden_Setting_Debug == true then print("Fighting Horde") end
+		else
+			actionRunAway()
 		end
 	end
 
@@ -131,8 +131,6 @@ function behaviorInBattle()
 				print("But will release if no IV31.")
 				keepOnlyIfIV31 = true
 			end
-		else
-			actionRunAway()
 		end
 
 		-- Strategy
