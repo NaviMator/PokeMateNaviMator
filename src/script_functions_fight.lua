@@ -106,7 +106,7 @@ function actionRunAway()
 		randomWaitingTime()
 
 		-- Swap if trapped or something is wrong (untested)
-		if triedToRun >= 2 then
+		if triedToRun >= 10 then
 			print("Propably trapped. Trying to fight.")
 			actionFight()
 		end
@@ -278,6 +278,7 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 		-- block a unuseable strategy from being tried again
 		table.insert(failedStrategies, strategy)
 		print ("No attack for strategy " .. strategy .. " available. Will not try again this battle.")
+		isItMyTurnJet()
 		if bool_Hidden_Setting_Debug == true then print("Failed Strategies: " .. table_to_string(failedStrategies)) end
 	end
 end
