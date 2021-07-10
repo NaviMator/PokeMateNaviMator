@@ -245,15 +245,16 @@ end
 function walkRoute(startX, stratY, endX, endY, availableRoutes, walkingBack)
 
 	choice = random(1,tableLength(availableRoutes))
-	print("Using Route #".. choice)
 	chosenRoute = (availableRoutes[choice])
 
 	if walkingBack ~= true then
+		print("Using Route #".. choice)
 		CheckPosition(startX,stratY)
 		pathFinder(chosenRoute)
 		CheckPosition(endX,endY)
 	else
 		if bool_Activities_Routes_DigAndTeleportBack == true then
+			print("Using a shortcut")
 			KeyTyped("H"..int_Setting_HotkeyFM_Dig)
 			sleep(3000)
 			levelChange()
@@ -261,6 +262,7 @@ function walkRoute(startX, stratY, endX, endY, availableRoutes, walkingBack)
 			sleep(3000)
 			levelChange()
 		else
+			print("Using Route #".. choice)
 			CheckPosition(endX,endY)
 			pathFinder(chosenRoute)
 			CheckPosition(startX,stratY)

@@ -152,7 +152,7 @@ function actionThrowBall()
 		int_Item_Current_Masterball = int_Item_Current_Masterball -1
 		print("Go Masterball! (" .. int_Item_Current_Masterball .. " left)")
 	else
-		print("No more balls.")
+		MessageBox("No more balls left.\nWill go regenerate and Stop.")
 		goHeal = true
 		returnAfterHealing = false
 		actionRunAway()

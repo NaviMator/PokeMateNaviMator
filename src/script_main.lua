@@ -16,6 +16,8 @@ function walkingToDestination()
 			regenerate()
 			if returnAfterHealing ~= false then
 				initialWalkDone = false
+			else
+				stop()
 			end
 		end
 
