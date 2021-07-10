@@ -92,10 +92,12 @@ end
 -- Checks if player is standing on rigth spot
 -- trys to correct the position if not correct
 function CheckPosition(X, Y)
-	ErrorCorrection(X, Y)
-	if(not (Trainer.GetX() == X and Trainer.GetY() == Y)) then
-		MessageBox("Player has wrong Position\nPlease got back to start and Run the Bot again")
-		Stop()
+	if X and Y then
+		ErrorCorrection(X, Y)
+		if(not (Trainer.GetX() == X and Trainer.GetY() == Y)) then
+			MessageBox("Player has wrong Position\nPlease got back to start and Run the Bot again")
+			Stop()
+		end
 	end
 end
 
@@ -120,7 +122,7 @@ end
 
 -- Enter PokeCenter to Nurse
 function goToNurse()
-	print("goint to nurse")
+	print("Heading to nurse")
 	Trainer.MoveUp(false, 1)
 	levelChange()
 	Trainer.MoveUp(bool_Setting_Steps_AlwaysRun, 4)
@@ -136,8 +138,7 @@ end
 
 -- Go To Nurse and talk to her
 function regenerate()
-	print("regernerating")
-	goToNurse()
+	print("Regernerating")
 	CheckPosition(7,4)
 	Trainer.TalkToNPC()
 	for i=1, 7 do
@@ -147,6 +148,7 @@ function regenerate()
 	end
 	healed()
 	randomWaitingTime()
+	print("Regenerated")
 end
 
 
@@ -167,25 +169,25 @@ function pathFinder(walkRouteWay)
 
 		-- Walking has to be split up to single steps because of possible interruption
 		if walkInstruction[1] == "U" then
-			print("Walking Up ".. walkInstruction[2])
+			if bool_Hidden_Setting_Debug == true then print("Walking Up ".. walkInstruction[2]) end
 			for i=1, walkInstruction[2] do
 				Trainer.MoveUp(running, 1)
 				checkInterruption()
 			end
 		elseif walkInstruction[1] == "D" then
-			print("Walking Down ".. walkInstruction[2])
+			if bool_Hidden_Setting_Debug == true then print("Walking Down ".. walkInstruction[2]) end
 			for i=1, walkInstruction[2] do
 				Trainer.MoveDown(running, 1)
 				checkInterruption()
 			end
 		elseif walkInstruction[1] == "L" then
-			print("Walking Left ".. walkInstruction[2])
+			if bool_Hidden_Setting_Debug == true then print("Walking Left ".. walkInstruction[2]) end
 			for i=1, walkInstruction[2] do
 				Trainer.MoveLeft(running, 1)
 				checkInterruption()
 			end
 		elseif walkInstruction[1] == "R" then
-			print("Walking Right ".. walkInstruction[2])
+			if bool_Hidden_Setting_Debug == true then print("Walking Right ".. walkInstruction[2]) end
 			for i=1, walkInstruction[2] do
 				Trainer.MoveRight(running, 1)
 				checkInterruption()
@@ -202,13 +204,16 @@ function pathFinder(walkRouteWay)
 		elseif walkInstruction[1] == "Cut" then
 			print("Trimming tree")
 			KeyTyped("H"..int_Setting_HotkeyFM_Cut)
+			levelChange()
 		elseif walkInstruction[1] == "Surf" then
 			print("Going for a swim")
 			KeyTyped("H"..int_Setting_HotkeyFM_Surf)
+			sleep(3000)
 			levelChange()
 		elseif walkInstruction[1] == "Strength" then
 			print("Pushing boulders")
 			KeyTyped("H"..int_Setting_HotkeyFM_Strength)
+			sleep(3000)
 			levelChange()
 		elseif walkInstruction[1] == "RockSmash" then
 			print("Smashing boulders")
@@ -248,8 +253,18 @@ function walkRoute(startX, stratY, endX, endY, availableRoutes, walkingBack)
 		pathFinder(chosenRoute)
 		CheckPosition(endX,endY)
 	else
-		CheckPosition(endX,endY)
-		pathFinder(chosenRoute)
-		CheckPosition(startX,stratY)
+		if bool_Activities_Routes_DigAndTeleportBack == true then
+			KeyTyped("H"..int_Setting_HotkeyFM_Dig)
+			sleep(3000)
+			levelChange()
+			KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
+			sleep(3000)
+			levelChange()
+		else
+			CheckPosition(endX,endY)
+			pathFinder(chosenRoute)
+			CheckPosition(startX,stratY)
+			goToNurse()
+		end
 	end
 end

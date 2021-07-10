@@ -36,10 +36,14 @@ function routes(route, reverse)
 		startX = 6
 		stratY = 6
 		endX = 18
-		endY = 37
+		endY = 36
 
 		routesTowards = {
-			{'R-6', 'U-11', 'R-4', 'U-5', 'R-9', 'U-9', 'L-4', 'U-5', 'L-11', 'U-4','Door'}
+			{'R-6', 'U-11', 'R-4', 'U-5', 'R-9', 'U-9', 'L-4', 'U-5', 'L-11', 'U-4','Door','U-1'}
+		}
+		routesBack = {
+			{'R-10', 'D-2', 'L-2', 'D-2', 'Door', 'L-6', 'D-8', 'Ledge', 'D-4', 'R-9', 'D-5', 'Ledge', 'D-11','L-6','U-1'},
+			{'R-10', 'D-2', 'L-2', 'D-2', 'Door', 'R-11', 'D-9', 'Ledge', 'D-6', 'L-8', 'D-2', 'Ledge','D-11','L-6','U-1'}
 		}
 	elseif route == "Hoenn victory road" then -- Hoenn, victory road (start Ever Grande City at nurse)
 		startX = 27
@@ -77,6 +81,42 @@ function routes(route, reverse)
 		}
 		routesBack = {
 			{'D-5','L-8','D-2','L-12','U-6','L-8','U-2'}
+		}
+	elseif route == "Hoenn route 121" then -- Hoenn, route 121 (start Lilycove City at nurse)
+		startX = 24
+		stratY = 15
+		endX = 71
+		endY = 9
+
+		routesTowards = {
+			{'D-1','L-40','D-5','L-4','U-2'}
+		}
+		routesBack = {
+			{'D-2','R-7','U-4','R-12','U-3','R-10','D-3','R-8','U-3'}
+		}
+	elseif route == "Kanto route 15" then -- Kanto, route 15 (start Fuchsia City at nurse)
+		startX = 25
+		stratY = 32
+		endX = 20
+		endY = 11
+
+		routesTowards = {
+			{'R-4','Ledge','U-12','R-30','Door','R-11','Door','R-4'}
+		}
+		routesBack = {
+			{'U-5','L-15','D-2','L-2','Door','L-11','Door','L-30','D-4','L-25','D-13','R-8','U-4','R-16','U-2'}
+		}
+	elseif route == "Cinnabar Island" then -- Kanto, route 15 (start Cinnabar Island at nurse)
+		startX = 14
+		stratY = 12
+		endX = 13
+		endY = 17
+
+		routesTowards = {
+			{'D-2','Surf','L-2','D-3'}
+		}
+		routesBack = {
+			{'R-10','U-8','R-2','U-2'}
 		}
 	end
 

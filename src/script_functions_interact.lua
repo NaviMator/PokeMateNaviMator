@@ -24,12 +24,13 @@ function pokemonSwap(swapToPokemon)
 			randomWaitingTime()
 			print("I chose you #" .. PokemonSwapNr + 1)
 			Battle.DoAction(0,0,"SWAP",PokemonSwapNr,0)
+			randomWaitingTime()
+			Battle.DoAction(0,0,"SWAP",PokemonSwapNr,0) -- Has to be fired again to work
 			pokemonSwapped = true
 		end
 	end
 
 end
-
 
 
 -- Wait to attack
@@ -53,16 +54,13 @@ function isItMyTurnJet()
 				sleep(1500)
 				print("Pokemon defeated. Swapping to next pokemon.")
 				pokemonSwap(0)
+				sleep(5000)
 			end
 		end
 	end
 
 	randomWaitingTime()
 end
-
-
-
-
 
 
 -- Check if player got interrupted by a fight while walking and react to fight

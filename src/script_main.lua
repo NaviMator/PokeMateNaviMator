@@ -67,6 +67,13 @@ end
 
 
 
+
+--[[
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~Behavior~in~battle~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--]]
+
 function behaviorInBattle()
 
 	readDatabase()
@@ -85,17 +92,23 @@ function behaviorInBattle()
 	-- Check if horde battle
 	if Battle.GetBattleType() == "HORDE_BATTLE" then
 		print("Enemys brought friends")
-		if bool_Strategy_Fighting_FightAgainstHordes == false then
+		if array_Activities_Behavior_Task[1] == "EXP-Training" and bool_Strategy_Fighting_FightAgainstHordes == true then
+			if bool_Hidden_Setting_Debug == true then print("Fighting Horde") end
+		else
 			actionRunAway()
 		end
 	end
 
 	-- Analyse enemy
-	enemyPokemonID = Battle.Active.GetPokemonID(1, 0)
-	if Battle.Active.GetPokemonType1(1, 0) == Battle.Active.GetPokemonType2(1, 0) then
-		print("Enemy is Pokemon # " .. tostring(enemyPokemonID) .. " and Type " .. tostring(Battle.Active.GetPokemonType1(1, 0)))
-	else
-		print("Enemy is Pokemon # " .. tostring(enemyPokemonID) .. " and Type " .. tostring(Battle.Active.GetPokemonType1(1, 0)) .. " and " .. tostring(Battle.Active.GetPokemonType2(1, 0)))
+	for PokemonNr = 0, Battle.GetFightingTeamSize(1)-1 do
+		enemyPokemonID = Battle.Active.GetPokemonID(1, PokemonNr)
+		if enemyPokemonID > 0 then
+			if Battle.Active.GetPokemonType1(1, 0) == Battle.Active.GetPokemonType2(1, 0) then
+				print("Enemy is Pokemon # " .. tostring(enemyPokemonID) .. " and Type " .. tostring(Battle.Active.GetPokemonType1(1, PokemonNr)))
+			else
+				print("Enemy is Pokemon # " .. tostring(enemyPokemonID) .. " and Type " .. tostring(Battle.Active.GetPokemonType1(1, PokemonNr)) .. " and " .. tostring(Battle.Active.GetPokemonType2(1, PokemonNr)))
+			end
+		end
 	end
 
 	--[[
@@ -124,7 +137,7 @@ function behaviorInBattle()
 
 		-- Strategy
 		if catchIt then
-			actionCatchEnemy()
+			actionSpecialAttack("catch")
 			checkIfCaught(keepOnlyIfIV31)
 		else
 			actionRunAway()
@@ -139,11 +152,26 @@ function behaviorInBattle()
 	elseif array_Activities_Behavior_Task[1] == "EXP-Training" then
 		actionFight()
 
-	-- elseif array_Activities_Behavior_Task == "EV-Training" then
-	-- elseif array_Activities_Behavior_Task == "Thief" then
-	-- elseif array_Activities_Behavior_Task == "Pay Day" then
+
+	--[[
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	~~~~~~~~~~~~~~~~~~~Pay~Day~~~~~~~~~~~~~~~~~
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	--]]
+	elseif array_Activities_Behavior_Task[1] == "Pay Day" then
+		actionSpecialAttack("payday", bool_Strategy_PayDayThief_SkipResistantEnemies)
+
+
+	--[[
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	~~~~~~~~~~~~~~~~~~~~Thief~~~~~~~~~~~~~~~~~~
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	--]]
+	elseif array_Activities_Behavior_Task[1] == "Thief" then
+		actionSpecialAttack("thief", bool_Strategy_PayDayThief_SkipResistantEnemies)
+
 	else
-		MessageBox("Task not yet implemented.")
+		MessageBox("Task not implemented.")
 		stop()
 	end
 end

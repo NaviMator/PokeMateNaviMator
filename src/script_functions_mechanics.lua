@@ -54,12 +54,9 @@ attacksThatCauseEffects = {
         -- Stun Spore
     },
 
-	Weaken = {
-		206 -- False Swipe
-	},
-
 	Other = {
-		212 -- Mean Look
+		212, -- Mean Look
+		100 -- Teleport
 	}
 }
 
