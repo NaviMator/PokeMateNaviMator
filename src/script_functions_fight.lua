@@ -324,17 +324,6 @@ function actionSpecialAttack(specialAttackStrategy, skippingResistantEnemies)
 		isItMyTurnJet()
 		randomWaitingTime()
 		readDatabase()
-		
-		--[[ Should not be necessary anymore
-		-- Run away and walk home if I die
-		if Battle.Active.GetPokemonHealth(0, 0) <= 0 then
-			print("Died in battle :(")
-			pokemonSwap(0)
-			goHeal = true
-			returnAfterHealing = true
-			actionRunHome()
-		end
-		]]
 
 		fightAnalysis()
 
