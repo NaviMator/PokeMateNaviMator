@@ -239,7 +239,9 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 							isItMyTurnJet()
 							print("Attacking with " .. attackInfos.Name .. " (" .. attackInfos.PP - 1 .. " PP left)")
 							Battle.DoAction(0, 0, "SKILL", attackInfos.ID, nextEnemyTargetID)
-							didAttack = true
+							if attackInfos.PP > 1 then
+								didAttack = true
+							end
 						end
 
 					end
@@ -269,15 +271,18 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 	-- block a unuseable strategy from being tried again
 	if didAttack == false and Trainer.IsInBattle() then
 		table.insert(failedStrategies, strategy)
-		print ("No attack for strategy " .. strategy .. " available. Will not try again this battle.")
+		print ("No attack for strategy " .. strategy .. " left. Will not try again this battle.")
 
 		-- Regenerate if important strategies fail
 		if strategy == "sleep" and bool_Strategy_Catching_HealWhenSleepPPAreEmpty then
-			actionRunHome()
+			goHeal = true
+			returnAfterHealing = true
 		elseif strategy == "paralize" and bool_Strategy_Catching_HealWhenParalizePPAreEmpty then
-			actionRunHome()
+			goHeal = true
+			returnAfterHealing = true
 		elseif strategy == "weaken" and bool_Strategy_Catching_HealWhenFalseSwipePPAreEmpty then
-			actionRunHome()
+			goHeal = true
+			returnAfterHealing = true
 		elseif strategy == "payday" and bool_Strategy_PayDayThief_HealWhenPayDayPPAreEmpty then
 			actionRunHome()
 		elseif strategy == "thief" and bool_Strategy_PayDayThief_HealWhenThiefPPAreEmpty then
