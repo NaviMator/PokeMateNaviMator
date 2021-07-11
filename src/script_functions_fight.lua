@@ -168,6 +168,7 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 	isItMyTurnJet()
 	randomWaitingTime()
 	dontDefeat = false
+	availableAttacks = {}
 
 	-- Look for possible attacks
 	if strategy == "sleep" then
@@ -190,8 +191,8 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 	end
 
 	-- Analyse hordes
-	nextEnemyFound = false
 	if Battle.GetBattleType() == "HORDE_BATTLE" then
+		nextEnemyFound = false
 		for PokemonNr = 0, Battle.GetFightingTeamSize(1)-1 do
 			-- Note: tostring(Battle.GetFightingTeamSize(1)) -- Function always returns 1 or 5
 			if Battle.Active.IsValidPokemon(1, PokemonNr) == true and nextEnemyFound == false then
@@ -207,55 +208,45 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 	end
 
 	-- Start strategy
-	if bool_Hidden_Setting_Debug == true then print("Starting strategy: " .. strategy) end
+	if bool_Hidden_Setting_Debug == true then print("Strategy started: " .. strategy) end
 	didAttack = false
 	expiredPPAttacks = 0
 
-	for attack, attackInfos in pairs(ownPokemonAttacks) do
-		if didAttack == false and Trainer.IsInBattle() then
-			if bool_Hidden_Setting_Debug == true then print("Priority Attack is Atrack #".. attack .. ", " .. attackInfos.Name .. " (ID " .. attackInfos.ID .. ")" .. " | " .. attackInfos.PP - 1 .. " PP left.") end
-			if availableAttacks then
+	for attack, attackInfos in pairs(ownPokemonAttacks) do -- Loop through available attacks
+		if didAttack == false and Trainer.IsInBattle() then -- Continue loop if no attack has been done
+			if bool_Hidden_Setting_Debug == true then print("Priority Attack is Move ".. attack .. ": " .. attackInfos.Name .. " (ID " .. attackInfos.ID .. ")" .. " | " .. attackInfos.PP - 1 .. " PP left.") end
+			if availableAttacks then -- Use attack by strategy
 
-				if arrayContains(availableAttacks, attackInfos.ID) then
+				if arrayContains(availableAttacks, attackInfos.ID) then -- Check if attack matches strategy
 
+					-- Skip attack if enemy is immune 
 					if arrayContains(notEffectiveAgainst[Battle.Active.GetPokemonType1(1, nextEnemyTargetNumber)], attackInfos.Type) or arrayContains(notEffectiveAgainst[Battle.Active.GetPokemonType2(1, nextEnemyTargetNumber)], attackInfos.Type) then
 						print("Enemy is immune against " .. attackInfos.Name .. " (" .. pokemonTypes[attackInfos.Type] .. ")")
 					else
 
+						-- Skip attack if enemy is resistant (optional)
 						if dontDefeat == false then
 							if arrayContains(notVeryEffectiveAgainst[Battle.Active.GetPokemonType1(1, nextEnemyTargetNumber)], attackInfos.Type) or arrayContains(notVeryEffectiveAgainst[Battle.Active.GetPokemonType2(1, nextEnemyTargetNumber)], attackInfos.Type) then
 								if skippingResistantEnemies then
-									print("Enemy is strong against " .. attackInfos.Name .. " (" .. pokemonTypes[attackInfos.Type] .. ")")
+									print("Enemy is resistant against " .. attackInfos.Name .. " (" .. pokemonTypes[attackInfos.Type] .. ")")
 									actionRunAway()
 								end
 							end
 						end
 						
+						-- Use attack if PP are left
 						if attackInfos.PP > 0 then
 							isItMyTurnJet()
 							print("Attacking with " .. attackInfos.Name .. " (" .. attackInfos.PP - 1 .. " PP left)")
 							Battle.DoAction(0, 0, "SKILL", attackInfos.ID, nextEnemyTargetID)
 							didAttack = true
-						else
-							print ("0 PP for strategy " .. strategy .. " left")
-							if strategy == "sleep" and bool_Strategy_Catching_HealWhenSleepPPAreEmpty then
-								actionRunHome()
-							elseif strategy == "paralize" and bool_Strategy_Catching_HealWhenParalizePPAreEmpty then
-								actionRunHome()
-							elseif strategy == "weaken" and bool_Strategy_Catching_HealWhenFalseSwipePPAreEmpty then
-								actionRunHome()
-							elseif strategy == "payday" and bool_Strategy_PayDayThief_HealWhenPayDayPPAreEmpty then
-								actionRunHome()
-							elseif strategy == "thief" and bool_Strategy_PayDayThief_HealWhenThiefPPAreEmpty then
-								actionRunHome()
-							end
 						end
 
 					end
 
 				end
-			else
-				if attackInfos.PP > 0 then
+			else -- Use attack by priority
+				if attackInfos.PP > 0 then -- Use attack with highest priority if PP are left
 					print("Attacking with " .. attackInfos.Name .. " (" .. attackInfos.PP - 1 .. " PP left)")
 					Battle.DoAction(0, 0, "SKILL", attackInfos.ID, nextEnemyTargetID)
 					didAttack = true
@@ -267,17 +258,32 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 		end
 	end
 
-
+	-- Use struggle if no PP are left
 	if expiredPPAttacks == tableLength(ownPokemonAttacks) and dontDefeat ~= true and Trainer.IsInBattle() then
+		isItMyTurnJet()
 		Battle.DoAction(0, 0, "SKILL", 165, nextEnemyTargetID)
 		print("Struggle is real.")
 		didAttack = true
 	end
 
+	-- block a unuseable strategy from being tried again
 	if didAttack == false and Trainer.IsInBattle() then
-		-- block a unuseable strategy from being tried again
 		table.insert(failedStrategies, strategy)
 		print ("No attack for strategy " .. strategy .. " available. Will not try again this battle.")
+
+		-- Regenerate if important strategies fail
+		if strategy == "sleep" and bool_Strategy_Catching_HealWhenSleepPPAreEmpty then
+			actionRunHome()
+		elseif strategy == "paralize" and bool_Strategy_Catching_HealWhenParalizePPAreEmpty then
+			actionRunHome()
+		elseif strategy == "weaken" and bool_Strategy_Catching_HealWhenFalseSwipePPAreEmpty then
+			actionRunHome()
+		elseif strategy == "payday" and bool_Strategy_PayDayThief_HealWhenPayDayPPAreEmpty then
+			actionRunHome()
+		elseif strategy == "thief" and bool_Strategy_PayDayThief_HealWhenThiefPPAreEmpty then
+			actionRunHome()
+		end
+
 		isItMyTurnJet()
 		if bool_Hidden_Setting_Debug == true then print("Failed Strategies: " .. table_to_string(failedStrategies)) end
 	end
@@ -310,7 +316,7 @@ end
 -- Function to catch enemy or use payday, thief, etc
 function actionSpecialAttack(specialAttackStrategy, skippingResistantEnemies)
 
-	print("Strategy: " .. specialAttackStrategy)
+	print("Strategy wanted: " .. specialAttackStrategy)
 	failedStrategies = {} -- Reset for new battle
 
 	while Trainer.IsInBattle() do
@@ -333,7 +339,6 @@ function actionSpecialAttack(specialAttackStrategy, skippingResistantEnemies)
 		fightAnalysis()
 
 		-- Figure out next move
-		availableAttacks = {}
 		if specialAttackStrategy == "catch" then
 			if bool_Strategy_Catching_Sleep and enemyStatus == 0 and arrayContains(failedStrategies, "sleep") == false then
 				attackEnemy(ownPokemonAttacks, "sleep")

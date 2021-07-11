@@ -21,12 +21,16 @@ function pokemonSwap(swapToPokemon)
 
 	for PokemonSwapNr = swapToPokemon, 5 do
 		if Battle.Bench.GetPokemonHealth(0, PokemonSwapNr) > 0 and pokemonSwapped ~= true then
+			sleep(500)
 			randomWaitingTime()
 			print("I chose you #" .. PokemonSwapNr + 1)
 			Battle.DoAction(0,0,"SWAP",PokemonSwapNr,0)
+			sleep(500)
 			randomWaitingTime()
 			Battle.DoAction(0,0,"SWAP",PokemonSwapNr,0) -- Has to be fired again to work
 			pokemonSwapped = true
+			sleep(500)
+			randomWaitingTime()
 		end
 	end
 

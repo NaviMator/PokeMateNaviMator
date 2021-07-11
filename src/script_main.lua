@@ -86,8 +86,11 @@ function behaviorInBattle()
 		-- Note: tostring(Battle.GetFightingTeamSize(1)) -- Function always returns 1 or 5
 		if Battle.Active.GetPokemonRarity(1, PokemonNr) == "SHINY" then
 			MessageBox("ENEMY IS SERIOUSLY SHINY!!!")
-			catchIt = true
-			Stop() -- Temporary Trust-Workaround
+			
+			Stop() -- Temporary workaround
+			-- Unsure here. You don't want to risk bad bot behaviour but neither afk.
+			-- Best practice would need to know a lot of hardcoded variables to understand the situation.
+
 		end
 	end
 
