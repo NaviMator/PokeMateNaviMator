@@ -10,7 +10,9 @@ require (baseFolder.."src/script_functions_mechanics")  -- List of hardcoded mec
 require (baseFolder.."src/script_functions_walk")       -- Functions to walk around
 require (baseFolder.."src/script_functions_interact")   -- Functions to interact
 require (baseFolder.."src/script_functions_fight")      -- Functions to fight and catch
-require (baseFolder.."src/script_routes")               -- Scripts of available routes
+require (baseFolder.."src/script_rec")                  -- Scripts to record routes
+require (baseFolder.."src/database/script_routes")      -- Scripts of available routes
+require (baseFolder.."src/database/script_playthrough") -- Scripts of available playthroughts
 require (baseFolder.."src/script_main")                 -- Main logic that puts everything together
 
 print("Setup successful")

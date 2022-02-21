@@ -47,7 +47,7 @@ function prioritizeMoves()
 			if arrayContains(enemyTypes, pokemonType) then
 				if arrayContains(attackTypes, attackInfos.Type) then
 					if bool_Hidden_Setting_Debug == true then print("Resistance for " .. pokemonType .. " found. Decreasing priority of " .. attackInfos.Name .. " by 10 points.") end
-					attackInfos.Prio = attackInfos.Prio - 10
+					attackInfos.Prio = attackInfos.Prio - 20
 				end
 			end
 		end
@@ -56,7 +56,7 @@ function prioritizeMoves()
 			if arrayContains(enemyTypes, pokemonType) then
 				if arrayContains(attackTypes, attackInfos.Type) then
 					if bool_Hidden_Setting_Debug == true then print("Weakness for " .. pokemonType .. " found. Increasing priority of " .. attackInfos.Name .. " by 10 points.") end
-					attackInfos.Prio = attackInfos.Prio + 10
+					attackInfos.Prio = attackInfos.Prio + 20
 				end
 			end
 		end
@@ -66,7 +66,14 @@ function prioritizeMoves()
 			attackInfos.Prio = attackInfos.Prio + 10
 		end
 
-		for status, statusAttacks in pairs(attacksThatCauseEffects) do
+		for effect, effectAttacks in pairs(attacksThatCauseEffects) do
+			if arrayContains(effectAttacks, attackInfos.ID) then
+				if bool_Hidden_Setting_Debug == true then print("Will cause " .. effect .. ". Decreasing priority of " .. attackInfos.Name .. " by 80 points.") end
+				attackInfos.Prio = attackInfos.Prio - 80
+			end
+		end
+
+		for status, statusAttacks in pairs(attacksThatCauseStatus) do
 			if arrayContains(statusAttacks, attackInfos.ID) then
 				if bool_Hidden_Setting_Debug == true then print("Will cause " .. status .. ". Decreasing priority of " .. attackInfos.Name .. " by 80 points.") end
 				attackInfos.Prio = attackInfos.Prio - 80
@@ -75,12 +82,12 @@ function prioritizeMoves()
 
 		if Battle.GetBattleType() == "SINGLE_BATTLE" then
 			if arrayContains(attacksThatdamageGroups, attackInfos.ID) and bool_Strategy_Fighting_SaveUpMultiTargetMoves then
-				attackInfos.Prio = attackInfos.Prio - 30
+				attackInfos.Prio = attackInfos.Prio - 40
 				if bool_Hidden_Setting_Debug == true then print("Should be saved for multiple enemies. Decreasing priority of " .. attackInfos.Name .. " by 30 points.") end
 			end
 		else
 			if arrayContains(attacksThatdamageGroups, attackInfos.ID) then
-				attackInfos.Prio = attackInfos.Prio + 30
+				attackInfos.Prio = attackInfos.Prio + 40
 				if bool_Hidden_Setting_Debug == true then print("Will attack multiple enemies. Increasing priority of " .. attackInfos.Name .. " by 30 points.") end
 			end
 		end
@@ -105,7 +112,7 @@ function actionRunAway()
 		isItMyTurnJet()
 		randomWaitingTime()
 
-		-- Swap if trapped or something is wrong (untested)
+		-- Swap if trapped or something is wrong (still not tested)
 		if triedToRun >= 10 then
 			print("Propably trapped. Trying to fight.")
 			actionFight()
@@ -187,7 +194,7 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 	elseif strategy == "group" then
 		availableAttacks = attacksThatdamageGroups
 	else
-		strategy = "random"
+		strategy = "defeat"
 	end
 
 	-- Analyse hordes
@@ -215,47 +222,43 @@ function attackEnemy(ownPokemonAttacks, strategy, skippingResistantEnemies)
 	for attack, attackInfos in pairs(ownPokemonAttacks) do -- Loop through available attacks
 		if didAttack == false and Trainer.IsInBattle() then -- Continue loop if no attack has been done
 			if bool_Hidden_Setting_Debug == true then print("Priority Attack is Move ".. attack .. ": " .. attackInfos.Name .. " (ID " .. attackInfos.ID .. ")" .. " | " .. attackInfos.PP - 1 .. " PP left.") end
-			if availableAttacks then -- Use attack by strategy
 
-				if arrayContains(availableAttacks, attackInfos.ID) then -- Check if attack matches strategy
+			if arrayContains(availableAttacks, attackInfos.ID) then -- Check if attack matches strategy
 
-					-- Skip attack if enemy is immune 
-					if arrayContains(notEffectiveAgainst[Battle.Active.GetPokemonType1(1, nextEnemyTargetNumber)], attackInfos.Type) or arrayContains(notEffectiveAgainst[Battle.Active.GetPokemonType2(1, nextEnemyTargetNumber)], attackInfos.Type) then
-						print("Enemy is immune against " .. attackInfos.Name .. " (" .. pokemonTypes[attackInfos.Type] .. ")")
-					else
+				-- Skip attack if enemy is immune 
+				if arrayContains(notEffectiveAgainst[Battle.Active.GetPokemonType1(1, nextEnemyTargetNumber)], attackInfos.Type) or arrayContains(notEffectiveAgainst[Battle.Active.GetPokemonType2(1, nextEnemyTargetNumber)], attackInfos.Type) then
+					print("Enemy is immune against " .. attackInfos.Name .. " (" .. pokemonTypes[attackInfos.Type] .. ")")
+				else
 
-						-- Skip attack if enemy is resistant (optional)
-						if dontDefeat == false then
-							if arrayContains(notVeryEffectiveAgainst[Battle.Active.GetPokemonType1(1, nextEnemyTargetNumber)], attackInfos.Type) or arrayContains(notVeryEffectiveAgainst[Battle.Active.GetPokemonType2(1, nextEnemyTargetNumber)], attackInfos.Type) then
-								if skippingResistantEnemies then
-									print("Enemy is resistant against " .. attackInfos.Name .. " (" .. pokemonTypes[attackInfos.Type] .. ")")
-									actionRunAway()
-								end
+					-- Skip attack if enemy is resistant (optional)
+					if dontDefeat == false then
+						if arrayContains(notVeryEffectiveAgainst[Battle.Active.GetPokemonType1(1, nextEnemyTargetNumber)], attackInfos.Type) or arrayContains(notVeryEffectiveAgainst[Battle.Active.GetPokemonType2(1, nextEnemyTargetNumber)], attackInfos.Type) then
+							if skippingResistantEnemies then
+								print("Enemy is resistant against " .. attackInfos.Name .. " (" .. pokemonTypes[attackInfos.Type] .. ")")
+								actionRunAway()
 							end
 						end
-						
-						-- Use attack if PP are left
-						if attackInfos.PP > 0 then
-							isItMyTurnJet()
-							print("Attacking with " .. attackInfos.Name .. " (" .. attackInfos.PP - 1 .. " PP left)")
-							Battle.DoAction(0, 0, "SKILL", attackInfos.ID, nextEnemyTargetID)
-							if attackInfos.PP > 1 then
-								didAttack = true
-							end
+					end
+					
+					-- Use attack if PP are left
+					if attackInfos.PP > 0 then
+						isItMyTurnJet()
+						print("Attacking with " .. attackInfos.Name .. " (" .. attackInfos.PP - 1 .. " PP left)")
+						Battle.DoAction(0, 0, "SKILL", attackInfos.ID, nextEnemyTargetID)
+						if attackInfos.PP > 1 then
+							didAttack = true
 						end
-
 					end
 
 				end
-			else -- Use attack by priority
-				if attackInfos.PP > 0 then -- Use attack with highest priority if PP are left
-					print("Attacking with " .. attackInfos.Name .. " (" .. attackInfos.PP - 1 .. " PP left)")
-					Battle.DoAction(0, 0, "SKILL", attackInfos.ID, nextEnemyTargetID)
-					didAttack = true
-				else
-					print("0 PP for " .. attackInfos.Name .. " left")
-					expiredPPAttacks = expiredPPAttacks + 1
-				end
+
+			elseif attackInfos.PP > 0 then -- Use attack with highest priority if PP are left
+				print("Attacking with " .. attackInfos.Name .. " (" .. attackInfos.PP - 1 .. " PP left)")
+				Battle.DoAction(0, 0, "SKILL", attackInfos.ID, nextEnemyTargetID)
+				didAttack = true
+			else
+				print("0 PP for " .. attackInfos.Name .. " left")
+				expiredPPAttacks = expiredPPAttacks + 1
 			end
 		end
 	end
@@ -305,10 +308,11 @@ function actionFight()
 		isItMyTurnJet()
 		randomWaitingTime()
 		readDatabase()
-		
+
 		fightAnalysis()
 		prioritizeMoves()
 
+		failedStrategies = {} -- Reset for new battle
 		attackEnemy(ownPokemonAttacks)
 
 		writeDatabase()

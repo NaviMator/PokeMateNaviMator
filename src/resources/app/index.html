@@ -28,6 +28,9 @@
           <li>
             <div class="nav-link" data-page="activities">Bot Activities</div>
           </li>
+          <li>
+            <div class="nav-link" data-page="rec">Record Route</div>
+          </li>
         </ul>
         <hr>
         <div class="headline"><svg class="sidebar-icon" style="background-image:url(assets/icons/ui/ditto.svg)"></svg>Settings</div>
@@ -46,6 +49,7 @@
         <div class="scriptinfo">
           <h6>Script for PokeMate.jar</h6>
           <code>require "scripts/script"</code>
+          <button style="display:none" class="openSoftwareButton btn btn-primary" data-software="PokeMate">Start Pokemate.jar</button>
         </div>
 
       </div>
@@ -56,6 +60,7 @@
         <h1>Current Values</h1>
 
         <h2>PP</h2>
+        <p>Keep track of your current PP</p>
         <div class="contentPlaceholder" id="PP_Current"></div>
 
         <div class='row g-3 mb-3'>
@@ -66,22 +71,76 @@
         </div>
 
         <h2>Items</h2>
+        <p>Keep track of items the bot will use</p>
         <div class="contentPlaceholder" id="Item_Current"></div>
       </div>
 
       <div class="page" id="page_activities">
         <h1>Bot activities</h1>
-
-        <h2>Routes</h2>
-        <div class="contentPlaceholder" id="Activities_Routes"></div>
+        <p>Basic setting how the bot will move</p>
+        <div class="contentPlaceholder" id="Activities_Basic"></div>
 
         <h2>Behavior</h2>
+        <p>Basic settings what the bot will do</p>
         <div class="contentPlaceholder" id="Activities_Behavior"></div>
+
+        <h2>Routes</h2>
+        <p>What routes the bot will walk</p>
+        <div class="contentPlaceholder" id="Activities_Routes"></div>
+
+        <h2>Playthrough</h2>
+        <p>What chapter of the playthrough the bot will walk</p>
+        <div class="contentPlaceholder" id="Activities_Playthrough"></div>
+      </div>
+
+      <div class="page" id="page_rec">
+        <h1>Record Route</h1>
+        <p>Record inputs live to build scripts</p>
+
+        <h2>Inputs</h2>
+        <div class="rec-inputs-wrapper">
+          <div class="rec-inputs rec-inputs-arrows">
+            <button class="rec-input rec-u btn btn-primary" data-rec="U-1">&uarr;</button>
+            <button class="rec-input rec-l btn btn-primary" data-rec="L-1">&larr;</button>
+            <button class="rec-input rec-r btn btn-primary" data-rec="R-1">&rarr;</button>
+            <button class="rec-input rec-d btn btn-primary" data-rec="D-1">&darr;</button>
+          </div>
+          <div class="rec-inputs rec-inputs-specials">
+            <button class="rec-input btn btn-primary" data-rec="Speak">Speak to</button>
+            <button class="rec-input btn btn-primary" data-rec="Talk-1">Continue Dialogue</button>
+            <button class="rec-input btn btn-primary" data-rec="Wait-1">Wait 1 Second</button>
+            <button class="rec-input btn btn-primary" data-rec="Door">Go through Door</button>
+            <button class="rec-input btn btn-primary" data-rec="Ledge">Jump down ledge</button>
+          </div>
+          <div class="rec-inputs rec-inputs-hms">
+              <button class="rec-input btn btn-primary" data-rec="Cut">Cut</button>
+              <button class="rec-input btn btn-primary" data-rec="Surf">Surf</button>
+              <button class="rec-input btn btn-primary" data-rec="Strength">Strength</button>
+              <button class="rec-input btn btn-primary" data-rec="RockSmash">RockSmash</button>
+              <button class="rec-input btn btn-primary" data-rec="RockClimb">RockClimb</button>
+              <button class="rec-input btn btn-primary" data-rec="Waterfall">Waterfall</button>
+              <button class="rec-input btn btn-primary" data-rec="Whirlpool">Whirlpool</button>
+              <button class="rec-input btn btn-primary" data-rec="Dive">Dive</button>
+              <button class="rec-input btn btn-primary" data-rec="Dig">Dig</button>
+              <button class="rec-input btn btn-primary" data-rec="Teleport">Teleport</button>
+              <button class="rec-input btn btn-secondary" data-rec="GetCoordinates">Log coordinates</button>
+          </div>
+        </div>
+
+        <h2>Output</h2>
+        <p>Click output to copy.</p>
+        <code id="rec-output">{}</code>
+        <button id="rec-output-clearer" class="rec-output-clear btn btn-primary">Clear</button>
+
+
+        <h2>Settings</h2>
+        <div class="contentPlaceholder" id="Rec_Settings"></div>
 
       </div>
 
       <div class="page" id="page_pokemon">
         <h1>Pokémon</h1>
+        <p>Declares which pokemon to catch and if they should be kept if no IV is 31.</p>
         <div class="topBar col-12 col-sm-8 col-md-9 col-xl-10 p-4">
           <div class="row">
             <div class="col-5">
@@ -117,22 +176,32 @@
       <div class="page" id="page_strategy">
         <h1>Strategy</h1>
         <h2>Catching</h2>
+        <p>How to catch pokemon while farming</p>
         <div class="contentPlaceholder" id="Strategy_Catching"></div>
         <h2>Fighting</h2>
+        <p>How to fight</p>
         <div class="contentPlaceholder" id="Strategy_Fighting"></div>
+        <h2>Training</h2>
+        <p>How to EV-train</p>
+        <div class="contentPlaceholder" id="Strategy_Training"></div>
         <h2>Pay day &amp; Thief</h2>
+        <p>How to use payday and thief</p>
         <div class="contentPlaceholder" id="Strategy_PayDayThief"></div>
       </div>
 
       <div class="page" id="page_config">
         <h1>Configuration</h1>
         <h2>Base-PP Values</h2>
+        <p>Set PP to the base to reset them in the current values</p>
         <div class="contentPlaceholder" id="PP_Base"></div>
-        <h2>Hotkeys</h2>
+        <h2>Hotkeys (Items)</h2>
+        <p>Declare the ingame hotkeys for items</p>
         <div class="contentPlaceholder" id="Setting_Hotkey"></div>
         <h2>Hotkeys (Field Moves)</h2>
+        <p>Declare the ingame hotkeys for field moves</p>
         <div class="contentPlaceholder" id="Setting_HotkeyFM"></div>
         <h2>Behaviour</h2>
+        <p>Set how the movement is randomized</p>
         <h3>Waiting Time (ms)</h3>
         <div class="contentPlaceholder" id="Setting_WaitingTime"></div>
         <h3>Steps</h3>
@@ -156,6 +225,7 @@
 (function(){
   readDatabase();
   $("input[type=number]").removeClass("attention-increased attention-decreased");
+  $("button").removeClass("changed");
   lines.forEach(function(line){
     line = line.split(" = ");
     thisItemConfigs = line[0];
@@ -187,9 +257,47 @@
         }
       }
     }
+    if($(".dropdown-menu#" + thisItemConfigs).length > 0){
+      thisItem = $(".dropdown-menu#" + thisItemConfigs)
+      
+      thisItemValueNew = thisItemValueNew.replace("[","")
+      thisItemValueNew = thisItemValueNew.replace("]","")
+      thisItemValueNew = thisItemValueNew.replaceAll("\"","")
+      thisItemValueNew = thisItemValueNew.split(",")
+      
+      thisItemValuesNew = ""
+      $.each(thisItemValueNew, function(index, value){
+        thisItemValuesNew = thisItemValuesNew + "<a class='dropdown-item' data-newvalue='" + value + "' href='#'>" + value + "</a>"
+      });
+      thisItemValuesNew = thisItemValuesNew.replaceAll("\'","\"") // only necessary here because of reasons
+      
+      thisItemValuesOld = thisItem.html()
+      if (thisItemValuesNew != thisItemValuesOld){
+        
+        $('button[data-dropdowngroup="'+thisItemConfigs+'"]').html(thisItemValueNew[0]).addClass("changed");
+        thisItem.html(thisItemValuesNew)
+
+        //log(thisItemValuesNew + " changed to " + thisItemValuesOld)
+        initializeDropdowns(".dropdown-menu#" + thisItemConfigs)
+      }
+
+    }
   });
   setTimeout(arguments.callee, 500);
 })();
+
+// Beautify Names
+function beautifyName(oldName) {
+  newName = oldName.replace(/([A-Z])/g, ' $1').trim()
+  specialCasesForAcronyms = ["P P","H P","I V","E V"]
+  jQuery.each( specialCasesForAcronyms, function( i, val ) {
+    newName = newName.replace(val, val.replace(" ", ""))
+  });
+  //if(oldName != newName){
+  //  console.log(oldName + " -> " + newName)
+  //}
+  return newName
+}
 
 
 // Fill UI content initially
@@ -198,6 +306,9 @@ lines.forEach(function(line, idx){
   thisItemConfigs = line[0];
   thisItemValue = line[1];
   thisItemConfig = thisItemConfigs.split("_");
+  
+  thisItemBeautifiedName = beautifyName(thisItemConfig[3])
+
   thisItemParentElement = $("#" + thisItemConfig[1] + "_" + thisItemConfig[2]);
  
   if(thisItemParentElement.length > 0){
@@ -210,7 +321,7 @@ lines.forEach(function(line, idx){
       thisItemParentElement.append(
         "<div class='row g-3 mb-3' id='"+ thisItemElementGroup +"'>" +
           "<div class='col-3 md-col-2'>" +
-            "<label for='"+thisItemConfigs+"' class='form-label'>" + thisItemConfig[3] + "</label>" +
+            "<label for='"+thisItemConfigs+"' class='form-label'>" + thisItemBeautifiedName + "</label>" +
           "</div>" +
           "<div class='col-3 md-col-2'>" +
             "<input type='number' class='form-control"+ isCurrentlyZero +"' id='" + thisItemConfigs + "' value='" + thisItemValue + "'>" +
@@ -233,7 +344,7 @@ lines.forEach(function(line, idx){
       }
       thisItemParentElement.append(
         "<div class='row g-3 mb-4' id='"+ thisItemElementGroup +"'>" +
-          "<div class='col-3 md-col-2'>" + thisItemConfig[3] + "</div>" +
+          "<div class='col-3 md-col-2'>" + thisItemBeautifiedName + "</div>" +
           "<div class='col-auto'>" +
             "<div class='col-auto custom-control custom-switch dataBaseControlSwitch'>" +
               "<input type='checkbox' "+ checked +" class='custom-control-input' id='" + thisItemConfigs + "'>" +
@@ -247,7 +358,6 @@ lines.forEach(function(line, idx){
 
       thisItemValue = thisItemValue.replace("[","");
       thisItemValue = thisItemValue.replace("]","");
-      thisItemValue = thisItemValue.replace("]","");
       thisItemValue = thisItemValue.replaceAll("\"","");
       thisItemValue = thisItemValue.split(",");
 
@@ -258,7 +368,7 @@ lines.forEach(function(line, idx){
 
       thisItemParentElement.append(
         "<div class='row g-3 mb-4' id='"+ thisItemElementGroup +"'>" +
-          "<div class='col-3 md-col-2'>" + thisItemConfig[3] + "</div>" +
+          "<div class='col-3 md-col-2'>" + thisItemBeautifiedName + "</div>" +
           "<div class='col-auto'>" +
 
             "<div class='dropdown'>" + 
@@ -312,7 +422,7 @@ $.getJSON( "pokemonList.json", function( data ) {
 
             $.each( individualPokemonSettings, function( pkmKey, individualPokemonSetting ) {
               individualPokemonSettingInfos = individualPokemonSetting.split("_");
-              individualPokemonSettingName = individualPokemonSettingInfos[2]
+              individualPokemonSettingName = beautifyName(individualPokemonSettingInfos[2])
 
               content = content + 
               "<div class='col-3 custom-control custom-switch dataBaseControlSwitchforArrays'>" +
@@ -357,7 +467,76 @@ $.getJSON( "pokemonList.json", function( data ) {
 });
 
 
+// Copy Text from Code Elements
+$("code").click(function() {
+  var codeElement = $(this)
 
+  var sampleTextarea = document.createElement("textarea");
+  document.body.appendChild(sampleTextarea);
+  sampleTextarea.value = codeElement.text();
+  sampleTextarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(sampleTextarea);
+
+  codeElement.addClass("copyToolTip");
+  setTimeout(function(){
+    codeElement.removeClass("copyToolTip");
+  }, 1000);
+});
+
+
+// Clears Rec-Output
+$("#rec-output-clearer").click(function() {
+  $("#rec-output").text("{}");
+  window["array_Hidden_Record_LastOutput"] = [0,0];
+  writeDatabase();
+});
+
+
+// Record Route
+$("button.rec-input").click(function() {
+  var newArrayPiece = $(this).attr("data-rec");
+  var currentRecArray = $("#rec-output").text();
+  $("button.rec-input").prop("disabled",true);
+  
+  if(newArrayPiece != "GetCoordinates"){
+    if(currentRecArray == "{}"){
+      //console.log("Adding first item")
+      $("#rec-output").text("{\""+newArrayPiece+"\"},");
+    }
+    else{
+      //console.log("Adding item or increasing value")
+      var currentRecArrayWithoutEnd = currentRecArray.split("}");
+      var currentRecArrayItems = currentRecArrayWithoutEnd[0].split("\"");
+      var lastItem = currentRecArrayItems.slice(-2)[0];
+      if(lastItem.includes("-")){
+        //console.log("Last item could be increased")
+        var lastItemParts = lastItem.split("-");
+        var newItemParts = newArrayPiece.split("-");
+        if (lastItemParts[0] == newItemParts[0]){
+          //console.log("Sameseees. Increasing value.")
+          var newValueoflastItem = parseInt(lastItemParts[1])+1;
+          var currentRecArrayInsteadOfLastInt = currentRecArrayWithoutEnd[0].substring(0, currentRecArrayWithoutEnd[0].lastIndexOf('-'));
+          //console.log(currentRecArrayInsteadOfLastInt) // phew.
+          $("#rec-output").text(currentRecArrayInsteadOfLastInt+"-"+newValueoflastItem+"\"},");
+        }
+        else{
+          //console.log("New type. Adding item.")
+          $("#rec-output").text(currentRecArrayWithoutEnd[0]+",\""+newArrayPiece+"\"},");
+        }
+      }
+      else{
+        //console.log("Last Type can not be increased. Adding Value.")
+        $("#rec-output").text(currentRecArrayWithoutEnd[0]+",\""+newArrayPiece+"\"},");
+      }
+    }
+  }
+  window["array_Hidden_Record_LastOutput"] = [Date.now(),newArrayPiece];
+  writeDatabase();
+  setTimeout(function(){
+    $("button.rec-input").prop("disabled",false);
+  }, 500);
+});
 
 
 // Update int inputs
@@ -409,24 +588,26 @@ $(".dataBaseControlSwitch input[type=checkbox]").change(function() {
 });
 
 // Update dropdown inputs
-$(".dropdown-item").click(function() {
-  $(this).parent().slideUp();
-  $(this).parent().removeClass("open");
-  dropdowngroup = $(this).parent().attr("id");
-  newValue = $(this).data("newvalue");
-  //console.log(dropdowngroup);
-  //console.log(newValue);
-  $("button.dropdown-toggle[data-dropdowngroup='" + dropdowngroup + "']").html(newValue);
-  newArray = [newValue];
-  $(this).siblings().each( function () {
-    newArray.push($(this).data("newvalue"));
+function initializeDropdowns(dropdownToInitialize) {
+  $(dropdownToInitialize + " .dropdown-item").click(function() {
+    $(this).parent().slideUp();
+    $(this).parent().removeClass("open");
+    dropdowngroup = $(this).parent().attr("id");
+    newValue = $(this).data("newvalue");
+    //console.log(dropdowngroup);
+    //console.log(newValue);
+    newArray = [];
+    $(this).siblings().each( function () {
+      newArray.push($(this).data("newvalue"));
+    });
+    newArray.sort()
+    newArray.unshift(newValue)
+    //$("button.dropdown-toggle[data-dropdowngroup='" + dropdowngroup + "']").html(newValue)
+    window[dropdowngroup] = newArray;
+    writeDatabase();
   });
-  //console.log(newArray);
-  window[dropdowngroup] = newArray;
-  writeDatabase();
-});
-
-
+}
+initializeDropdowns(".dropdown-menu")
 
 
 /*******************/
@@ -464,7 +645,15 @@ $("button.dropdown-toggle").click(function() {
   }
 });
 
-
+// Run Software Button
+$( ".openSoftwareButton" ).click(function() {
+  var exec = require('child_process').exec, child;
+  var link = $(this).attr("data-software");
+  child = exec('java -jar ..\\..\\'+link+'.jar',
+  function (error, stdout, stderr){
+    if(error !== null){console.log('exec error: ' + error);}
+  });
+});
 
 
 
@@ -499,6 +688,10 @@ $("#pokemonListfilter").on("keyup", function() {
 });
 
 
+
+// Initial Sets
+window["array_Hidden_Record_LastOutput"] = [0,0];
+writeDatabase();
 
 
 </script>

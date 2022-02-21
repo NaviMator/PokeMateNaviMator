@@ -32,6 +32,20 @@ function routes(route, reverse)
 			{'D-3', 'R-3', 'U-8', 'R-24', 'U-6'},
 			{'D-3', 'R-3', 'U-6', 'R-24', 'U-8'}
 		}
+	-- This one banned me once
+	-- elseif route == "Kanto viridian city (Fishing)" then -- Kanto, viridian city (start Lavender Town at nurse)
+		-- startX = 26
+		-- stratY = 27
+		-- endX = 17
+		-- endY = 27
+-- 
+		-- routesTowards = {
+			-- {'L-10'}
+		-- }
+-- 
+		-- routesBack = {
+			-- {'R-10', 'U-1'}
+		-- }
 	elseif route == "Kanto route 10" then -- Kanto, route 10 (start Lavender Town at nurse)
 		startX = 6
 		stratY = 6
@@ -70,6 +84,20 @@ function routes(route, reverse)
 		routesBack = {
 			{'L-10','D-8','L-10','U-2','L-4','D-2','L-14','U-6','L-8','U-2'}
 		}
+	elseif route == "Hoenn route 102" then -- Hoenn, route 102 (start Petalburg City at nurse)
+		startX = 20
+		stratY = 17
+		endX = 7
+		endY = 12
+
+		routesTowards = {
+			{"D-1","R-19","D-5","L-2"},
+			{"D-2","R-20","D-4","L-3"},
+		}
+		routesBack = {
+			{"U-8","R-2","U-5","L-19","U-2"},
+			{"U-10","R-2","U-4","L-19","U-3"},
+		}
 	elseif route == "Hoenn route 113 (Collect Ash)" then -- Hoenn, route 113 (start Fallarbor Town at nurse)
 		startX = 14
 		stratY = 8
@@ -93,6 +121,18 @@ function routes(route, reverse)
 		}
 		routesBack = {
 			{'D-2','R-7','U-4','R-12','U-3','R-10','D-3','R-8','U-3'}
+		}
+	elseif route == "Dragonspiral (Fishing)" then -- Unova, Dragonspiral (start Icirrus City at nurse)
+		startX = 184
+		stratY = 196
+		endX = 22
+		endY = 41
+
+		routesTowards = {
+			{'L-5','U-40','R-2','U-15','L-2','U-3','Door','U-9','R-1'}
+		}
+		routesBack = {
+			{'D-6','R-2','D-12','L-2','D-40','R-5','U-2','Door','U-7'}
 		}
 	elseif route == "Kanto route 15" then -- Kanto, route 15 (start Fuchsia City at nurse)
 		startX = 25

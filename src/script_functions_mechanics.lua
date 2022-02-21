@@ -60,7 +60,11 @@ attacksThatCauseEffects = {
 	}
 }
 
-
+attacksThatCauseStatus = {
+	LowerEnemyAttack = {
+		45 --Growl
+	}
+}
 
 
 -- List of special moves for group-battles
@@ -426,15 +430,60 @@ notEffectiveAgainst = {
 -- List of pokemon that are great for ev-training
 -- Not startet yet. Feel free to contribute.
 
-pokemonForEV_HP = {
-	297 -- Hariyama
+pokemonForEV = {
+	HP = {
+		296, -- Makuhita
+		297, -- Hariyama
+		265, -- Wurmple
+		293, -- Whismur
+		287, -- Slakoth
+		285 -- Shroomish
+	},
+	ATK = {
+		261 -- Poochyena
+	},
+	DEF = {
+		290, -- Nincada
+		273 -- Seedot
+	},
+	SPATK = {
+		280 -- Ralts
+
+	},
+	SPDEF = {
+		270 -- Lotad
+	},
+	SPD = {
+		263, -- Zigzagoon
+		264, -- Linoone
+		278, -- Wingull
+		276, -- Taillow
+		283 -- Surskit
+	},
+	Mixed = { -- Thats always bad to calculate
+
+	}
 }
 
 
 
+--[[
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~L~O~C~A~T~I~O~N~S~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--]]
+-- Area for function World.GetRegionId()
 
+regions = {
+	0, -- Kanto
+	1, -- Hoenn
+}
 
-
-
-
-
+pokecenters = {
+	Hoenn = {
+		51 -- Littleoot Towrn (Own Room)
+	},
+	Unova = {
+		115 -- Nevaio City
+	}
+}

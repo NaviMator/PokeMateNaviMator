@@ -34,6 +34,28 @@ function pokemonSwap(swapToPokemon)
 		end
 	end
 
+	checkIfLostAtPokeCenter()
+
+end
+
+-- Learn new move (or not)
+function learnMove()
+	if Battle.IsInMovetutor() == true then
+		readDatabase() -- Read Database
+		if array_Strategy_Training_LearnNewMoves[1] == "Replace first" then
+			KeyTyped("A")
+			sleep(1000)
+			KeyTyped("A")
+			sleep(5000)
+		elseif array_Strategy_Training_LearnNewMoves[1] == "Skip" then
+			KeyTyped("B")
+			sleep(1000)
+			KeyTyped("A")
+			sleep(1000)
+		elseif array_Strategy_Training_LearnNewMoves[1] == "Stop bot" then
+			MessageBox("Switching to manual to decide a move.")
+		end
+	end
 end
 
 
@@ -45,6 +67,7 @@ function isItMyTurnJet()
 	while(not Battle.CanAttack()) do
 		if countLoop >= 40 then
 			print("Still waiting...")
+			learnMove()
 			countLoop = 0
 		end
 		sleep(250)
@@ -63,6 +86,7 @@ function isItMyTurnJet()
 		end
 	end
 
+	learnMove()
 	randomWaitingTime()
 end
 
@@ -70,8 +94,10 @@ end
 -- Check if player got interrupted by a fight while walking and react to fight
 function checkInterruption()
 	while Trainer.IsInBattle() do
+		sleep(150)
 		print("Interrupted. Will continue path after battle.")
-		behaviorInBattle()
+		battlePilotDecision()
+		sleep(200)
 	end
 end
 
@@ -111,11 +137,11 @@ function fishing()
 		randomWaitingTime()
 		KeyTyped("A")
 	end
-	sleep(2000)
+	sleep(3000)
 	KeyTyped("A")
 end
 
--- Release pokemon if no IV is 31
+-- Check IV and release pokemon if unwanted
 function keepIf31(keepOnlyIfIV31, newestPokemon)
 
 	newestPokemonIVs = {}
