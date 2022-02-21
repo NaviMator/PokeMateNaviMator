@@ -49,7 +49,7 @@
         <div class="scriptinfo">
           <h6>Script for PokeMate.jar</h6>
           <code>require "scripts/script"</code>
-          <button style="display:none" class="openSoftwareButton btn btn-primary" data-software="PokeMate">Start Pokemate.jar</button>
+          <button class="openSoftwareButton btn btn-primary" data-software="PokeMate">Launch Pokemate.jar</button>
         </div>
 
       </div>
@@ -649,7 +649,7 @@ $("button.dropdown-toggle").click(function() {
 $( ".openSoftwareButton" ).click(function() {
   var exec = require('child_process').exec, child;
   var link = $(this).attr("data-software");
-  child = exec('java -jar ..\\..\\'+link+'.jar',
+  child = exec("cd ..\\..\\ && java -jar " + link + ".jar",
   function (error, stdout, stderr){
     if(error !== null){console.log('exec error: ' + error);}
   });
