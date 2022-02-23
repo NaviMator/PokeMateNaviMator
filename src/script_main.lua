@@ -84,10 +84,10 @@ function behaviorInBattle()
 	readDatabase()
 
 	-- Check for battle type
---	if Battle.GetEnemyTrainerType() == 0 or Battle.GetEnemyTrainerType() == 1 then
---		print("Battle against trainer. Will fight.")
---		actionFight()
---	end
+	--if Battle.GetEnemyTrainerType() == 0 or Battle.GetEnemyTrainerType() == 1 then
+	--	print("Battle against trainer. Will fight.")
+	--	battle()
+	--end
 
 	-- Check for shiny
 	for PokemonNr = 0, Battle.GetFightingTeamSize(1)-1 do
@@ -95,9 +95,10 @@ function behaviorInBattle()
 		if Battle.Active.GetPokemonRarity(1, PokemonNr) == "SHINY" then
 			MessageBox("ENEMY IS SERIOUSLY SHINY!!!")
 			
-			Stop() -- Temporary workaround
+			stop() -- Temporary workaround
 			-- Unsure here. You don't want to risk bad bot behaviour but neither afk.
 			-- Best practice would need to know a lot of hardcoded variables to understand the situation.
+			-- Including keeping Masterballs and confirming the usage and also picking non-shinies from a horde
 
 		end
 	end
@@ -114,16 +115,22 @@ function behaviorInBattle()
 		end
 	end
 
-	-- Check if horde battle
+	-- Check if horde battle for training
 	if Battle.GetBattleType() == "HORDE_BATTLE" then
 		print("Enemys brought friends")
-		if array_Activities_Behavior_TaskInBattle[1] == "EXP-Training" and bool_Strategy_Fighting_FightAgainstHordes == true then
-			actionFight()
-			if bool_Hidden_Setting_Debug == true then print("Fighting Horde") end
+		if array_Activities_Behavior_TaskInBattle[1] == "EXP-Training" or array_Activities_Behavior_TaskInBattle[1] == "EV-Training" then
+			if bool_Strategy_Fighting_FightAgainstHordes == true then
+				if bool_Hidden_Setting_Debug == true then print("Fighting Horde") end
+				battle()
+			else
+				runFromBattle()
+			end
 		else
-			actionRunAway()
+			runFromBattle()
 		end
 	end
+
+
 
 	--[[
 	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -149,14 +156,14 @@ function behaviorInBattle()
 
 		-- Strategy
 		if catchIt then
-			actionSpecialAttack("catch")
+			battle("catch")
 			checkIfCaught(keepOnlyIfIV31)
 		else
 			if bool_Strategy_Catching_FightIfUnwanted == true then
 				print ("Won't catch but fight instead of run")
-				actionFight() -- To do: decide between ev- and exp-training
+				battle() -- To do: decide between ev- and exp-training
 			else
-				actionRunAway()
+				runFromBattle()
 			end
 		end
 
@@ -167,7 +174,7 @@ function behaviorInBattle()
 	--]]
 
 	elseif array_Activities_Behavior_TaskInBattle[1] == "EV-Training" then
-		actionFight()
+		battle("evtraining")
 
 
 	--[[
@@ -177,7 +184,7 @@ function behaviorInBattle()
 	--]]
 
 	elseif array_Activities_Behavior_TaskInBattle[1] == "EXP-Training" then
-		actionFight()
+		battle("training")
 
 
 	--[[
@@ -186,7 +193,7 @@ function behaviorInBattle()
 	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	--]]
 	elseif array_Activities_Behavior_TaskInBattle[1] == "Pay Day" then
-		actionSpecialAttack("payday", bool_Strategy_PayDayThief_SkipResistantEnemies)
+		battle("payday")
 
 
 	--[[
@@ -195,7 +202,7 @@ function behaviorInBattle()
 	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	--]]
 	elseif array_Activities_Behavior_TaskInBattle[1] == "Thief" then
-		actionSpecialAttack("thief", bool_Strategy_PayDayThief_SkipResistantEnemies)
+		battle("thief")
 
 	else
 		MessageBox("Task not implemented.")

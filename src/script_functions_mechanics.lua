@@ -24,38 +24,38 @@ statusEffects = {
 attacksThatCauseEffects = {
 
     Sleep = {
-        95 -- Hypnosis
-        -- Yawn
-        -- Spore
-        -- Dark Void
-        -- Sleep Powder
-        -- Lovely Kiss
-        -- Sing
-        -- Grass Whistle
+        95, -- Hypnosis
+        281, -- Yawn
+        147,-- Spore
+        464,-- Dark Void
+        79,-- Sleep Powder
+        142,-- Lovely Kiss
+        47,-- Sing
+        320-- Grass Whistle
     },
 
     Poison = {
-        -- Poison Gas
-        -- Poison Powder
+        139, -- Poison Gas
+        77 -- Poison Powder
     },
 
     BadPoison = {
-        -- Toxic
+        92 -- Toxic
     },
 
     Burn = {
-        -- Will-O-Wisp
+        261 -- Will-O-Wisp
     },
 
     Paralize = {
-        -- Nuzzle
-        -- Thunder Wave
-        -- Glare
-        -- Stun Spore
+        86,-- Thunder Wave
+        137,-- Glare
+        78-- Stun Spore
     },
 
 	Other = {
 		212, -- Mean Look
+		206, -- False Swipe
 		100 -- Teleport
 	}
 }

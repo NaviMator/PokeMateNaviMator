@@ -32,20 +32,21 @@ function routes(route, reverse)
 			{'D-3', 'R-3', 'U-8', 'R-24', 'U-6'},
 			{'D-3', 'R-3', 'U-6', 'R-24', 'U-8'}
 		}
-	-- This one banned me once
-	-- elseif route == "Kanto viridian city (Fishing)" then -- Kanto, viridian city (start Lavender Town at nurse)
-		-- startX = 26
-		-- stratY = 27
-		-- endX = 17
-		-- endY = 27
--- 
-		-- routesTowards = {
-			-- {'L-10'}
-		-- }
--- 
-		-- routesBack = {
-			-- {'R-10', 'U-1'}
-		-- }
+	elseif route == "Hoenn route 104 (Fishing)" then -- Hoenn route 104, (start Petalburg City at nurse)
+		startX = 20
+		stratY = 17
+		endX = 27
+		endY = 75
+
+		routesTowards = {
+			{"L-5","U-5","L-27","D-6","L-2","D-5","L-3","D-4"},
+			{"L-3","U-3","L-5","U-2","L-5","U-2","L-23","D-10","L-2","D-4"},
+		}
+		routesBack = {
+			{"U-5","R-3","U-9","R-26","D-4","R-2","D-2","R-6","U-1"},
+			{"R-3","U-13","R-28","D-5","R-5","U-1"},
+			{"U-3","R-3","U-5","R-2","U-4","R-3","U-3","R-4","U-2","R-22","D-6","R-5","U-2"},
+		}
 	elseif route == "Kanto route 10" then -- Kanto, route 10 (start Lavender Town at nurse)
 		startX = 6
 		stratY = 6
