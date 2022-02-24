@@ -655,7 +655,45 @@ $( ".openSoftwareButton" ).click(function() {
   });
 });
 
+// Keyboard Keys to record
+document.onkeydown = function(e) {
+    switch(e.which) {
+        case 37: // Left
+          $("button[data-rec='L-1'").click()
+        break;
 
+        case 38: // Up
+          $("button[data-rec='U-1'").click()
+        break;
+
+        case 39: // Right
+          $("button[data-rec='R-1'").click()
+        break;
+
+        case 40: // Down
+          $("button[data-rec='D-1'").click()
+        break;
+
+        case 32: // Space
+          $("button[data-rec='Door'").click()
+        break;
+
+        case 65: // A
+          $("button[data-rec='Speak'").click()
+        break;
+
+        case 66: // B
+          $("button[data-rec='Talk-1'").click()
+        break;
+
+        case 17: // Strg
+          $("button[data-rec='Wait-1'").click()
+        break;
+
+        default: return;
+    }
+    e.preventDefault();
+};
 
 
 /*******************/
