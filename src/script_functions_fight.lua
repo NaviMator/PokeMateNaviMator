@@ -163,13 +163,12 @@ function throwBall()
 		int_Item_Current_Masterball = int_Item_Current_Masterball -1
 		print("Go Masterball! (" .. int_Item_Current_Masterball .. " left)")
 	else
-		MessageBox("No more balls left.\nWill go regenerate and Stop.")
+		print("No more balls left. Will go regenerate and Stop.")
 		goHeal = true
 		returnAfterHealing = false
 		runFromBattle()
 	end
 	writeDatabase()
-
 end
 
 
@@ -199,11 +198,10 @@ function attackEnemy(ownPokemonAttacks, forceAttack, attackName, skipResistant)
 	-- Loop own attacks and use forced or best one available
 	didAttack = false
 	expiredPPAttacks = 0
+	
 	if bool_Hidden_Setting_Debug == true then print("Attacking to " .. attackName) end
-
 	for attack, attackInfos in pairs(ownPokemonAttacks) do -- Loop through available attacks
 		if didAttack == false and Trainer.IsInBattle() then -- Continue loop if no attack has been done
-			isItMyTurnJet()
 			if forceAttack ~= false then -- Check if attack is forced
 				if arrayContains(forceAttack, attackInfos.ID) then -- Check if attack matches strategy
 					-- Skip attack if enemy is immune or resistant (optional)
@@ -283,7 +281,7 @@ end
 
 
 
--- Function to catch enemy or use payday, thief, etc
+-- Function to chose how to battle
 function battle(strategy)
 
 	unuseableAttacks = {} -- Reset for new battle
@@ -304,17 +302,22 @@ function battle(strategy)
 
 		-- Figure out next move
 		if strategy == "catch" then
-			if bool_Strategy_Catching_Sleep and enemyStatus == 0 and arrayContains(unuseableAttacks, "sleep") == false then
-				forceAttack = attacksThatCauseEffects["Sleep"]
-				attackName = "sleep"
-			elseif bool_Strategy_Catching_Paralize and enemyStatus == 0 and arrayContains(unuseableAttacks, "paralize") == false then
-				forceAttack = attacksThatCauseEffects["Paralize"]
-				attackName = "paralize"
-			elseif bool_Strategy_Catching_FalseSwipe and enemyHealth >= int_Strategy_Catching_LeftOverHP and arrayContains(unuseableAttacks, "weaken") == false then
-				forceAttack = {206} -- False Swipe
-				attackName = "weaken"
+			if arrayContains(pokemonToCatchFirstTurn, Battle.Active.GetPokemonID(1, 0)) == false then
+				if bool_Strategy_Catching_Sleep and enemyStatus == 0 and arrayContains(unuseableAttacks, "sleep") == false then
+					forceAttack = attacksThatCauseEffects["Sleep"]
+					attackName = "sleep"
+				elseif bool_Strategy_Catching_Paralize and enemyStatus == 0 and arrayContains(unuseableAttacks, "paralize") == false then
+					forceAttack = attacksThatCauseEffects["Paralize"]
+					attackName = "paralize"
+				elseif bool_Strategy_Catching_FalseSwipe and enemyHealth >= int_Strategy_Catching_LeftOverHP and arrayContains(unuseableAttacks, "weaken") == false then
+					forceAttack = {206} -- False Swipe
+					attackName = "weaken"
+				else
+					attackName = "throwBall"
+				end
 			else
-				throwBall()
+				print("Pokemon ID " .. Battle.Active.GetPokemonID(1, 0) .. " should be immediately.")
+				attackName = "throwBall"
 			end
 		else
 			attackName = strategy
@@ -330,10 +333,13 @@ function battle(strategy)
 			end
 		end
 
-		attackEnemy(ownPokemonAttacks, forceAttack, attackName, skipResistant)
+		if attackName == "throwBall" then
+			throwBall()
+		else
+			attackEnemy(ownPokemonAttacks, forceAttack, attackName, skipResistant)
+		end
 		writeDatabase()
 		isItMyTurnJet()
-
 
 	end
 end

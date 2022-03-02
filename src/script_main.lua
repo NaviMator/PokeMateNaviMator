@@ -17,7 +17,10 @@ function walkingToDestination()
 			print("Highway to heal.")
 			routes(array_Activities_Routes_Route[1], true)
 			regenerate()
-			if returnAfterHealing ~= false then
+			if bool_Activities_Routes_Repeat == false then
+				MessageBox("Job done.")
+				stop()
+			elseif returnAfterHealing ~= false then
 				initialWalkDone = false
 			else
 				stop()
@@ -30,6 +33,7 @@ function walkingToDestination()
 			routes(array_Activities_Routes_Route[1])
 			initialWalkDone = true
 		end
+
 	else
 		if goHeal == true then
 			MessageBox("Need to heal but no route defined.")
@@ -82,6 +86,7 @@ end
 function behaviorInBattle()
 
 	readDatabase()
+	mapOnBattleEntry = getPositionCode()
 
 	-- Check for battle type
 	--if Battle.GetEnemyTrainerType() == 0 or Battle.GetEnemyTrainerType() == 1 then
@@ -145,10 +150,10 @@ function behaviorInBattle()
 		keepOnlyIfIV31 = false
 
 		-- Decision making
-		if arrayContains(pokemonArray_Pokemon_Catch_CatchAlways, enemyPokemonID) or bool_Pokemon_Catch_CatchAlways then
+		if arrayContains(pokemonArray_Pokemon_Catch_CatchAlways, Battle.Active.GetPokemonID(1, 0)) or bool_Pokemon_Catch_CatchAlways then
 			print("Will catch enemy.")
 			catchIt = true
-			if arrayContains(pokemonArray_Pokemon_Catch_OnlyKeepIfIV, enemyPokemonID) or bool_Pokemon_Catch_OnlyKeepIfIV then
+			if arrayContains(pokemonArray_Pokemon_Catch_OnlyKeepIfIV, Battle.Active.GetPokemonID(1, 0)) or bool_Pokemon_Catch_OnlyKeepIfIV then
 				print("But will release if no IV31.")
 				keepOnlyIfIV31 = true
 			end

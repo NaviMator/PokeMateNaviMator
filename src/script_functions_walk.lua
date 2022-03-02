@@ -95,12 +95,11 @@ function CheckPosition(X, Y)
 	if X and Y then
 		ErrorCorrection(X, Y)
 		if(not (Trainer.GetX() == X and Trainer.GetY() == Y)) then
-			MessageBox("Player has wrong Position.")
+			MessageBox("Player has wrong Position.\nExpected "..X.." and "..Y.."\nGot "..Trainer.GetX().." and "..Trainer.GetY())
 			stop()
 		end
 	end
 end
-
 
 
 -- Do until Map changed
@@ -109,12 +108,14 @@ function doUntilMapChanged(doAfterMapChangeAction, running)
 	if running == nil then
 		running = bool_Setting_Steps_AlwaysRun
 	end
+	stepsTaken = 0
 	while true do
 		newMapID = Trainer.GetMapID()
 		if newMapID == oldMapID then
 			if bool_Hidden_Setting_Debug == true then print("Map not changed from " .. oldMapID) end
 			if doAfterMapChangeAction == "MoveDown" then
 				Trainer.MoveDown(running, 1)
+				stepsTaken = stepsTaken + 1
 			else
 				sleep(200)
 			end
@@ -123,6 +124,10 @@ function doUntilMapChanged(doAfterMapChangeAction, running)
 			sleep(1000)
 			randomWaitingTime()
 			return true
+		end
+		if stepsTaken >= 15 then
+			MessageBox("Something went wrong. Expected map change.")
+			stop()
 		end
 	end
 end
@@ -201,10 +206,7 @@ end
 
 -- Check if stranded in Pokecenter
 function checkIfLostAtPokeCenter()
-	sleep(2000)
-	currentMap = Trainer.GetMapID()
-	if bool_Hidden_Setting_Debug == true then print("Check if Lost at PokeCenter. Current Map-ID is " .. currentMap) end
-	if arrayContains(pokecenters, currentMap) then
+	if mapOnBattleEntry ~= getPositionCode() then
 		print("Propably died and stranded in Pokecenter. Will continue with journey.")
 		walkingToDestination()
 	end
@@ -256,29 +258,24 @@ function pathFinder(walkRouteWay, fastShoesAvailable)
 		elseif walkInstruction[1] == "Wait" then
 			print("Waiting ".. walkInstruction[2] .. " Seconds.")
 			waitingTime = walkInstruction[2] * 1000
-			sleep(waitingTime)
-			randomWaitingTime()
+			sleepRandom(waitingTime)
 			checkInterruption()
 		elseif walkInstruction[1] == "Press" then
 			print("Pressing ".. walkInstruction[2])
 			KeyTyped(walkInstruction[2])
 		elseif walkInstruction[1] == "Speak" then
 			print("Greeting.")
-			sleep(200)
-			randomWaitingTime()
+			sleepRandom(200)
 			Trainer.TalkToNPC()
 		elseif walkInstruction[1] == "Talk" then
 			print("Negotiating.")
-			sleep(200)
-			randomWaitingTime()
+			sleepRandom(200)
 			for i=1, walkInstruction[2] do
-				sleep(1000)
-				randomWaitingTime()
+				sleepRandom(1000)
 				KeyTyped("B")
 			end
-			randomWaitingTime()
+			sleepRandom()
 			checkInterruption()
-
 
 		-- More movement
 		elseif walkInstruction[1] == "Door" then
@@ -286,53 +283,54 @@ function pathFinder(walkRouteWay, fastShoesAvailable)
 			levelChange()
 		elseif walkInstruction[1] == "Ledge" then
 			print("Jumping down ledge.")
-			sleep(1000)
-			randomWaitingTime()
+			sleepRandom(1000)
 			checkInterruption()
 		elseif walkInstruction[1] == "Cut" then
 			print("Trimming tree.")
 			KeyTyped("H"..int_Setting_HotkeyFM_Cut)
-			sleep(3000)
+			sleepRandom(3000)
 			levelChange()
 		elseif walkInstruction[1] == "Surf" then
 			print("Going for a swim.")
 			KeyTyped("H"..int_Setting_HotkeyFM_Surf)
-			sleep(3000)
-			levelChange()
+			sleepRandom(3000)
 		elseif walkInstruction[1] == "Strength" then
 			print("Pushing boulders.")
 			KeyTyped("H"..int_Setting_HotkeyFM_Strength)
-			sleep(3000)
-			levelChange()
+			sleepRandom(3000)
 		elseif walkInstruction[1] == "RockSmash" then
 			print("Smashing boulders.")
 			KeyTyped("H"..int_Setting_HotkeyFM_RockSmash)
-			levelChange()
+			sleepRandom(2000)
+			KeyTyped("A")
+			sleepRandom(1000)
+			KeyTyped("A")
+			sleepRandom(2000)
 			checkInterruption()
 		elseif walkInstruction[1] == "RockClimb" then
 			print("Walking up walls.")
 			KeyTyped("H"..int_Setting_HotkeyFM_RockClimb)
-			levelChange()
+			sleepRandom(3000)
 		elseif walkInstruction[1] == "Waterfall" then
 			print("Swimming up walls.")
 			KeyTyped("H"..int_Setting_HotkeyFM_Waterfall)
-			levelChange()
+			sleepRandom(3000)
 		elseif walkInstruction[1] == "Whirlpool" then
 			print("Entering hot tub.")
 			KeyTyped("H"..int_Setting_HotkeyFM_Whirlpool)
-			levelChange()
+			sleepRandom(3000)
 		elseif walkInstruction[1] == "Dive" then
 			print("Taking a deep breath.")
 			KeyTyped("H"..int_Setting_HotkeyFM_Dive)
-			levelChange()
+			sleepRandom(3000)
 		elseif walkInstruction[1] == "Dig" then
 			print("Burrowing.")
 			KeyTyped("H"..int_Setting_HotkeyFM_Dig)
-			levelChange()
+			sleepRandom(3000)
 		elseif walkInstruction[1] == "Teleport" then
 			print("Initializing hyperdrive.")
 			KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
-			levelChange()
+			sleepRandom(3000)
 		end
 	end
 end

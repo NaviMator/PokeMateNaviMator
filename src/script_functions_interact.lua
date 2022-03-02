@@ -8,55 +8,19 @@
 function randomWaitingTime()
 	sleep(random(int_Setting_WaitingTime_Min,int_Setting_WaitingTime_Max))
 end
-
-
--- Swap pokemon
-function pokemonSwap(swapToPokemon)
-
-	pokemonSwapped = false
-
-	if not swapToPokemon then
-		swapToPokemon = 0
-	end
-
-	for PokemonSwapNr = swapToPokemon, 5 do
-		if Battle.Bench.GetPokemonHealth(0, PokemonSwapNr) > 0 and pokemonSwapped ~= true then
-			sleep(500)
-			randomWaitingTime()
-			print("I chose you #" .. PokemonSwapNr + 1)
-			Battle.DoAction(0,0,"SWAP",PokemonSwapNr,0)
-			sleep(500)
-			randomWaitingTime()
-			Battle.DoAction(0,0,"SWAP",PokemonSwapNr,0) -- Has to be fired again to work
-			pokemonSwapped = true
-			sleep(500)
-			randomWaitingTime()
-		end
-	end
-
-	checkIfLostAtPokeCenter()
-
+function sleepRandom(time)
+	sleep(time)
+	randomWaitingTime()
 end
 
--- Learn new move (or not)
-function learnMove()
-	if Battle.IsInMovetutor() == true then
-		readDatabase() -- Read Database
-		if array_Strategy_Training_LearnNewMoves[1] == "Replace first" then
-			KeyTyped("A")
-			sleep(1000)
-			KeyTyped("A")
-			sleep(5000)
-		elseif array_Strategy_Training_LearnNewMoves[1] == "Skip" then
-			KeyTyped("B")
-			sleep(1000)
-			KeyTyped("A")
-			sleep(1000)
-		elseif array_Strategy_Training_LearnNewMoves[1] == "Stop bot" then
-			MessageBox("Switching to manual to decide a move.")
-		end
-	end
+
+-- Position code
+function getPositionCode()
+	positionCode = Trainer.GetMapID().."-"..Trainer.GetX().."-"..Trainer.GetY()
+	if bool_Hidden_Setting_Debug == true then print("Position-Code: " .. positionCode) end
+	return positionCode
 end
+
 
 
 -- Wait to attack
@@ -67,7 +31,6 @@ function isItMyTurnJet()
 	while(not Battle.CanAttack()) do
 		if countLoop >= 40 then
 			print("Still waiting...")
-			learnMove()
 			countLoop = 0
 		end
 		sleep(250)
@@ -84,10 +47,63 @@ function isItMyTurnJet()
 				sleep(5000)
 			end
 		end
+		levelUpControl()
 	end
 
-	learnMove()
 	randomWaitingTime()
+end
+
+
+-- Swap pokemon
+function pokemonSwap(swapToPokemon)
+
+	swapToPokemon = swapToPokemon or 0
+	pokemonSwapped = false
+	
+	for PokemonSwapNr = swapToPokemon, 5 do
+		if Battle.Bench.GetPokemonHealth(0, PokemonSwapNr) > 0 and pokemonSwapped ~= true then
+			sleepRandom(500)
+			print("I chose you #" .. PokemonSwapNr + 1)
+			Battle.DoAction(0,0,"SWAP",PokemonSwapNr,0)
+			sleepRandom(500)
+			Battle.DoAction(0,0,"SWAP",PokemonSwapNr,0) -- Has to be fired again to work
+			pokemonSwapped = true
+			sleepRandom(500)
+		end
+	end
+	isItMyTurnJet()
+	--checkIfLostAtPokeCenter()
+
+end
+
+-- Learn new move and evolve (or not)
+function levelUpControl()
+	--if Battle.IsInMovetutor() == true then -- Currently not supported
+	--	readDatabase() -- Read Database
+	--	if array_Strategy_Training_LearnNewMoves[1] == "Replace first" then
+	--		KeyTyped("A")
+	--		sleep(1000)
+	--		KeyTyped("A")
+	--		sleepRandom(4000)
+	--	elseif array_Strategy_Training_LearnNewMoves[1] == "Skip" then
+	--		KeyTyped("B")
+	--		sleep(1000)
+	--		KeyTyped("A")
+	--		sleepRandom(1000)
+	--	elseif array_Strategy_Training_LearnNewMoves[1] == "Stop bot" then
+	--		MessageBox("Switching to manual to decide a move.")
+	--		stop()
+	--	end
+			--elseif Battle.IsInEvolution() == true then -- Not supported at the moment
+			--	readDatabase() -- Read Database
+			--	if bool_Strategy_Training_SkipEvolve == true then
+			--		print("Skipping evolution.")
+			--		while Battle.IsInEvolution() == true do
+			--			sleep(500)
+			--			KeyTyped("B")
+			--		end
+			--	end
+	--end
 end
 
 

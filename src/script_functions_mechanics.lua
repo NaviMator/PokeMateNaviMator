@@ -465,6 +465,9 @@ pokemonForEV = {
 	}
 }
 
+pokemonToCatchFirstTurn = {
+	63 -- Abra
+}
 
 
 --[[
@@ -477,13 +480,4 @@ pokemonForEV = {
 regions = {
 	0, -- Kanto
 	1, -- Hoenn
-}
-
-pokecenters = {
-	Hoenn = {
-		51 -- Littleoot Towrn (Own Room)
-	},
-	Unova = {
-		115 -- Nevaio City
-	}
 }
