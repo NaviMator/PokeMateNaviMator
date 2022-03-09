@@ -22,6 +22,15 @@ function getPositionCode()
 end
 
 
+-- Use Hotkey
+function useHotkey(hotkey, command)
+	if hotkey > 0 then
+		KeyTyped("H"..hotkey)
+	else
+		print("Hotkey "..command.." not set. Please set and start again.")
+		stop()
+	end
+end
 
 -- Wait to attack
 function isItMyTurnJet()
@@ -125,7 +134,7 @@ function useSweetScent()
 	
 	if int_PP_Current_SweetScent >= 5 then -- Check if PP are left
 		print("Go sweet scent!") -- Note the user
-		KeyTyped("H"..int_Setting_HotkeyFM_SweetScent) -- Use Sweet Scent
+		useHotkey(int_Setting_HotkeyFM_SweetScent, "Sweet Scent")
 		int_PP_Current_SweetScent = int_PP_Current_SweetScent - 5 -- Substract used ammount from variable
 		writeDatabase() -- write variable to database
 		sleep(5000)
@@ -143,11 +152,11 @@ function fishing()
 	print ("Throwing bait")
 	while Trainer.IsInBattle() == false do
 		if array_Activities_Behavior_RodToUse[1] == "Old Rod" then
-			KeyTyped("H"..int_Setting_Hotkey_OldRod)
+			useHotkey(int_Setting_Hotkey_OldRod, "Old Rod")
 		elseif array_Activities_Behavior_RodToUse[1] == "Good Rod" then
-			KeyTyped("H"..int_Setting_Hotkey_GoodRod)
+			useHotkey(int_Setting_Hotkey_GoodRod, "Good Rod")
 		elseif array_Activities_Behavior_RodToUse[1] == "Super Rod" then
-			KeyTyped("H"..int_Setting_Hotkey_SuperRod)
+			useHotkey(int_Setting_Hotkey_SuperRod, "Super Rod")
 		end
 		sleep(2000)
 		randomWaitingTime()

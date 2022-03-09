@@ -222,7 +222,8 @@ function pathFinder(walkRouteWay, fastShoesAvailable)
 
 		-- Dont run long ways because steps get skipped sometimes
 		if walkInstruction[1] == "U" or walkInstruction[1] == "R" or walkInstruction[1] == "D" or walkInstruction[1] == "L" then
-			if tonumber(walkInstruction[2]) >= 10 or fastShoesAvailable == false then
+			--if tonumber(walkInstruction[2]) >= 10 or fastShoesAvailable == false then
+			if fastShoesAvailable == false then
 				running = false
 			else
 				running = bool_Setting_Steps_AlwaysRun
@@ -289,19 +290,19 @@ function pathFinder(walkRouteWay, fastShoesAvailable)
 			checkInterruption()
 		elseif walkInstruction[1] == "Cut" then
 			print("Trimming tree.")
-			KeyTyped("H"..int_Setting_HotkeyFM_Cut)
+			useHotkey(int_Setting_HotkeyFM_Cut, walkInstruction[1])
 			sleepRandom(3000)
 		elseif walkInstruction[1] == "Surf" then
 			print("Going for a swim.")
-			KeyTyped("H"..int_Setting_HotkeyFM_Surf)
+			useHotkey(int_Setting_HotkeyFM_Surf, walkInstruction[1])
 			sleepRandom(3000)
 		elseif walkInstruction[1] == "Strength" then
 			print("Pushing boulders.")
-			KeyTyped("H"..int_Setting_HotkeyFM_Strength)
+			useHotkey(int_Setting_HotkeyFM_Strength, walkInstruction[1])
 			sleepRandom(3000)
 		elseif walkInstruction[1] == "RockSmash" then
 			print("Smashing boulders.")
-			KeyTyped("H"..int_Setting_HotkeyFM_RockSmash)
+			useHotkey(int_Setting_HotkeyFM_RockSmash, walkInstruction[1])
 			sleepRandom(2000)
 			KeyTyped("A")
 			sleepRandom(1000)
@@ -310,27 +311,27 @@ function pathFinder(walkRouteWay, fastShoesAvailable)
 			checkInterruption()
 		elseif walkInstruction[1] == "RockClimb" then
 			print("Walking up walls.")
-			KeyTyped("H"..int_Setting_HotkeyFM_RockClimb)
+			useHotkey(int_Setting_HotkeyFM_RockClimb, walkInstruction[1])
 			sleepRandom(3000)
 		elseif walkInstruction[1] == "Waterfall" then
 			print("Swimming up walls.")
-			KeyTyped("H"..int_Setting_HotkeyFM_Waterfall)
+			useHotkey(int_Setting_HotkeyFM_Waterfall, walkInstruction[1])
 			sleepRandom(3000)
 		elseif walkInstruction[1] == "Whirlpool" then
 			print("Entering hot tub.")
-			KeyTyped("H"..int_Setting_HotkeyFM_Whirlpool)
+			useHotkey(int_Setting_HotkeyFM_Whirlpool, walkInstruction[1])
 			sleepRandom(3000)
 		elseif walkInstruction[1] == "Dive" then
 			print("Taking a deep breath.")
-			KeyTyped("H"..int_Setting_HotkeyFM_Dive)
+			useHotkey(int_Setting_HotkeyFM_Dive, walkInstruction[1])
 			sleepRandom(3000)
 		elseif walkInstruction[1] == "Dig" then
 			print("Burrowing.")
-			KeyTyped("H"..int_Setting_HotkeyFM_Dig)
+			useHotkey(int_Setting_HotkeyFM_Dig, walkInstruction[1])
 			sleepRandom(3000)
 		elseif walkInstruction[1] == "Teleport" then
 			print("Initializing hyperdrive.")
-			KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
+			useHotkey(int_Setting_HotkeyFM_Teleport, walkInstruction[1])
 			sleepRandom(3000)
 		end
 	end
@@ -354,7 +355,7 @@ function walkRoute(startX, stratY, endX, endY, availableRoutes, walkingBack)
 		pathFinder(chosenRoute)
 		CheckPosition(endX,endY)
 	else
-		if bool_Activities_Routes_DigAndTeleportBack == true then
+		if bool_Activities_Routes_DigAndTeleportBack == true and int_Setting_HotkeyFM_Dig > 0 and int_Setting_HotkeyFM_Teleport > 0 then
 			print("Using a shortcut")
 			KeyTyped("H"..int_Setting_HotkeyFM_Dig)
 			sleep(3000)
