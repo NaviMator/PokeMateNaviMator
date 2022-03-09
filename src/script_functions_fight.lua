@@ -113,7 +113,7 @@ function runFromBattle()
 		randomWaitingTime()
 
 		-- Swap if trapped or something is wrong (still not tested)
-		if triedToRun >= 10 then
+		if triedToRun >= 5 then
 			print("Propably trapped. Trying to fight.")
 			battle()
 		end

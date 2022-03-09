@@ -21,8 +21,8 @@ button.changed{background-color:rgb(20 160 0); border-color:rgb(20 160 0);}
 .dataBaseControlSwitch label{transform:scale(1.5); transform-origin:left; margin-left:18px;}
 .dropdown-toggle{min-width:160px;}
 .dropdown-menu .dropdown-item:first-child{display: none;}
-.btn.openSoftwareButton{background:#a5bcc3; border-color: #2a2e33; color: #333; margin-top: 10px; width: 100%;}
-.btn.openSoftwareButton:hover{background-color: #aae5f7}
+.btn.openSoftwareButton,.btn.openLinkButton{background:#a5bcc3; border-color: #2a2e33; color: #333; margin-top: 10px; width: 100%;}
+.btn.openSoftwareButton:hover,.btn.openLinkButton:hover{background-color: #aae5f7}
 p{font-size: .8em; color: #ccc; margin-top: -10px; font-style: italic;}
 code{color:#000; background:rgba(0, 0, 0, 0.1); border-radius:10px; display:block; width:100%; padding:10px 20px; border:1px solid rgba(0, 0, 0, 0.3);}
 .sidebar code{color:#fff; background:rgba(0, 0, 0, 0.2); border:none;}

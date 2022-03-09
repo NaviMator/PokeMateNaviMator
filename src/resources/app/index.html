@@ -50,6 +50,7 @@
           <h6>Script for PokeMate.jar</h6>
           <code>require "scripts/script"</code>
           <button class="openSoftwareButton btn btn-primary" data-software="PokeMate">Launch Pokemate.jar</button>
+          <button class="openLinkButton btn btn-primary" data-link="https://docs.pokemate.fiereu.de/pokemate-documentation/features/lua-api" target="_blank">API Documentation</button>
         </div>
 
       </div>
@@ -653,6 +654,11 @@ $( ".openSoftwareButton" ).click(function() {
   function (error, stdout, stderr){
     if(error !== null){console.log('exec error: ' + error);}
   });
+});
+$( ".openLinkButton" ).click(function() {
+  var link = $(this).attr("data-link");
+  const { shell } = require('electron')
+  shell.openExternal(link)
 });
 
 // Keyboard Keys to record

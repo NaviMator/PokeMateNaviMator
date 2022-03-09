@@ -208,6 +208,7 @@ end
 function checkIfLostAtPokeCenter()
 	if mapOnBattleEntry ~= getPositionCode() then
 		print("Propably died and stranded in Pokecenter. Will continue with journey.")
+		initialWalkDone = false
 		walkingToDestination()
 	end
 end
@@ -338,7 +339,6 @@ end
 
 -- Walking to and back from route logic
 function walkRoute(startX, stratY, endX, endY, availableRoutes, walkingBack)
-
 	choice = random(1,tableLength(availableRoutes))
 	chosenRoute = (availableRoutes[choice])
 
