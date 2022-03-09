@@ -188,7 +188,7 @@ end
 function regenerate()
 	print("Regernerating")
 	--CheckPosition(7,4) -- Kanto
-	Trainer.TalkToNPC()
+	KeyTyped("A")
 	for i=1, 5 do
 		sleep(1200)
 		randomWaitingTime()
@@ -267,7 +267,7 @@ function pathFinder(walkRouteWay, fastShoesAvailable)
 		elseif walkInstruction[1] == "Speak" then
 			print("Greeting.")
 			sleepRandom(200)
-			Trainer.TalkToNPC()
+			KeyTyped("A")
 		elseif walkInstruction[1] == "Talk" then
 			print("Negotiating.")
 			sleepRandom(200)
