@@ -29,5 +29,6 @@ function record()
 			end
 		end
 		sleep(150)
+		checkInterruption()
 	end
 end
