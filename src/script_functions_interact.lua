@@ -78,22 +78,22 @@ end
 
 -- Learn new move and evolve (or not)
 function levelUpControl()
-	--if Battle.IsInMovetutor() == true then -- Currently not supported
-	--	readDatabase() -- Read Database
-	--	if array_Strategy_Training_LearnNewMoves[1] == "Replace first" then
-	--		KeyTyped("A")
-	--		sleep(1000)
-	--		KeyTyped("A")
-	--		sleepRandom(4000)
-	--	elseif array_Strategy_Training_LearnNewMoves[1] == "Skip" then
-	--		KeyTyped("B")
-	--		sleep(1000)
-	--		KeyTyped("A")
-	--		sleepRandom(1000)
-	--	elseif array_Strategy_Training_LearnNewMoves[1] == "Stop bot" then
-	--		MessageBox("Switching to manual to decide a move.")
-	--		stop()
-	--	end
+	if Battle.IsInMovetutor() == true then
+		readDatabase()
+		if array_Strategy_Training_LearnNewMoves[1] == "Replace first" then
+			KeyTyped("A")
+			sleep(1000)
+			KeyTyped("A")
+			sleepRandom(4000)
+		elseif array_Strategy_Training_LearnNewMoves[1] == "Skip" then
+			KeyTyped("B")
+			sleep(1000)
+			KeyTyped("A")
+			sleepRandom(1000)
+		elseif array_Strategy_Training_LearnNewMoves[1] == "Stop bot" then
+			MessageBox("Switching to manual to decide a move.")
+			stop()
+		end
 			--elseif Battle.IsInEvolution() == true then -- Not supported at the moment
 			--	readDatabase() -- Read Database
 			--	if bool_Strategy_Training_SkipEvolve == true then
@@ -103,7 +103,7 @@ function levelUpControl()
 			--			KeyTyped("B")
 			--		end
 			--	end
-	--end
+	end
 end
 
 

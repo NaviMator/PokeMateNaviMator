@@ -107,11 +107,13 @@
             <button class="rec-input rec-d btn btn-primary" data-rec="D-1">&darr;</button>
           </div>
           <div class="rec-inputs rec-inputs-specials">
-            <button class="rec-input btn btn-primary" data-rec="Speak">Speak (A)</button>
-            <button class="rec-input btn btn-primary" data-rec="Talk-1">Continue (B)</button>
-            <button class="rec-input btn btn-primary" data-rec="Wait-1">Wait 1 Second</button>
-            <button class="rec-input btn btn-primary" data-rec="Door">Go through Door</button>
-            <button class="rec-input btn btn-primary" data-rec="Ledge">Jump down ledge</button>
+            <button class="rec-input btn btn-primary" data-tooltipinfo="Talk to NPC" data-rec="Speak">Speak</button>
+            <button class="rec-input btn btn-primary" data-tooltipinfo="Continue Dialogue" data-rec="Talk-1">Continue</button>
+            <button class="rec-input btn btn-primary" data-tooltipinfo="Wait 1 Second" data-rec="Wait-1">Wait</button>
+            <button class="rec-input btn btn-primary" data-tooltipinfo="Wait until through door" data-rec="Door">Door</button>
+            <button class="rec-input btn btn-primary" data-tooltipinfo="Wait until jumped ledge" data-rec="Ledge">Jump</button>
+            <button class="rec-input btn btn-primary" data-rec="Press-A">Press A</button>
+            <button class="rec-input btn btn-primary" data-rec="Press-B">Press B</button>
           </div>
           <div class="rec-inputs rec-inputs-hms">
               <button class="rec-input btn btn-primary" data-rec="Cut">Cut</button>
@@ -514,7 +516,8 @@ $("button.rec-input").click(function() {
         //console.log("Last item could be increased")
         var lastItemParts = lastItem.split("-");
         var newItemParts = newArrayPiece.split("-");
-        if (lastItemParts[0] == newItemParts[0]){
+        
+        if (lastItemParts[0] == newItemParts[0] && $.isNumeric(newItemParts[1])){
           //console.log("Sameseees. Increasing value.")
           var newValueoflastItem = parseInt(lastItemParts[1])+1;
           var currentRecArrayInsteadOfLastInt = currentRecArrayWithoutEnd[0].substring(0, currentRecArrayWithoutEnd[0].lastIndexOf('-'));

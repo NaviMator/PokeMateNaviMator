@@ -188,7 +188,7 @@ end
 function regenerate()
 	print("Regernerating")
 	--CheckPosition(7,4) -- Kanto
-	KeyTyped("A")
+	Trainer.TalkToNPC();
 	for i=1, 5 do
 		sleep(1200)
 		randomWaitingTime()
@@ -264,10 +264,11 @@ function pathFinder(walkRouteWay, fastShoesAvailable)
 		elseif walkInstruction[1] == "Press" then
 			print("Pressing ".. walkInstruction[2])
 			KeyTyped(walkInstruction[2])
+			sleepRandom(200)
 		elseif walkInstruction[1] == "Speak" then
 			print("Greeting.")
 			sleepRandom(200)
-			KeyTyped("A")
+			Trainer.TalkToNPC();
 		elseif walkInstruction[1] == "Talk" then
 			print("Negotiating.")
 			sleepRandom(200)
@@ -290,7 +291,6 @@ function pathFinder(walkRouteWay, fastShoesAvailable)
 			print("Trimming tree.")
 			KeyTyped("H"..int_Setting_HotkeyFM_Cut)
 			sleepRandom(3000)
-			levelChange()
 		elseif walkInstruction[1] == "Surf" then
 			print("Going for a swim.")
 			KeyTyped("H"..int_Setting_HotkeyFM_Surf)
@@ -339,6 +339,12 @@ end
 
 -- Walking to and back from route logic
 function walkRoute(startX, stratY, endX, endY, availableRoutes, walkingBack)
+
+	if availableRoutes == NULL then
+		MessageBox("Error: No routes defined. Check if spelled correctly.")
+		stop()
+	end
+
 	choice = random(1,tableLength(availableRoutes))
 	chosenRoute = (availableRoutes[choice])
 

@@ -34,7 +34,9 @@ code{color:#000; background:rgba(0, 0, 0, 0.1); border-radius:10px; display:bloc
 /* Rec Buttons */
 .rec-inputs-wrapper{display: flex; flex-wrap: wrap; margin:40px 0; position: relative;}
 .rec-inputs{position: relative; display: inline-block;}
-.rec-inputs .rec-input{margin:0 5px 10px 0;}
+.rec-inputs .rec-input{margin:0 5px 10px 0; position: relative;}
+.rec-inputs .rec-input[data-tooltipinfo]:hover::before {content: attr(data-tooltipinfo); position:absolute; top:0; left:50%; transform:translate(-50%, calc(-100% - 10px)); padding:10px 20px; border-radius:10px; background:rgba(0, 0, 0, 0.5); color: #fff; text-align:center;}
+.rec-inputs .rec-input[data-tooltipinfo]:hover::after {content: ""; position:absolute; top:-10px; left:50%; transform:translateX(-50%); border:10px solid rgba(0, 0, 0, 0.5); border-color:rgba(0, 0, 0, 0.5) transparent transparent transparent;}
 .rec-inputs.rec-inputs-arrows{height:100px; width:180px;}
 .rec-inputs.rec-inputs-arrows .rec-input{position: absolute; width:40px;}
 .rec-inputs.rec-inputs-arrows .rec-input.rec-u{top:0; left:50px;}
