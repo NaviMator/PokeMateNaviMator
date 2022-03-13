@@ -19,8 +19,7 @@ statusEffects = {
 }
 
 
--- Listed of attack-IDs that cause status-effects without damaging the oppponent.
--- The names of following attacks are complete, but not the IDs. Feel free to contribute.
+-- List of attack-IDs that cause status-effects without damaging the oppponent.
 attacksThatCauseEffects = {
     Sleep = {
         47,  -- Sing
@@ -49,12 +48,7 @@ attacksThatCauseEffects = {
     },
 }
 
-attacksThatFlee = {
-	46,  -- Roar
-	100, -- Teleport
-	18,  -- Whirlwind
-}
-
+-- List of attack-IDs that do not deal direct damage.
 attacksThatDontDamage = {
 	LowerEnemyAttack = {
 		45,  --Growl
@@ -271,18 +265,21 @@ attacksThatDontDamage = {
 	},
 }
 
+attacksThatFlee = {
+	46,  -- Roar
+	100, -- Teleport
+	18,  -- Whirlwind
+}
+
+attacksThatdamageGroups = {
+	57, -- Surf
+	89, -- Earthquake
+}
+
 attacksThatneedUserInput = {
 	102, -- Mimic
 	226, -- Baton Pass
 	166, -- Sketch
-}
-
-
--- List of special moves for group-battles
--- this list is very incomplete. Feel free to contribute.
-attacksThatdamageGroups = {
-	57, -- Surf
-	89, -- Earthquake
 }
 
 
