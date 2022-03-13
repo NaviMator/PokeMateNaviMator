@@ -66,6 +66,16 @@ function prioritizeMoves()
 			attackInfos.Prio = attackInfos.Prio + 10
 		end
 
+		if arrayContains(attacksThatFlee, attackInfos.ID) then
+			attackInfos.Prio = attackInfos.Prio - 250
+			if bool_Hidden_Setting_Debug == true then print("Preventing end of battle. Decreasing priority of " .. attackInfos.Name .. " by 250 points.") end
+		end
+
+		if arrayContains(attacksThatneedUserInput, attackInfos.ID) then -- Temporary
+			attackInfos.Prio = attackInfos.Prio - 500
+			if bool_Hidden_Setting_Debug == true then print("Preventing user input. Decreasing priority of " .. attackInfos.Name .. " by 500 points.") end
+		end
+
 		for effect, effectAttacks in pairs(attacksThatCauseEffects) do
 			if arrayContains(effectAttacks, attackInfos.ID) then
 				if bool_Hidden_Setting_Debug == true then print("Will cause " .. effect .. ". Decreasing priority of " .. attackInfos.Name .. " by 80 points.") end
@@ -73,7 +83,7 @@ function prioritizeMoves()
 			end
 		end
 
-		for status, statusAttacks in pairs(attacksThatCauseStatus) do
+		for status, statusAttacks in pairs(attacksThatDontDamage) do
 			if arrayContains(statusAttacks, attackInfos.ID) then
 				if bool_Hidden_Setting_Debug == true then print("Will cause " .. status .. ". Decreasing priority of " .. attackInfos.Name .. " by 80 points.") end
 				attackInfos.Prio = attackInfos.Prio - 80
