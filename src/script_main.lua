@@ -164,6 +164,7 @@ function behaviorInBattle()
 		-- Strategy
 		if catchIt then
 			battle("catch")
+			if bool_Hidden_Setting_Debug == true then print("Battle ended.") end
 			checkIfCaught(keepOnlyIfIV31)
 		else
 			if bool_Strategy_Catching_FightIfUnwanted == true then

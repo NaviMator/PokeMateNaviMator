@@ -12,15 +12,7 @@
 function randomSteps(direction)
 	readDatabase()
 	stepAmount = random(int_Setting_Steps_Min,int_Setting_Steps_Max)
-	if direction == "r" then
-		Trainer.MoveRight(bool_Setting_Steps_AlwaysRun, stepAmount)
-	elseif direction == "l" then
-		Trainer.MoveLeft(bool_Setting_Steps_AlwaysRun, stepAmount)
-	elseif direction == "u" then
-		Trainer.MoveUp(bool_Setting_Steps_AlwaysRun, stepAmount)
-	elseif direction == "d" then
-		Trainer.MoveDown(bool_Setting_Steps_AlwaysRun, stepAmount)
-	end
+	Trainer["Move"..direction](bool_Setting_Steps_AlwaysRun, stepAmount, checkInterruption())
 	randomWaitingTime()
 end
 
@@ -35,11 +27,11 @@ function runningAround(path)
 	end
 	while Trainer.IsInBattle() == false do
 		if path == "vertically" then
-			randomSteps("d")
-			randomSteps("u")
+			randomSteps("Down")
+			randomSteps("Up")
 		elseif path == "horizontally" then
-			randomSteps("r")
-			randomSteps("l")
+			randomSteps("Right")
+			randomSteps("Left")
 		end
 	end
 end
@@ -64,26 +56,22 @@ function ErrorCorrection(X, Y)
 
 	if(dX > 0) then
 		while(Trainer.GetX() < X) do
-			checkInterruption()
-			Trainer.MoveRight(bool_Setting_Steps_AlwaysRun, 1)
+			Trainer.MoveRight(bool_Setting_Steps_AlwaysRun, 1, checkInterruption())
 		end
 	end
 	if(dX < 0) then
 		while(Trainer.GetX() > X) do
-			checkInterruption()
-			Trainer.MoveLeft(bool_Setting_Steps_AlwaysRun, 1)
+			Trainer.MoveLeft(bool_Setting_Steps_AlwaysRun, 1, checkInterruption())
 		end
 	end
 	if(dY > 0) then
 		while(Trainer.GetY() < Y) do
-			checkInterruption()
-			Trainer.MoveDown(bool_Setting_Steps_AlwaysRun, 1)
+			Trainer.MoveDown(bool_Setting_Steps_AlwaysRun, 1, checkInterruption())
 		end
 	end
 	if(dY < 0) then
 		while(Trainer.GetY() > Y) do
-			checkInterruption()
-			Trainer.MoveUp(bool_Setting_Steps_AlwaysRun, 1)
+			Trainer.MoveUp(bool_Setting_Steps_AlwaysRun, 1, checkInterruption())
 		end
 	end
 end
@@ -220,41 +208,33 @@ function pathFinder(walkRouteWay, fastShoesAvailable)
 		randomWaitingTime()
 		walkInstruction = splitString(walkLine,"-")
 
-		-- Dont run long ways because steps get skipped sometimes
-		if walkInstruction[1] == "U" or walkInstruction[1] == "R" or walkInstruction[1] == "D" or walkInstruction[1] == "L" then
-			--if tonumber(walkInstruction[2]) >= 10 or fastShoesAvailable == false then
+		if walkInstruction[1] == "U" or walkInstruction[1] == "R" or walkInstruction[1] == "D" or walkInstruction[1] == "L" then		
+			--if tonumber(walkInstruction[2]) >= 10 or fastShoesAvailable == false then -- Dont run long ways because steps get skipped sometimes
 			if fastShoesAvailable == false then
 				running = false
 			else
 				running = bool_Setting_Steps_AlwaysRun
 			end
-		end
 
-		-- Walking (has to be split up to single steps because of possible interruption)
-		if walkInstruction[1] == "U" then
-			if bool_Hidden_Setting_Debug == true then print("Walking Up ".. walkInstruction[2]) end
-			for i=1, walkInstruction[2] do
-				Trainer.MoveUp(running, 1)
-				checkInterruption()
+			if walkInstruction[1] == "U" then
+				direction = "Up"
+			elseif walkInstruction[1] == "D" then
+				direction = "Down"
+			elseif walkInstruction[1] == "L" then
+				direction = "Left"
+			elseif walkInstruction[1] == "R" then
+				direction = "Right"
 			end
-		elseif walkInstruction[1] == "D" then
-			if bool_Hidden_Setting_Debug == true then print("Walking Down ".. walkInstruction[2]) end
-			for i=1, walkInstruction[2] do
-				Trainer.MoveDown(running, 1)
-				checkInterruption()
+
+			if bool_Hidden_Setting_Debug == true then
+				if running == true then
+					print("Running ".. direction .. " " .. walkInstruction[2] .. " Steps.")
+				else
+					print("Walking ".. direction .. " " .. walkInstruction[2] .. " Steps.")
+				end
 			end
-		elseif walkInstruction[1] == "L" then
-			if bool_Hidden_Setting_Debug == true then print("Walking Left ".. walkInstruction[2]) end
-			for i=1, walkInstruction[2] do
-				Trainer.MoveLeft(running, 1)
-				checkInterruption()
-			end
-		elseif walkInstruction[1] == "R" then
-			if bool_Hidden_Setting_Debug == true then print("Walking Right ".. walkInstruction[2]) end
-			for i=1, walkInstruction[2] do
-				Trainer.MoveRight(running, 1)
-				checkInterruption()
-			end
+
+			Trainer["Move"..direction](running, walkInstruction[2], checkInterruption())
 
 		-- Interaction
 		elseif walkInstruction[1] == "Wait" then
