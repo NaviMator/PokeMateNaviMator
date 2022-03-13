@@ -118,12 +118,12 @@ attacksThatDontDamage = {
 		235, -- Synthesis
 		273, -- Wish
 		355, -- Roost
-	}
+	},
 	Weather = {
 		201, -- Sandstorm
 		240, -- Rain Dance
 		241, -- Sunny Day
-	}
+	},
 	SpecialTactics = {
 		50,  -- Disable
 		73,  -- Leech Seed
