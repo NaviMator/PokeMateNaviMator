@@ -143,6 +143,7 @@ attacksThatDontDamage = {
 		170, -- Mind Reader
 		171, -- Nightmare
 		176, -- Conversion Two
+		206, -- False Swipe (in this list because it can not end battles)
 	},
 	SpecialBattle = {
 		144, -- Transform

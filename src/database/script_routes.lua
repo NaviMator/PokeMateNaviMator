@@ -96,8 +96,8 @@ function routes(route, reverse)
 			{"D-2","R-20","D-4","L-3"},
 		}
 		routesBack = {
-			{"U-8","R-2","U-5","L-19","U-2"},
-			{"U-10","R-2","U-4","L-19","U-3"},
+			{"U-4","R-2","U-5","L-19","U-2"},
+			{"U-4","R-2","U-4","L-19","U-3"},
 		}
 	elseif route == "Hoenn route 113 (Collect Ash)" then -- Hoenn, route 113 (start Fallarbor Town at nurse)
 		startX = 14

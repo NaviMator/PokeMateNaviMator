@@ -55,23 +55,22 @@ function behaviorAtDestination()
 	readDatabase()
 	if array_Activities_Basic_Mode[1] == "Record" then
 		record()
-	else
-		if array_Activities_Behavior_MovementAtDestination[1] == "Move (left/right)" then
-			runningAround("horizontally")
-		elseif array_Activities_Behavior_MovementAtDestination[1] == "Move (up/down)" then
-			runningAround("vertically")
-		elseif array_Activities_Behavior_MovementAtDestination[1] == "Fishing" then
-			fishing()
-		elseif array_Activities_Behavior_MovementAtDestination[1] == "Sweet Scent" then
-			useSweetScent()
-		elseif array_Activities_Behavior_MovementAtDestination[1] == "Walk back" then
-			goHeal = true
-			returnAfterHealing = true
-		elseif array_Activities_Behavior_MovementAtDestination[1] == "Do nothing" then
-			stop();
-		end
+	elseif bool_Activities_Routes_HealWhenFirstPokemonIsDefeated and Party.GetPokemonHealth(0, 0) <= 0 then
+		print("Teamleader is defeated.")
+		runHome()
+	elseif array_Activities_Behavior_MovementAtDestination[1] == "Move (left/right)" then
+		runningAround("horizontally")
+	elseif array_Activities_Behavior_MovementAtDestination[1] == "Move (up/down)" then
+		runningAround("vertically")
+	elseif array_Activities_Behavior_MovementAtDestination[1] == "Fishing" then
+		fishing()
+	elseif array_Activities_Behavior_MovementAtDestination[1] == "Sweet Scent" then
+		useSweetScent()
+	elseif array_Activities_Behavior_MovementAtDestination[1] == "Walk back" then
+		runHome()
+	elseif array_Activities_Behavior_MovementAtDestination[1] == "Do nothing" then
+		stop();
 	end
-
 end
 
 

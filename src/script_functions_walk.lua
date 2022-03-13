@@ -11,6 +11,11 @@
 -- Get direction and random steps 
 function randomSteps(direction)
 	readDatabase()
+	if bool_Setting_Steps_AlwaysRun == true then
+		print("Running around.")
+	else
+		print("Sneaking around.")
+	end
 	stepAmount = random(int_Setting_Steps_Min,int_Setting_Steps_Max)
 	Trainer["Move"..direction](bool_Setting_Steps_AlwaysRun, stepAmount, checkInterruption())
 	randomWaitingTime()
@@ -20,19 +25,12 @@ end
 -- Running around
 function runningAround(path)
 	readDatabase()
-	if bool_Setting_Steps_AlwaysRun == true then
-		print("Running around.")
-	else
-		print("Sneaking around.")
-	end
-	while Trainer.IsInBattle() == false do
-		if path == "vertically" then
-			randomSteps("Down")
-			randomSteps("Up")
-		elseif path == "horizontally" then
-			randomSteps("Right")
-			randomSteps("Left")
-		end
+	if path == "vertically" then
+		randomSteps("Down")
+		randomSteps("Up")
+	elseif path == "horizontally" then
+		randomSteps("Right")
+		randomSteps("Left")
 	end
 end
 

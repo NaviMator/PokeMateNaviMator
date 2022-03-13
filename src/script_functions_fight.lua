@@ -254,8 +254,8 @@ function attackEnemy(ownPokemonAttacks, forceAttack, attackName, skipResistant)
 	end
 	
 	-- Use struggle if no PP are left
+	isItMyTurnJet()
 	if expiredPPAttacks == tableLength(ownPokemonAttacks) and strategy ~= "catch" and Trainer.IsInBattle() then
-		isItMyTurnJet()
 		print("Struggle is real.")
 		Battle.DoAction(0, 0, "SKILL", 165, nextEnemyTargetID)
 		didAttack = true
@@ -328,6 +328,13 @@ function battle(strategy)
 			else
 				print("Pokemon ID " .. Battle.Active.GetPokemonID(1, 0) .. " should be immediately.")
 				attackName = "throwBall"
+			end
+		elseif strategy == "flee" then
+			if arrayContains(unuseableAttacks, "flee") == false then
+				forceAttack = attacksThatFlee
+				attackName = "flee"
+			else
+				runFromBattle()
 			end
 		else
 			attackName = strategy
