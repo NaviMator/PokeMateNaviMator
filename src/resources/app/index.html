@@ -666,6 +666,8 @@ $( ".openLinkButton" ).click(function() {
 
 // Keyboard Keys to record
 document.onkeydown = function(e) {
+  currentPage = $(".nav-link.active").attr("data-page")
+  if(currentPage == "rec"){
     switch(e.which) {
         case 37: // Left
           $("button[data-rec='L-1'").click()
@@ -702,6 +704,7 @@ document.onkeydown = function(e) {
         default: return;
     }
     e.preventDefault();
+  }
 };
 
 
