@@ -97,8 +97,7 @@ function behaviorInBattle()
 	-- Check for shiny
 	for PokemonNr = 0, Battle.GetFightingTeamSize(1)-1 do
 		-- Note: tostring(Battle.GetFightingTeamSize(1)) -- Function always returns 1 or 5
-		if Battle.Active.GetPokemonRarity(1, PokemonNr) == "SHINY" then
-			
+		if Battle.Bench.IsShiny(1, PokemonNr) then
 			Alert(true);
 			MessageBox("ENEMY IS SERIOUSLY SHINY!!!")
 			Alert(true);
