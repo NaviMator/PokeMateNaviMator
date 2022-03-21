@@ -27,7 +27,7 @@ function useHotkey(hotkey, command)
 	if hotkey > 0 then
 		KeyTyped("H"..hotkey)
 	else
-		print("Hotkey "..command.." not set. Please set and start again.")
+		MessageBox("Hotkey "..command.." not set. Please set and start again.")
 		stop()
 	end
 end
@@ -35,7 +35,6 @@ end
 -- Wait to attack
 function isItMyTurnJet()
 
-	-- print("Waiting...")
 	countLoop = 0
 	while(not Battle.CanAttack()) do
 		if countLoop >= 40 then
@@ -81,7 +80,6 @@ function pokemonSwap(swapToPokemon)
 		end
 	end
 	isItMyTurnJet()
-	--checkIfLostAtPokeCenter()
 
 end
 
@@ -103,15 +101,15 @@ function levelUpControl()
 			MessageBox("Switching to manual to decide a move.")
 			stop()
 		end
-			--elseif Battle.IsInEvolution() == true then -- Not supported at the moment
-			--	readDatabase() -- Read Database
-			--	if bool_Strategy_Training_SkipEvolve == true then
-			--		print("Skipping evolution.")
-			--		while Battle.IsInEvolution() == true do
-			--			sleep(500)
-			--			KeyTyped("B")
-			--		end
-			--	end
+	elseif Battle.IsInEvolution() == true then
+		readDatabase()
+		if bool_Strategy_Training_SkipEvolve == true then
+			print("Skipping evolution.")
+			while Battle.IsInEvolution() == true do
+				sleep(500)
+				KeyTyped("B")
+			end
+		end
 	end
 end
 
@@ -139,9 +137,8 @@ function useSweetScent()
 		writeDatabase() -- write variable to database
 		sleep(5000)
 	else
-		print("No more sweet scent PP left. Goint to heal.")
-		goHeal = true
-		returnAfterHealing = true
+		print("No more sweet scent PP left.")
+		runHome()
 	end
 
 end
