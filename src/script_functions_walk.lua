@@ -334,14 +334,14 @@ function walkRoute(startX, stratY, endX, endY, availableRoutes, walkingBack)
 		CheckPosition(endX,endY)
 	else
 		print("Using a shortcut")
-		if array_Activities_Routes_ShortcutBackToPokecenter[1] == "Dig & Teleport" and int_Setting_HotkeyFM_Dig > 0 and int_Setting_HotkeyFM_Teleport > 0 then
+		if array_Activities_Routes_ShortcutBackToPokecenter[1] == "Dig and Teleport" and int_Setting_HotkeyFM_Dig > 0 and int_Setting_HotkeyFM_Teleport > 0 then
 			KeyTyped("H"..int_Setting_HotkeyFM_Dig)
 			sleep(3000)
 			levelChange()
 			KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
 			sleep(3000)
 			levelChange()
-		elseif array_Activities_Routes_ShortcutBackToPokecenter[1] == "Dive up & Teleport" and int_Setting_HotkeyFM_Dive > 0 and int_Setting_HotkeyFM_Teleport > 0 then
+		elseif array_Activities_Routes_ShortcutBackToPokecenter[1] == "Dive up and Teleport" and int_Setting_HotkeyFM_Dive > 0 and int_Setting_HotkeyFM_Teleport > 0 then
 			KeyTyped("H"..int_Setting_HotkeyFM_Dive)
 			sleep(3000)
 			levelChange()
