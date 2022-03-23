@@ -12,9 +12,9 @@
 function randomSteps(direction)
 	readDatabase()
 	if bool_Setting_Steps_AlwaysRun == true then
-		print("Running around.")
+		print("Running " .. direction .. ".")
 	else
-		print("Sneaking around.")
+		print("Sneaking " .. direction .. ".")
 	end
 	stepAmount = random(int_Setting_Steps_Min,int_Setting_Steps_Max)
 	Trainer["Move"..direction](bool_Setting_Steps_AlwaysRun, stepAmount, checkInterruption())
@@ -81,8 +81,8 @@ function CheckPosition(X, Y)
 	if X and Y then
 		ErrorCorrection(X, Y)
 		if(not (Trainer.GetX() == X and Trainer.GetY() == Y)) then
-			MessageBox("Player has wrong Position.\nExpected "..X.." and "..Y.."\nGot "..Trainer.GetX().." and "..Trainer.GetY())
 			stop()
+			MessageBox("Player has wrong Position.\nExpected "..X.." and "..Y.."\nGot "..Trainer.GetX().." and "..Trainer.GetY())
 		end
 	end
 end
@@ -333,11 +333,22 @@ function walkRoute(startX, stratY, endX, endY, availableRoutes, walkingBack)
 		pathFinder(chosenRoute)
 		CheckPosition(endX,endY)
 	else
-		if bool_Activities_Routes_DigAndTeleportBack == true and int_Setting_HotkeyFM_Dig > 0 and int_Setting_HotkeyFM_Teleport > 0 then
-			print("Using a shortcut")
+		print("Using a shortcut")
+		if array_Activities_Routes_ShortcutBackToPokecenter[1] == "Dig & Teleport" and int_Setting_HotkeyFM_Dig > 0 and int_Setting_HotkeyFM_Teleport > 0 then
 			KeyTyped("H"..int_Setting_HotkeyFM_Dig)
 			sleep(3000)
 			levelChange()
+			KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
+			sleep(3000)
+			levelChange()
+		elseif array_Activities_Routes_ShortcutBackToPokecenter[1] == "Dive up & Teleport" and int_Setting_HotkeyFM_Dive > 0 and int_Setting_HotkeyFM_Teleport > 0 then
+			KeyTyped("H"..int_Setting_HotkeyFM_Dive)
+			sleep(3000)
+			levelChange()
+			KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
+			sleep(3000)
+			levelChange()
+		elseif array_Activities_Routes_ShortcutBackToPokecenter[1] == "Teleport" and int_Setting_HotkeyFM_Teleport > 0 then
 			KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
 			sleep(3000)
 			levelChange()

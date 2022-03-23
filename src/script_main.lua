@@ -86,26 +86,33 @@ function behaviorInBattle()
 
 	readDatabase()
 	mapOnBattleEntry = getPositionCode()
-
-	-- Check for battle type
-	--if Battle.GetEnemyTrainerType() == 0 or Battle.GetEnemyTrainerType() == 1 then
-	--	print("Battle against trainer. Will fight.")
-	--	battle()
-	--end
+	shiny = false
 
 	-- Check for shiny
 	for PokemonNr = 0, Battle.GetFightingTeamSize(1)-1 do
-		-- Note: tostring(Battle.GetFightingTeamSize(1)) -- Function always returns 1 or 5
 		if Battle.Bench.IsShiny(1, PokemonNr) then
-			Alert(true);
-			MessageBox("ENEMY IS SERIOUSLY SHINY!!!")
-			Alert(true);
 
-			stop() -- Temporary workaround
-			-- Unsure here. You don't want to risk bad bot behaviour but neither afk.
-			-- Best practice would need to know a lot of hardcoded variables to understand the situation.
-			-- Including keeping Masterballs and confirming the usage and also picking non-shinies from a horde
+			print("ENEMY (Slot ".. PokemonNr+1 ..") IS SERIOUSLY SHINY!!!")
 
+			if Battle.GetBattleType() == "HORDE_BATTLE" then
+				-- Unsure if picking from horde is safe enough
+				Alert(true)
+				stop()
+				MessageBox("SHINY IN HORDE!!!")
+				stop()
+			elseif array_Strategy_Catching_ShinyBehaviour[1] == "Alert and stop bot" then 
+				Alert(true)
+				stop()
+				MessageBox("SHINY!!!")
+				stop()
+			elseif array_Strategy_Catching_ShinyBehaviour[1] == "Throw Masterball" and int_Item_Current_Masterball > 0 then
+				-- To do. Untested Alpha.
+				while Trainer.IsInBattle() do
+					throwBall("masterball")
+				end
+			else
+				shiny = true
+			end
 		end
 	end
 
@@ -158,6 +165,11 @@ function behaviorInBattle()
 				print("But will release if no IV31.")
 				keepOnlyIfIV31 = true
 			end
+		end
+
+		if shiny == true then
+			catchIt = true
+			keepOnlyIfIV31 = false
 		end
 
 		-- Strategy
@@ -240,10 +252,18 @@ function battlePilotDecision()
 			end
 		else
 			print("Automatic battle engaged.")
-			behaviorInBattle()
+			if Battle.IsWildEncounter() == true then
+				behaviorInBattle()
+			else
+				battle()
+			end
 		end
 	else
-		behaviorInBattle()
+		if Battle.IsWildEncounter() == true then
+			behaviorInBattle()
+		else
+			battle()
+		end
 	end
 end
 

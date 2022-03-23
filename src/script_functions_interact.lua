@@ -203,14 +203,19 @@ end
 function checkIfCaught(keepOnlyIfIV31)
 
 	newestPokemon = PC.GetLastCaughtPokemon()
-	newestPokemonID = PC.GetPokemonUID(newestPokemon)
-
-	if newestPokemonID == -1 or newestPokemonID == int_Hidden_Setting_LastPokemonCaught then
+	
+	if newestPokemon == -1 then
 		print("No pokemon caught.")
 	else
-		print("Good Catch. Everybody clap. Roll on snare drum. Curtains.")
-		int_Hidden_Setting_LastPokemonCaught = newestPokemonID
-		writeDatabase()
-		keepIf31(keepOnlyIfIV31, newestPokemon)
+		newestPokemonID = PC.GetPokemonUID(newestPokemon)
+		
+		if newestPokemonID == int_Hidden_Setting_LastPokemonCaught then
+			print("No pokemon caught.")
+		else
+			print("Good Catch. Everybody clap. Roll on snare drum. Curtains.")
+			int_Hidden_Setting_LastPokemonCaught = newestPokemonID
+			writeDatabase()
+			keepIf31(keepOnlyIfIV31, newestPokemon)
+		end
 	end
 end

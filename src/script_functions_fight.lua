@@ -150,13 +150,18 @@ end
 
 
 -- Throw ball
-function throwBall()
+function throwBall(masterball)
 
 	isItMyTurnJet()
 	randomWaitingTime()
 	readDatabase()
 
-	if int_Item_Current_Pokeball > 0 then
+	if masterball == "masterball" and int_Item_Current_Masterball > 0 then
+		Battle.DoItemInteraction(0,0,"ITEM",5001,0,-1)
+		int_Item_Current_Masterball = int_Item_Current_Masterball -1
+		print("Go Masterball! (" .. int_Item_Current_Masterball .. " left)")
+		-- untested!
+	elseif int_Item_Current_Pokeball > 0 then
 		Battle.DoItemInteraction(0,0,"ITEM",5004,0,-1)
 		int_Item_Current_Pokeball = int_Item_Current_Pokeball -1
 		print("Go Pokeball! (" .. int_Item_Current_Pokeball .. " left)")
@@ -168,11 +173,12 @@ function throwBall()
 		Battle.DoItemInteraction(0,0,"ITEM",5002,0,-1)
 		int_Item_Current_Ultraball = int_Item_Current_Ultraball -1
 		print("Go Ultraball! (" .. int_Item_Current_Ultraball .. " left)")
-	elseif int_Item_Current_Masterball > 0 then
-		Battle.DoItemInteraction(0,0,"ITEM",5001,0,-1)
-		int_Item_Current_Masterball = int_Item_Current_Masterball -1
-		print("Go Masterball! (" .. int_Item_Current_Masterball .. " left)")
 	else
+		if shiny == true then
+			Alert(true)
+			MessageBox("No more balls found, but shiny")
+			stop()
+		end
 		print("No more balls left. Will go regenerate and Stop.")
 		goHeal = true
 		returnAfterHealing = false
@@ -192,7 +198,6 @@ function attackEnemy(ownPokemonAttacks, forceAttack, attackName, skipResistant)
 	if Battle.GetBattleType() == "HORDE_BATTLE" then
 		nextEnemyFound = false
 		for PokemonNr = 0, Battle.GetFightingTeamSize(1)-1 do
-			-- Note: tostring(Battle.GetFightingTeamSize(1)) -- Function always returns 1 or 5
 			if Battle.Active.IsValidPokemon(1, PokemonNr) == true and nextEnemyFound == false then
 				nextEnemyTargetNumber = PokemonNr
 				nextEnemyTargetID = PokemonNr * 16 + 1 -- This equals the ID of the place for some reason (1, 17, 33, 49, 65)
