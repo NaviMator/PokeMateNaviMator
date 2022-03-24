@@ -255,6 +255,7 @@ function battlePilotDecision()
 			if Battle.IsWildEncounter() == true then
 				behaviorInBattle()
 			else
+				print("Trainer battle detected. Won't try to fatch.")
 				battle()
 			end
 		end
@@ -262,6 +263,7 @@ function battlePilotDecision()
 		if Battle.IsWildEncounter() == true then
 			behaviorInBattle()
 		else
+			print("Trainer battle detected. Won't try to fatch.")
 			battle()
 		end
 	end

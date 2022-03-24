@@ -7,6 +7,15 @@
 -- Credits to Fiereu for position correction and much more
 
 
+-- Fix of movement to fix timing of interruption
+function walking(direction, stepAmount, running)
+	for step = 1, stepAmount do
+		Trainer["Move"..direction](running, 1)
+		if bool_Hidden_Setting_Debug == true then print("Step ".. step) end
+		checkInterruption()
+	end
+end
+
 
 -- Get direction and random steps 
 function randomSteps(direction)
@@ -17,7 +26,7 @@ function randomSteps(direction)
 		print("Sneaking " .. direction .. ".")
 	end
 	stepAmount = random(int_Setting_Steps_Min,int_Setting_Steps_Max)
-	Trainer["Move"..direction](bool_Setting_Steps_AlwaysRun, stepAmount, checkInterruption())
+	walking(direction, stepAmount, bool_Setting_Steps_AlwaysRun)
 	randomWaitingTime()
 end
 
@@ -54,22 +63,22 @@ function ErrorCorrection(X, Y)
 
 	if(dX > 0) then
 		while(Trainer.GetX() < X) do
-			Trainer.MoveRight(bool_Setting_Steps_AlwaysRun, 1, checkInterruption())
+			walking("Right", 1, bool_Setting_Steps_AlwaysRun)
 		end
 	end
 	if(dX < 0) then
 		while(Trainer.GetX() > X) do
-			Trainer.MoveLeft(bool_Setting_Steps_AlwaysRun, 1, checkInterruption())
+			walking("Left", 1, bool_Setting_Steps_AlwaysRun)
 		end
 	end
 	if(dY > 0) then
 		while(Trainer.GetY() < Y) do
-			Trainer.MoveDown(bool_Setting_Steps_AlwaysRun, 1, checkInterruption())
+			walking("Down", 1, bool_Setting_Steps_AlwaysRun)
 		end
 	end
 	if(dY < 0) then
 		while(Trainer.GetY() > Y) do
-			Trainer.MoveUp(bool_Setting_Steps_AlwaysRun, 1, checkInterruption())
+			walking("Up", 1, bool_Setting_Steps_AlwaysRun)
 		end
 	end
 end
@@ -100,7 +109,7 @@ function doUntilMapChanged(doAfterMapChangeAction, running)
 		if newMapID == oldMapID then
 			if bool_Hidden_Setting_Debug == true then print("Map not changed from " .. oldMapID) end
 			if doAfterMapChangeAction == "MoveDown" then
-				Trainer.MoveDown(running, 1)
+				walking("Down", 1, running)
 				stepsTaken = stepsTaken + 1
 			else
 				sleep(200)
@@ -152,14 +161,14 @@ end
 -- Enter PokeCenter to Nurse
 function goToNurse(fastShoesAvailable)
 	print("Heading to nurse")
-	Trainer.MoveUp(false, 1)
+	walking("Up", 1, false)
 	levelChange()
 	if fastShoesAvailable == false then
 		running = false
 	else
 		running = bool_Setting_Steps_AlwaysRun
 	end
-	Trainer.MoveUp(running, 8) -- Alternative to walk until player is blocked seems not to be supported in 3d yet
+	walking("Up", 8, running) -- Alternative to walk until player is blocked seems not to be supported in 3d yet
 end
 
 -- Reset values after healing
@@ -193,9 +202,15 @@ end
 -- Check if stranded in Pokecenter
 function checkIfLostAtPokeCenter()
 	if mapOnBattleEntry ~= getPositionCode() then
-		print("Propably died and stranded in Pokecenter. Will continue with journey.")
+		print("Propably died and stranded in Pokecenter.")
 		initialWalkDone = false
-		walkingToDestination()
+		if array_Activities_Basic_Mode[1] == "Stay in area" then
+			print("Will stop and for player input.")
+			stop()
+		else
+			print("Will continue with journey.")
+			walkingToDestination()
+		end
 	end
 end
 
@@ -264,7 +279,7 @@ function pathFinder(walkRouteWay, fastShoesAvailable)
 			levelChange()
 		elseif walkInstruction[1] == "Ledge" then
 			print("Jumping down ledge.")
-			sleepRandom(1000)
+			sleepRandom(1500)
 			checkInterruption()
 		elseif walkInstruction[1] == "Cut" then
 			print("Trimming tree.")
