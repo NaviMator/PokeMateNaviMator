@@ -16,11 +16,15 @@ function record()
 			if array_Hidden_Record_LastOutput[1] ~= lastRecTimestamp then
 				if bool_Hidden_Setting_Debug then print("Got new record-input: " .. array_Hidden_Record_LastOutput[2]) end
 				if array_Hidden_Record_LastOutput[2] == "Wait-1" then
-					print("Input is just a note.")
+          array_Hidden_Record_CurrentState[1] = "Waiting for input"
+          writeDatabase()
+          print("Just a note")
 				elseif array_Hidden_Record_LastOutput[2] == "GetCoordinates" then
-          print("X= " .. Trainer.GetX() .. " | Y= " .. Trainer.GetY())
+          array_Hidden_Record_CurrentState[1] = "Waiting for input"
+          writeDatabase()
+          print("X: " .. Trainer.GetX() .. " || Y: " .. Trainer.GetY())
         else
-          array_Hidden_Record_CurrentState[1] = "Processing Input 2"
+          array_Hidden_Record_CurrentState[1] = "Processing Input"
           writeDatabase()
           pathFinder({array_Hidden_Record_LastOutput[2]})
 				end
