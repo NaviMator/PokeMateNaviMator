@@ -15,9 +15,9 @@ end
 
 
 -- Position code
-function getPositionCode()
+function getPositionCode(getInfo)
 	positionCode = Trainer.GetMapID().."-"..Trainer.GetX().."-"..Trainer.GetY()
-	if bool_Hidden_Setting_Debug == true then print("Position-Code: " .. positionCode) end
+	if bool_Hidden_Setting_Debug == true and getInfo == true then print("Position-Code: " .. positionCode) end
 	return positionCode
 end
 
@@ -114,14 +114,119 @@ function levelUpControl()
 end
 
 
--- Check if player got interrupted by a fight while walking and react to fight
+-- Check if player got interrupted and react
 function checkInterruption()
-	while Trainer.IsInBattle() do
-		sleep(150)
-		print("Interrupted. Will continue path after battle.")
-		battlePilotDecision()
-		sleep(200)
-	end
+
+  while Trainer.IsInLoadingZone() or Trainer.IsInBattle() or Trainer.IsInDialog() do
+    print("Interrupted.")
+
+    if Trainer.IsInLoadingZone() then
+      array_Hidden_Record_CurrentState[1] = "Loading"
+      writeDatabase()
+      while Trainer.IsInLoadingZone() and Trainer.IsInBattle() == false and Trainer.IsInDialog() == false do
+        pingLoadingZone = true
+        sleepRandom(100)
+      end
+    end
+
+    if Trainer.IsInBattle() then
+      print("Battle detected.")
+      array_Hidden_Record_CurrentState[1] = "In battle"
+      writeDatabase()
+      battlePilotDecision()
+      sleepRandom(400)
+    end
+
+    if Trainer.IsInDialog() then
+      print("Dialog detected.")
+      array_Hidden_Record_CurrentState[1] = "In dialog"
+      writeDatabase()
+      
+      if array_Activities_Basic_Mode[1] == "Record" and bool_Rec_Settings_TalkAutomatically then
+        while Trainer.IsInDialog() do
+          if bool_Hidden_Setting_Debug then print("Dialog Type: " .. Trainer.GetDialogType()) end
+          if Trainer.GetDialogType() == "MSG_YESNO" then
+            KeyTyped("A")
+            --MSG_YESNO = "Dialog that wants to hear yes"
+          elseif Trainer.GetDialogType() == "MSG_YESNO" then
+            KeyTyped("A")
+            --MULTICHOICE = "Use computer (and propably more)"
+          elseif Trainer.GetDialogType() == "STARTER_SELECT_DIALOG" then
+            -- UNTESTED
+            -- STARTER_SELECT_DIALOG = "Box to chose Starter MAYBE?"
+            if array_Activities_Playthrough_Starter[1] == 'Grass' then
+              KeyTyped("A")
+            elseif array_Activities_Playthrough_Starter[1] == 'Fire' then
+              KeyTyped("Down")
+              KeyTyped("A")
+            elseif array_Activities_Playthrough_Starter[1] == 'Water' then
+              KeyTyped("Down")
+              KeyTyped("Down")
+              KeyTyped("A")
+            end
+
+
+          else
+            KeyTyped("B")
+            -- MSG_FACEPLAYER = "Detected by trainer-NPC"
+            -- MSG_LOCK = "Spoke to trainer-NPC"
+            -- MSG_NOCLOSE = "Spoke to NPC"
+            -- CLIENT_ONLY = "Spoke to NPC that wants to be skipped"
+            -- MSG_SIGN = "Spoke to sign or collected item"
+
+            -- UNKNOWN
+            --MSG_OBTAIN
+            --MSG_FIND
+            --MSG_ITEM
+            --MSG_NAV_TOOL
+            --MSG_SELECT_PARTY_MONSTER
+            --BUY_COINS
+            --VENDING_MACHINE
+            --MOVE_TUTOR
+            --MAP_SELECTOR
+            --ITEM_SELECTION
+            --BRAILLE
+            --REQUEST_BATTLE
+            --REQUEST_FRIEND
+            --REQUEST_TRADE
+            --REQUEST_LINK
+            --REQUEST_GUILD_INVITE
+            --MSG_SELECT_DAYCARE_MONSTER
+            --MSG_BREED_DIALOG
+            --MSG_SELECT_MONSTER_SKILL
+            --BERRY_PLANTING_DIALOG
+            --BERRY_BLEND_DIALOG
+            --COINS_SHOP_MONSTERS
+            --MSG_STRING
+            --MOVE_TUTOR_COST
+            --MOVE_TUTOR_FIRST_IN_PARTY
+            --EASY_CHAT
+            --MSG_NOYES
+            --WAIT
+            --WAIT_CANCELABLE
+            --BF_DIALOG
+            --NDS
+            --NDS_WAIT_BUTTON
+            --NDS_INPUT_WAIT_BUTTON
+            --NDS_INPUT_YESNO
+            --NDS_INPUT_MULTICHOICE
+            --NDS_SHOW_AT
+            --NDS_CLOSE_SHOW_AT
+            --ITEM_SELECTION_COUNTS
+            --MSG_LOCK_AUTOCLOSE
+            --MONSTER_SELECT
+            --CLOSE
+
+          end
+          sleepRandom(500)
+        end
+      end
+    end
+  end
+
+  array_Hidden_Record_CurrentState[1] = "Waiting for input"
+  writeDatabase()
+
 end
 
 

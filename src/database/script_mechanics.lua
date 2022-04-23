@@ -266,6 +266,11 @@ attacksThatDontDamage = {
 	},
 }
 
+attacksThatSwap = {
+  369, -- U-Turn
+  521, -- Volt Switch
+}
+
 attacksThatFlee = {
 	46,  -- Roar
 	100, -- Teleport

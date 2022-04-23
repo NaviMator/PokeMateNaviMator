@@ -9,7 +9,7 @@ function walkingToDestination()
 	readDatabase()
 	
 	if array_Activities_Basic_Mode[1] == "Record" then
-		if bool_Hidden_Setting_Debug == true then print("Recording mode is on. Will not try to walk.") end
+		record()
 	elseif array_Activities_Basic_Mode[1] == "Playthrough" then
 		playthrough(array_Activities_Playthrough_Chapter[1])
 	elseif array_Activities_Basic_Mode[1] == "Walk routes" then
@@ -29,7 +29,6 @@ function walkingToDestination()
 
 		if initialWalkDone ~= true then
 			print("Walking " .. array_Activities_Routes_Route[1])
-			leavePokeCenter()
 			routes(array_Activities_Routes_Route[1])
 			initialWalkDone = true
 		end
@@ -53,9 +52,7 @@ end
 function behaviorAtDestination()
 
 	readDatabase()
-	if array_Activities_Basic_Mode[1] == "Record" then
-		record()
-	elseif bool_Activities_Routes_HealWhenFirstPokemonIsDefeated and Party.GetPokemonHealth(0, 0) <= 0 then
+	if bool_Activities_Routes_HealWhenFirstPokemonIsDefeated and Party.GetPokemonHealth(0, 0) <= 0 then
 		print("Teamleader is defeated.")
 		runHome()
 	elseif array_Activities_Behavior_MovementAtDestination[1] == "Move (left/right)" then
@@ -85,7 +82,7 @@ end
 function behaviorInBattle()
 
 	readDatabase()
-	mapOnBattleEntry = getPositionCode()
+	mapOnBattleEntry = getPositionCode(true)
 	shiny = false
 
 	-- Check for shiny
@@ -255,7 +252,7 @@ function battlePilotDecision()
 			if Battle.IsWildEncounter() == true then
 				behaviorInBattle()
 			else
-				print("Trainer battle detected. Won't try to fatch.")
+				print("Trainer battle detected. Won't try to catch.")
 				battle()
 			end
 		end
@@ -263,7 +260,7 @@ function battlePilotDecision()
 		if Battle.IsWildEncounter() == true then
 			behaviorInBattle()
 		else
-			print("Trainer battle detected. Won't try to fatch.")
+			print("Trainer battle detected. Won't try to catch.")
 			battle()
 		end
 	end

@@ -24,12 +24,13 @@ function splitString(s, delimiter)
 end
 
 -- Reverse table
-function reverseTable(tbl)
-  for i=1, math.floor(#tbl / 2) do
-    local tmp = tbl[i]
-    tbl[i] = tbl[#tbl - i + 1]
-    tbl[#tbl - i + 1] = tmp
+function reverseTable(t)
+  local reversedTable = {}
+  local itemCount = #t
+  for k, v in ipairs(t) do
+      reversedTable[itemCount + 1 - k] = v
   end
+  return reversedTable
 end
 
 -- Convert table to string

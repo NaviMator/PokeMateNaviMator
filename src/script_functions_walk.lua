@@ -9,11 +9,29 @@
 
 -- Fix of movement to fix timing of interruption
 function walking(direction, stepAmount, running)
+  
+  stepAmount = tonumber(stepAmount)
+  
+  if bool_Hidden_Setting_Debug == true then
+    if stepAmount == 1 then stepGrammar = "step" else stepGrammar = "steps" end
+    if running == true then speedGrammar = "Running" else speedGrammar = "Walking" end
+    print(speedGrammar .. " " .. direction .. " " .. stepAmount .. " " .. stepGrammar .. ".")
+  end
+  
+  --array_Hidden_Record_CurrentState[1] = "Walking"
+	--writeDatabase()
+
 	for step = 1, stepAmount do
-		Trainer["Move"..direction](running, 1)
-		if bool_Hidden_Setting_Debug == true then print("Step ".. step) end
-		checkInterruption()
+    mapCodeBeforeStep = getPositionCode()
+    if bool_Hidden_Setting_Debug == true and stepAmount > 1 then print("Step " .. step .. "/" .. stepAmount .. ".") end
+    Trainer["Move"..direction](running, 1)
+    if mapCodeBeforeStep == getPositionCode() then
+      if bool_Hidden_Setting_Debug == true then print("Rotated. Will repeat step.") end
+      Trainer["Move"..direction](running, 1)
+    end
 	end
+  checkInterruption()
+
 end
 
 
@@ -97,56 +115,6 @@ function CheckPosition(X, Y)
 end
 
 
--- Do until Map changed
-function doUntilMapChanged(doAfterMapChangeAction, running)
-	oldMapID = Trainer.GetMapID()
-	if running == nil then
-		running = bool_Setting_Steps_AlwaysRun
-	end
-	stepsTaken = 0
-	while true do
-		newMapID = Trainer.GetMapID()
-		if newMapID == oldMapID then
-			if bool_Hidden_Setting_Debug == true then print("Map not changed from " .. oldMapID) end
-			if doAfterMapChangeAction == "MoveDown" then
-				walking("Down", 1, running)
-				stepsTaken = stepsTaken + 1
-			else
-				sleep(200)
-			end
-		else
-			if bool_Hidden_Setting_Debug == true then print("Map changed from " .. oldMapID .. " to " .. newMapID) end
-			sleep(1000)
-			randomWaitingTime()
-			return true
-		end
-		if stepsTaken >= 15 then
-			MessageBox("Something went wrong. Expected map change.")
-			stop()
-		end
-	end
-end
-
-
--- Levelchange (doors or caves)
-function levelChange()
-	-- if region == Unova -- not possible yet
-	--	while(Trainer.IsMovementBlocked()) do
-	--		sleep(1000)
-	--		if Trainer.GetMapID() <= 0 then
-	--			print("Crazy Map-ID. Will ignore and continue.")
-	--			sleep(1000)
-	--			break
-	--		end
-	--	end
-	-- else
-	if bool_Hidden_Setting_Debug == true then print("Waiting for levelchange") end
-	doUntilMapChanged()
-	print("Closing door behind me.")
-	-- end
-end
-
-
 -- Leave PokeCenter from Nurse
 function leavePokeCenter(fastShoesAvailable)
 	if fastShoesAvailable == false then
@@ -154,15 +122,21 @@ function leavePokeCenter(fastShoesAvailable)
 	else
 		running = bool_Setting_Steps_AlwaysRun
 	end
-	doUntilMapChanged("MoveDown", running)
+  pingLoadingZone = false
+  while pingLoadingZone == false do
+    walking("Down", 1, running)
+  end
+  pingLoadingZone = false
+  checkInterruption()
 	print ("Outside Pokecenter. Starting Route.")
 end
+
 
 -- Enter PokeCenter to Nurse
 function goToNurse(fastShoesAvailable)
 	print("Heading to nurse")
 	walking("Up", 1, false)
-	levelChange()
+  checkInterruption()
 	if fastShoesAvailable == false then
 		running = false
 	else
@@ -171,6 +145,7 @@ function goToNurse(fastShoesAvailable)
 	walking("Up", 8, running) -- Alternative to walk until player is blocked seems not to be supported in 3d yet
 end
 
+
 -- Reset values after healing
 function healed()
 	readDatabase()
@@ -178,6 +153,7 @@ function healed()
 	goHeal = false
 	writeDatabase()
 end
+
 
 -- Talk to Nurse
 function regenerate()
@@ -199,9 +175,10 @@ function regenerate()
 	print("Regenerated")
 end
 
+
 -- Check if stranded in Pokecenter
 function checkIfLostAtPokeCenter()
-	if mapOnBattleEntry ~= getPositionCode() then
+	if mapOnBattleEntry ~= getPositionCode(true) then
 		print("Propably died and stranded in Pokecenter.")
 		initialWalkDone = false
 		if array_Activities_Basic_Mode[1] == "Stay in area" then
@@ -215,8 +192,8 @@ function checkIfLostAtPokeCenter()
 end
 
 
--- How to walk and use HM
-function pathFinder(walkRouteWay, fastShoesAvailable)
+-- How to walk and interact
+function pathFinder(walkRouteWay, fastShoesAvailable, reverseThisWay)
 	for i,walkLine in ipairs(walkRouteWay) do
 		randomWaitingTime()
 		walkInstruction = splitString(walkLine,"-")
@@ -229,104 +206,34 @@ function pathFinder(walkRouteWay, fastShoesAvailable)
 				running = bool_Setting_Steps_AlwaysRun
 			end
 
-			if walkInstruction[1] == "U" then
-				direction = "Up"
-			elseif walkInstruction[1] == "D" then
-				direction = "Down"
-			elseif walkInstruction[1] == "L" then
-				direction = "Left"
-			elseif walkInstruction[1] == "R" then
-				direction = "Right"
-			end
+      if reverseThisWay ~= true then
+            if walkInstruction[1] == "U" then direction = "Up"
+        elseif walkInstruction[1] == "D" then direction = "Down"
+        elseif walkInstruction[1] == "L" then direction = "Left"
+        elseif walkInstruction[1] == "R" then direction = "Right"
+        end
+      else
+            if walkInstruction[1] == "D" then direction = "Up"
+        elseif walkInstruction[1] == "U" then direction = "Down"
+        elseif walkInstruction[1] == "R" then direction = "Left"
+        elseif walkInstruction[1] == "L" then direction = "Right"
+        end
+      end
 
-			if bool_Hidden_Setting_Debug == true then
-				if running == true then
-					print("Running ".. direction .. " " .. walkInstruction[2] .. " Steps.")
-				else
-					print("Walking ".. direction .. " " .. walkInstruction[2] .. " Steps.")
-				end
-			end
-
-			Trainer["Move"..direction](running, walkInstruction[2], checkInterruption())
+      walking(direction, walkInstruction[2], running)
 
 		-- Interaction
-		elseif walkInstruction[1] == "Wait" then
-			print("Waiting ".. walkInstruction[2] .. " Seconds.")
-			waitingTime = walkInstruction[2] * 1000
-			sleepRandom(waitingTime)
-			checkInterruption()
-		elseif walkInstruction[1] == "Press" then
-			print("Pressing ".. walkInstruction[2])
-			KeyTyped(walkInstruction[2])
-			sleepRandom(200)
-		elseif walkInstruction[1] == "Speak" then
-			print("Greeting.")
-			sleepRandom(200)
+		elseif walkInstruction[1] == "Interact" then
+			print("Interacting.")
 			Trainer.TalkToNPC();
-		elseif walkInstruction[1] == "Talk" then
-			print("Negotiating.")
-			sleepRandom(200)
-			for i=1, walkInstruction[2] do
-				sleepRandom(1000)
-				KeyTyped("B")
-			end
-			sleepRandom()
-			checkInterruption()
+      checkInterruption()
 
-		-- More movement
-		elseif walkInstruction[1] == "Door" then
-			print("Walking through door.")
-			levelChange()
-		elseif walkInstruction[1] == "Ledge" then
-			print("Jumping down ledge.")
-			sleepRandom(1500)
-			checkInterruption()
-		elseif walkInstruction[1] == "Cut" then
-			print("Trimming tree.")
-			useHotkey(int_Setting_HotkeyFM_Cut, walkInstruction[1])
-			sleepRandom(3000)
-		elseif walkInstruction[1] == "Surf" then
-			print("Going for a swim.")
-			useHotkey(int_Setting_HotkeyFM_Surf, walkInstruction[1])
-			sleepRandom(3000)
-		elseif walkInstruction[1] == "Strength" then
-			print("Pushing boulders.")
-			useHotkey(int_Setting_HotkeyFM_Strength, walkInstruction[1])
-			sleepRandom(3000)
-		elseif walkInstruction[1] == "RockSmash" then
-			print("Smashing boulders.")
-			useHotkey(int_Setting_HotkeyFM_RockSmash, walkInstruction[1])
-			sleepRandom(2000)
-			KeyTyped("A")
-			sleepRandom(1000)
-			KeyTyped("A")
-			sleepRandom(2000)
-			checkInterruption()
-		elseif walkInstruction[1] == "RockClimb" then
-			print("Walking up walls.")
-			useHotkey(int_Setting_HotkeyFM_RockClimb, walkInstruction[1])
-			sleepRandom(3000)
-		elseif walkInstruction[1] == "Waterfall" then
-			print("Swimming up walls.")
-			useHotkey(int_Setting_HotkeyFM_Waterfall, walkInstruction[1])
-			sleepRandom(3000)
-		elseif walkInstruction[1] == "Whirlpool" then
-			print("Entering hot tub.")
-			useHotkey(int_Setting_HotkeyFM_Whirlpool, walkInstruction[1])
-			sleepRandom(3000)
-		elseif walkInstruction[1] == "Dive" then
-			print("Taking a deep breath.")
-			useHotkey(int_Setting_HotkeyFM_Dive, walkInstruction[1])
-			sleepRandom(3000)
-		elseif walkInstruction[1] == "Dig" then
-			print("Burrowing.")
-			useHotkey(int_Setting_HotkeyFM_Dig, walkInstruction[1])
-			sleepRandom(3000)
-		elseif walkInstruction[1] == "Teleport" then
-			print("Initializing hyperdrive.")
-			useHotkey(int_Setting_HotkeyFM_Teleport, walkInstruction[1])
-			sleepRandom(3000)
-		end
+    outDatedMovement = {"Door","Speak","Talk","Ledge","Press","Wait","Cut","Surf","Strength","RockSmash","RockClimb","Waterfall","Dive"}
+    elseif arrayContains(outDatedMovement, walkInstruction[1]) then
+      print(walkInstruction[1] .. " is outdated movement. Use Interact to pick an item, talk and use HMs.")
+		else
+      print("Unknown command: " .. walkInstruction[1] .. ".")
+    end
 	end
 end
 
@@ -343,37 +250,35 @@ function walkRoute(startX, stratY, endX, endY, availableRoutes, walkingBack)
 	chosenRoute = (availableRoutes[choice])
 
 	if walkingBack ~= true then
-		print("Using Route #".. choice)
+		print("Walking to destination. Using Route #".. choice)
+    leavePokeCenter()
 		CheckPosition(startX,stratY)
 		pathFinder(chosenRoute)
 		CheckPosition(endX,endY)
 	else
-		print("Using a shortcut")
-		if array_Activities_Routes_ShortcutBackToPokecenter[1] == "Dig and Teleport" and int_Setting_HotkeyFM_Dig > 0 and int_Setting_HotkeyFM_Teleport > 0 then
-			KeyTyped("H"..int_Setting_HotkeyFM_Dig)
-			sleep(3000)
-			levelChange()
-			KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
-			sleep(3000)
-			levelChange()
-		elseif array_Activities_Routes_ShortcutBackToPokecenter[1] == "Dive up and Teleport" and int_Setting_HotkeyFM_Dive > 0 and int_Setting_HotkeyFM_Teleport > 0 then
-			KeyTyped("H"..int_Setting_HotkeyFM_Dive)
-			sleep(3000)
-			levelChange()
-			KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
-			sleep(3000)
-			levelChange()
-		elseif array_Activities_Routes_ShortcutBackToPokecenter[1] == "Teleport" and int_Setting_HotkeyFM_Teleport > 0 then
-			KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
-			sleep(3000)
-			levelChange()
-		else
-			print("Using Route #".. choice)
+    if array_Activities_Routes_ShortcutBackToPokecenter[1] == "Walk" then
+      print("Walking back. Using Route #".. choice)
 			CheckPosition(endX,endY)
-			pathFinder(chosenRoute)
+			pathFinder(reverseTable(chosenRoute), true, true)
 			CheckPosition(startX,stratY)
 			goToNurse()
-		end
+    else
+      print("Using a shortcut")
+      if array_Activities_Routes_ShortcutBackToPokecenter[1] == "Dig and Teleport" and int_Setting_HotkeyFM_Dig > 0 and int_Setting_HotkeyFM_Teleport > 0 then
+        KeyTyped("H"..int_Setting_HotkeyFM_Dig)
+        checkInterruption()
+        KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
+        checkInterruption()
+      elseif array_Activities_Routes_ShortcutBackToPokecenter[1] == "Dive up and Teleport" and int_Setting_HotkeyFM_Dive > 0 and int_Setting_HotkeyFM_Teleport > 0 then
+        KeyTyped("H"..int_Setting_HotkeyFM_Dive)
+        checkInterruption()
+        KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
+        checkInterruption()
+      elseif array_Activities_Routes_ShortcutBackToPokecenter[1] == "Teleport" and int_Setting_HotkeyFM_Teleport > 0 then
+        KeyTyped("H"..int_Setting_HotkeyFM_Teleport)
+        checkInterruption()
+      end
+    end
 	end
 end
 

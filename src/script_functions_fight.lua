@@ -71,6 +71,11 @@ function prioritizeMoves()
 			if bool_Hidden_Setting_Debug == true then print("Preventing end of battle. Decreasing priority of " .. attackInfos.Name .. " by 250 points.") end
 		end
 
+		if arrayContains(attacksThatSwap, attackInfos.ID) then
+			attackInfos.Prio = attackInfos.Prio - 200
+			if bool_Hidden_Setting_Debug == true then print("Preventing swap. Decreasing priority of " .. attackInfos.Name .. " by 250 points.") end
+		end
+
 		if arrayContains(attacksThatneedUserInput, attackInfos.ID) then -- Temporary
 			attackInfos.Prio = attackInfos.Prio - 500
 			if bool_Hidden_Setting_Debug == true then print("Preventing user input. Decreasing priority of " .. attackInfos.Name .. " by 500 points.") end

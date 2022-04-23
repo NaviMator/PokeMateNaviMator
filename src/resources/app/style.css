@@ -43,11 +43,15 @@ code{color:#000; background:rgba(0, 0, 0, 0.1); border-radius:10px; display:bloc
 .rec-inputs.rec-inputs-arrows .rec-input.rec-l{top:48px; left:0;}
 .rec-inputs.rec-inputs-arrows .rec-input.rec-r{top:48px; left:100px;}
 .rec-inputs.rec-inputs-arrows .rec-input.rec-d{top:48px; left:50px;}
-.rec-inputs.rec-inputs-specials{width:420px; position:relative;}
+.rec-inputs.rec-inputs-specials{width:420px; position:absolute; bottom:4px; left:200px}
 .rec-inputs.rec-inputs-hms{flex-basis: 100%; flex-shrink: 0; margin-top: 10px;}
 .rec-inputs.rec-inputs-hms .rec-input{font-size:0.8rem; padding:2px 6px;}
 .rec-inputs.rec-inputs-hms .rec-primary{background-color: #7dd6ff;}
 .rec-inputs.rec-inputs-hms .btn-secondary{position:absolute; right:0; top:0;}
+#recordState{position:relative; top:-40px;}
+#recordState i{display:inline-block; width:14px; height:14px; border-radius:50%; background-color:rgb(20 160 0); margin-right:4px; transition:background-color ease .2s;}
+#recordState i.disabled{background-color:rgb(160 20 0);}
+#recordState i.pending{background-color:rgb(250 150 35);}
 #rec-output{margin-bottom: 20px;}
 #rec-output-clearer{margin-bottom:40px;}
 

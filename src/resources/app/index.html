@@ -107,34 +107,17 @@
             <button class="rec-input rec-d btn btn-primary" data-rec="D-1">&darr;</button>
           </div>
           <div class="rec-inputs rec-inputs-specials">
-            <button class="rec-input btn btn-primary" data-tooltipinfo="Talk to NPC" data-rec="Speak">Speak</button>
-            <button class="rec-input btn btn-primary" data-tooltipinfo="Continue Dialogue" data-rec="Talk-1">Continue</button>
-            <button class="rec-input btn btn-primary" data-tooltipinfo="Wait 1 Second" data-rec="Wait-1">Wait</button>
-            <button class="rec-input btn btn-primary" data-tooltipinfo="Wait until through door" data-rec="Door">Door</button>
-            <button class="rec-input btn btn-primary" data-tooltipinfo="Wait until jumped ledge" data-rec="Ledge">Jump</button>
-            <button class="rec-input btn btn-primary" data-rec="Press-A">Press A</button>
-            <button class="rec-input btn btn-primary" data-rec="Press-B">Press B</button>
-          </div>
-          <div class="rec-inputs rec-inputs-hms">
-              <button class="rec-input btn btn-primary" data-rec="Cut">Cut</button>
-              <button class="rec-input btn btn-primary" data-rec="Surf">Surf</button>
-              <button class="rec-input btn btn-primary" data-rec="Strength">Strength</button>
-              <button class="rec-input btn btn-primary" data-rec="RockSmash">RockSmash</button>
-              <button class="rec-input btn btn-primary" data-rec="RockClimb">RockClimb</button>
-              <button class="rec-input btn btn-primary" data-rec="Waterfall">Waterfall</button>
-              <button class="rec-input btn btn-primary" data-rec="Whirlpool">Whirlpool</button>
-              <button class="rec-input btn btn-primary" data-rec="Dive">Dive</button>
-              <button class="rec-input btn btn-primary" data-rec="Dig">Dig</button>
-              <button class="rec-input btn btn-primary" data-rec="Teleport">Teleport</button>
-              <button class="rec-input btn btn-secondary" data-rec="GetCoordinates">Log coordinates</button>
+            <button class="rec-input btn btn-primary" data-rec="Interact">Interact</button>
+            <button class="rec-input btn btn-secondary" data-rec="GetCoordinates">Log coordinates</button>
           </div>
         </div>
+        <div id="recordState">State: <i></i><span>Waiting for input</span></div>
+
 
         <h2>Output</h2>
         <p>Click output to copy.</p>
         <code id="rec-output">{}</code>
         <button id="rec-output-clearer" class="rec-output-clear btn btn-primary">Clear</button>
-
 
         <h2>Settings</h2>
         <div class="contentPlaceholder" id="Rec_Settings"></div>
@@ -224,7 +207,9 @@
 /**Database*Control**/
 /********************/
 
-// Update Database all 500ms
+var recordInputUpdateAllowed = true;
+
+// Update Database continuously
 (function(){
   readDatabase();
   $("input[type=number]").removeClass("attention-increased attention-decreased");
@@ -233,12 +218,25 @@
     line = line.split(" = ");
     thisItemConfigs = line[0];
     thisItemValueNew = line[1];
-    if(thisItemValueNew == "true"){
-      thisItemValueNew = true;
+
+    // Record State
+    if (recordInputUpdateAllowed && thisItemConfigs == "array_Hidden_Record_CurrentState"){
+      setTimeout(function(){
+        arrayAsString = thisItemValueNew.toString().replace(/(\[\"|\"\])/g,"");
+        $("#recordState span").html(arrayAsString);
+        if(arrayAsString != "Waiting for input"){
+          $("#recordState i").addClass("disabled");
+          $("button.rec-input").prop("disabled",true);
+        }else{
+          $("#recordState i").removeClass("disabled");
+          $("#recordState i").addClass("enabled");
+          $("button.rec-input").prop("disabled",false);
+        };
+        $("#recordState i").removeClass("pending");
+      }, 150);
     }
-    if(thisItemValueNew == "false"){
-      thisItemValueNew = false;
-    }
+
+    // Numeric Input and Switches
     if($("input#" + thisItemConfigs).length > 0){
       thisItem = $("input#" + thisItemConfigs);
       thisItemValueOld = thisItem.val();
@@ -260,6 +258,8 @@
         }
       }
     }
+
+    // Dropdown
     if($(".dropdown-menu#" + thisItemConfigs).length > 0){
       thisItem = $(".dropdown-menu#" + thisItemConfigs)
       
@@ -283,10 +283,9 @@
         //log(thisItemValuesNew + " changed to " + thisItemValuesOld)
         initializeDropdowns(".dropdown-menu#" + thisItemConfigs)
       }
-
     }
   });
-  setTimeout(arguments.callee, 500);
+  setTimeout(arguments.callee, 400);
 })();
 
 // Beautify Names
@@ -496,11 +495,17 @@ $("#rec-output-clearer").click(function() {
 });
 
 
+
 // Record Route
 $("button.rec-input").click(function() {
   var newArrayPiece = $(this).attr("data-rec");
   var currentRecArray = $("#rec-output").text();
+
+  recordInputUpdateAllowed = false;
   $("button.rec-input").prop("disabled",true);
+  $("#recordState i").addClass("pending");
+  $("#recordState i").removeClass("enabled");
+  $("#recordState span").html("Processing Input");
   
   if(newArrayPiece != "GetCoordinates"){
     if(currentRecArray == "{}"){
@@ -535,12 +540,53 @@ $("button.rec-input").click(function() {
       }
     }
   }
-  window["array_Hidden_Record_LastOutput"] = [Date.now(),newArrayPiece];
-  writeDatabase();
   setTimeout(function(){
-    $("button.rec-input").prop("disabled",false);
+    recordInputUpdateAllowed = true;
   }, 500);
+  window["array_Hidden_Record_LastOutput"] = [Date.now(),newArrayPiece];
+  window["array_Hidden_Record_CurrentState"] = ["Processing Input"];
+  writeDatabase();
 });
+
+
+// Keyboard Keys to record
+//var keysAreLocked = false;
+document.onkeydown = function(e) {
+  currentPage = $(".nav-link.active").attr("data-page")
+  if(currentPage == "rec" && $("#recordState i").hasClass("enabled") && useKeysAllowed){
+    useKeysAllowed = false
+
+    switch(e.which) {
+        case 37: // Left
+          $("button[data-rec='L-1'").click()
+        break;
+
+        case 38: // Up
+          $("button[data-rec='U-1'").click()
+        break;
+
+        case 39: // Right
+          $("button[data-rec='R-1'").click()
+        break;
+
+        case 40: // Down
+          $("button[data-rec='D-1'").click()
+        break;
+
+        case 32: // Space
+          $("button[data-rec='Interact'").click()
+        break;
+
+        default: return;
+    }
+
+    setTimeout(function(){
+      useKeysAllowed = true;
+    }, 400);
+
+    e.preventDefault();
+  }
+};
 
 
 // Update int inputs
@@ -664,48 +710,6 @@ $( ".openLinkButton" ).click(function() {
   shell.openExternal(link)
 });
 
-// Keyboard Keys to record
-document.onkeydown = function(e) {
-  currentPage = $(".nav-link.active").attr("data-page")
-  if(currentPage == "rec"){
-    switch(e.which) {
-        case 37: // Left
-          $("button[data-rec='L-1'").click()
-        break;
-
-        case 38: // Up
-          $("button[data-rec='U-1'").click()
-        break;
-
-        case 39: // Right
-          $("button[data-rec='R-1'").click()
-        break;
-
-        case 40: // Down
-          $("button[data-rec='D-1'").click()
-        break;
-
-        case 32: // Space
-          $("button[data-rec='Door'").click()
-        break;
-
-        case 65: // A
-          $("button[data-rec='Speak'").click()
-        break;
-
-        case 66: // B
-          $("button[data-rec='Talk-1'").click()
-        break;
-
-        case 17: // Strg
-          $("button[data-rec='Wait-1'").click()
-        break;
-
-        default: return;
-    }
-    e.preventDefault();
-  }
-};
 
 
 /*******************/
@@ -741,7 +745,9 @@ $("#pokemonListfilter").on("keyup", function() {
 
 // Initial Sets
 window["array_Hidden_Record_LastOutput"] = [0,0];
+window["array_Hidden_Record_CurrentState"] = ["Waiting for input"];
 writeDatabase();
+useKeysAllowed = true;
 
 
 </script>
