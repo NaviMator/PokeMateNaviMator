@@ -224,6 +224,7 @@ function checkInterruption()
     end
   end
 
+  sleepRandom(200)
   array_Hidden_Record_CurrentState[1] = "Waiting for input"
   writeDatabase()
 

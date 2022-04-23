@@ -25,6 +25,7 @@ function walking(direction, stepAmount, running)
     mapCodeBeforeStep = getPositionCode()
     if bool_Hidden_Setting_Debug == true and stepAmount > 1 then print("Step " .. step .. "/" .. stepAmount .. ".") end
     Trainer["Move"..direction](running, 1)
+    checkInterruption()
     if mapCodeBeforeStep == getPositionCode() then
       if bool_Hidden_Setting_Debug == true then print("Rotated. Will repeat step.") end
       Trainer["Move"..direction](running, 1)
@@ -225,6 +226,7 @@ function pathFinder(walkRouteWay, fastShoesAvailable, reverseThisWay)
 		-- Interaction
 		elseif walkInstruction[1] == "Interact" then
 			print("Interacting.")
+      sleepRandom(500)
 			Trainer.TalkToNPC()
       checkInterruption()
 
