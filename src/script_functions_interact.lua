@@ -125,7 +125,7 @@ function checkInterruption()
       writeDatabase()
       while Trainer.IsInLoadingZone() and Trainer.IsInBattle() == false and Trainer.IsInDialog() == false do
         pingLoadingZone = true
-        sleepRandom(100)
+        sleepRandom(500)
       end
     end
 
@@ -142,7 +142,7 @@ function checkInterruption()
       array_Hidden_Record_CurrentState[1] = "In dialog"
       writeDatabase()
       
-      if array_Activities_Basic_Mode[1] == "Record" and bool_Rec_Settings_TalkAutomatically then
+      --if array_Activities_Basic_Mode[1] == "Record" and bool_Rec_Settings_TalkAutomatically then
         while Trainer.IsInDialog() do
           if bool_Hidden_Setting_Debug then print("Dialog Type: " .. Trainer.GetDialogType()) end
           if Trainer.GetDialogType() == "MSG_YESNO" then
@@ -220,7 +220,7 @@ function checkInterruption()
           end
           sleepRandom(500)
         end
-      end
+      --end
     end
   end
 

@@ -29,8 +29,8 @@ function walking(direction, stepAmount, running)
       if bool_Hidden_Setting_Debug == true then print("Rotated. Will repeat step.") end
       Trainer["Move"..direction](running, 1)
     end
+    checkInterruption()
 	end
-  checkInterruption()
 
 end
 
@@ -225,7 +225,7 @@ function pathFinder(walkRouteWay, fastShoesAvailable, reverseThisWay)
 		-- Interaction
 		elseif walkInstruction[1] == "Interact" then
 			print("Interacting.")
-			Trainer.TalkToNPC();
+			Trainer.TalkToNPC()
       checkInterruption()
 
     outDatedMovement = {"Door","Speak","Talk","Ledge","Press","Wait","Cut","Surf","Strength","RockSmash","RockClimb","Waterfall","Dive"}
